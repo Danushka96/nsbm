@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/8" fx:controller="nsbm.controllers.Controller" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/8" fx:controller="nsbm.controllers.loginController" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text layoutX="164.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login to the System">
          <font>

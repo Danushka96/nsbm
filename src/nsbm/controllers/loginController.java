@@ -9,7 +9,7 @@ import javafx.scene.text.Text;
 
 import java.sql.*;
 
-public class Controller {
+public class loginController {
     @FXML
     private TextField username;
     @FXML
