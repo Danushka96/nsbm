@@ -9,11 +9,11 @@
 
 
 # Implementation
-
+<center>
 ![](https://image.ibb.co/iHR5Lo/nsbm_team_logo.png)
 
 ![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
-
+</center>
 
 
 ### Class Diagram
