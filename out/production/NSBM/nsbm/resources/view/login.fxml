@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/8" fx:controller="nsbm.controllers.Controller" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="164.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login to the System">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="75.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="75.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password: ">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="username" id="username" layoutX="187.0" layoutY="95.0" prefHeight="25.0" prefWidth="184.0" onKeyTyped="#errorDel"/>
+      <PasswordField fx:id="password" id="password" layoutX="186.0" layoutY="131.0" prefHeight="25.0" prefWidth="184.0" onKeyTyped="#errorDel"/>
+      <Button layoutX="371.0" layoutY="206.0" mnemonicParsing="false" text="Login" onAction="#login" />
+      <Button layoutX="426.0" layoutY="206.0" mnemonicParsing="false" text="Register"/>
+      <Text fx:id="error" id="error" fill="#e80303" layoutX="187.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Username or Password is incorrect" textAlignment="CENTER" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

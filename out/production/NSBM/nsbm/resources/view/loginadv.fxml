@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" fx:controller="nsbm.Controller" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="257.0" style="-fx-background-color: CORNFLOWERBLUE;">
+         <children>
+            <ImageView fitHeight="155.0" fitWidth="191.0" layoutX="51.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="img/individual-ondemand-geek2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="120.0" fitWidth="218.0" layoutX="20.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="img/nsbm-team-logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text layoutX="300.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login to the NSBM System">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="284.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username: ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField layoutX="397.0" layoutY="172.0" />
+      <Text layoutX="284.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <PasswordField layoutX="397.0" layoutY="220.0" />
+      <Text fill="#e40000" layoutX="309.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* username or Password Invalied">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button layoutX="339.0" layoutY="320.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="169.0" style="-fx-background-color: CORNFLOWERBLUE;" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
