@@ -20,7 +20,10 @@ class ConnectionManager {
             try{
                 con=DriverManager.getConnection("jdbc:mysql://localhost/javasql","root","");
             } catch (SQLException e) {
-                System.out.println("Error Connecting with the Database");
+                //System.out.println("Error Connecting with the Database");
+//                databaseAlert.display("Databse Error","Check Database Connection");
+                databaseAlert alert = new databaseAlert();
+                alert.show("Database Error");
             }
         } catch (ClassNotFoundException e) {
             System.out.println("Driver Not Found");

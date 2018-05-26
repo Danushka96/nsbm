@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" fx:controller="nsbm.controllers.loginController" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="234.0" style="-fx-background-color: CORNFLOWERBLUE;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="17.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/nsbm-team-logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="139.0" fitWidth="132.0" layoutX="51.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/individual-ondemand-geek2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text layoutX="248.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login to the NSBM Student Managment System" textAlignment="CENTER" wrappingWidth="337.146484375">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="273.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="275.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="username" layoutX="381.0" layoutY="188.0" prefHeight="25.0" prefWidth="182.0" onKeyTyped="#errorDel"/>
+      <PasswordField fx:id="password" layoutX="381.0" layoutY="226.0" prefHeight="25.0" prefWidth="182.0" onKeyTyped="#errorDel"/>
+      <Button layoutX="459.0" layoutY="332.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="104.0" style="-fx-background-color: CORNFLOWERBLUE;" text="Login" onAction="#login">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Text fx:id="error" fill="#e40d0d" layoutX="300.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="username or password is Invalied" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
