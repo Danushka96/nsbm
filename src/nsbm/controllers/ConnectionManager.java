@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-class ConnectionManager {
+public class ConnectionManager {
 //    private static String url = "jdbc:mysql://localhost:3306/";
 //    private static String drivername = "com.mysql.jdbc.Driver";
 //    private static String username = "root";    // Database Username
@@ -13,12 +13,12 @@ class ConnectionManager {
     private static Connection con;
 //    private static String urlString1;
 
-    static Connection getConnection(){
+    public static Connection getConnection(){
 //        String urlString =url+database;
         try{
             Class.forName("com.mysql.jdbc.Driver");
             try{
-                con=DriverManager.getConnection("jdbc:mysql://localhost/javasql","root","");
+                con=DriverManager.getConnection("jdbc:mysql://localhost/nsbm","root","");
             } catch (SQLException e) {
                 //System.out.println("Error Connecting with the Database");
 //                databaseAlert.display("Databse Error","Check Database Connection");

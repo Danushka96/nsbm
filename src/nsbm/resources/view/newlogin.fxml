@@ -23,7 +23,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Text layoutX="248.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login to the NSBM Student Managment System" textAlignment="CENTER" wrappingWidth="337.146484375">
+      <Text layoutX="248.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login to the NSBM Course Enrollment System" textAlignment="CENTER" wrappingWidth="337.146484375">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>

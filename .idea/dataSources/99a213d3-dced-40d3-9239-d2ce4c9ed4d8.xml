@@ -17,8 +17,6 @@
       <Collation>utf8_general_ci</Collation>
     </schema>
     <schema id="6" parent="1" name="javasql">
-      <Current>1</Current>
-      <Visible>1</Visible>
       <Collation>latin1_swedish_ci</Collation>
     </schema>
     <schema id="7" parent="1" name="media4">
@@ -32,6 +30,7 @@
     </schema>
     <schema id="10" parent="1" name="nsbm">
       <Current>1</Current>
+      <Visible>1</Visible>
       <Collation>latin1_swedish_ci</Collation>
     </schema>
     <schema id="11" parent="1" name="performance_schema">
@@ -991,75 +990,65 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="252" parent="6" name="comments">
+    <table id="252" parent="10" name="students">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="253" parent="6" name="users">
-      <Engine>InnoDB</Engine>
-    </table>
-    <column id="254" parent="252" name="id">
+    <column id="253" parent="252" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(8)|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="252" name="MYUSER">
+    <column id="254" parent="252" name="name">
       <Position>2</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="256" parent="252" name="EMAIL">
-      <Position>3</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="257" parent="252" name="WEBPAGE">
-      <Position>4</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="258" parent="252" name="DATUM">
-      <Position>5</Position>
-      <DataType>date|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="259" parent="252" name="SUMMARY">
-      <Position>6</Position>
       <DataType>varchar(40)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="252" name="COMMENTS">
-      <Position>7</Position>
-      <DataType>varchar(400)|0s</DataType>
+    <column id="255" parent="252" name="nic">
+      <Position>3</Position>
+      <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
+    <column id="256" parent="252" name="email">
+      <Position>4</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="257" parent="252" name="address">
+      <Position>5</Position>
+      <DataType>varchar(60)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="258" parent="252" name="tp">
+      <Position>6</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="259" parent="252" name="dateofbirth">
+      <Position>7</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="260" parent="252" name="nic">
+      <ColNames>nic
+email</ColNames>
+      <Unique>1</Unique>
+    </index>
     <key id="261" parent="252" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="262" parent="253" name="username">
-      <Position>1</Position>
-      <DataType>varchar(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="263" parent="253" name="password">
-      <Position>2</Position>
-      <DataType>varchar(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="264" parent="253" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>username</ColNames>
-      <Primary>1</Primary>
+    <key id="262" parent="252" name="nic">
+      <ColNames>nic
+email</ColNames>
+      <UnderlyingIndexName>nic</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>
