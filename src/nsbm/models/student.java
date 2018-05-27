@@ -63,7 +63,22 @@ public class student {
         queryins.setString(7,this.dateofBirth);
         queryins.execute();
     }
-    public void update(){
-        String query = "";
+    public void update() throws SQLException {
+        String query = "UPDATE students set name=?,nic=?,email=?,address=?,tp=?,dateofbirth=? where id=?";
+        PreparedStatement queryupd = con.prepareStatement(query);
+        queryupd.setString(1,this.name);
+        queryupd.setString(2,this.nic);
+        queryupd.setString(3,this.email);
+        queryupd.setString(4,this.address);
+        queryupd.setString(5,this.tp);
+        queryupd.setString(6,this.dateofBirth);
+        queryupd.setString(7,this.id);
+        queryupd.execute();
+    }
+    public void delete() throws SQLException{
+        String query="DELETE from students where id=?";
+        PreparedStatement querydel=con.prepareStatement(query);
+        querydel.setString(1,this.id);
+        querydel.execute();
     }
 }

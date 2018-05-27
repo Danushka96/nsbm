@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/nsbm/models/student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/create_user_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/066aa940-fcca-47a2-9005-208d29215b19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/066aa940-fcca-47a2-9005-208d29215b19.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/view/loginadv.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/view/newlogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/view/newlogin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/controllers/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/controllers/ConnectionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/view/newlogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/view/newlogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/models/student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/models/student.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,12 +113,10 @@
       <file leaf-file-name="student.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/nsbm/models/student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="66" column="26" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+            <state relative-caret-position="94">
+              <caret line="72" column="38" lean-forward="true" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2372#2373#0" expanded="true" />
-                <element signature="e#2404#2405#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -429,12 +417,12 @@
       <workItem from="1527266319001" duration="8548000" />
       <workItem from="1527311172585" duration="8046000" />
       <workItem from="1527347762437" duration="891000" />
-      <workItem from="1527396847780" duration="5501000" />
+      <workItem from="1527396847780" duration="6970000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35504000" />
+    <option name="totallyTimeSpent" value="36973000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -448,9 +436,9 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32838285" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.26732674" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.26732674" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21406959" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21406959" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.1603631" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -544,8 +532,6 @@
           <caret line="55" column="76" lean-forward="true" selection-start-line="55" selection-start-column="76" selection-end-line="55" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2372#2373#0" expanded="true" />
-            <element signature="e#2404#2405#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -695,12 +681,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/models/student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="66" column="26" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+        <state relative-caret-position="94">
+          <caret line="72" column="38" lean-forward="true" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2372#2373#0" expanded="true" />
-            <element signature="e#2404#2405#0" expanded="true" />
           </folding>
         </state>
       </provider>
