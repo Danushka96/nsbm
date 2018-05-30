@@ -6,80 +6,54 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class student {
+public class student extends UniversityMemeber{
     private Connection con = ConnectionManager.getConnection();
-    private String id;
-    private String name;
-    private String nic;
-    private String email;
-    private String dateofBirth;
-    private String address;
-    private String tp;
+    private String student_id, registration_date;
+    private int intake_number;
+
 //  Constructors
-    public student(String id, String name,String nic,String email, String DOB, String address, String tp){
-        this.id = id;
-        this.name = name;
-        this.nic=nic;
-        this.email = email;
-        this.dateofBirth = DOB;
-        this.address = address;
-        this.tp = tp;
-    }
-    public student(){
-        this.id = null;
-        this.name = null;
-        this.nic = null;
-        this.email = null;
-        this.dateofBirth = null;
-        this.address = null;
-        this.tp = null;
+    public student(String student_id, String firstName,String lastName,String nic,String email, String DOB, String address, String tp, String registration_date, int intake_number){
+        super(nic,firstName,lastName,email,DOB,address,tp);
+        this.student_id=student_id;
+        this.registration_date=registration_date;
+        this.intake_number=intake_number;
     }
 //    Setters
-    private void setId(String id){ this.id = id; }
-    private void setName(String name){ this.name = name; }
-    private void setNic(String nic){ this.nic = nic;}
-    private void setEmail(String email){ this.email = email; }
-    private void setDateofBirth(String date){ this.dateofBirth = date; }
-    private void setAddress(String address){ this.address = address; }
-    private void setTp(String tp){ this.tp=tp; }
+    private void setStudent_id(String id){ this.student_id = id; }
+    private void setRegistration_date(String registration_date){ this.registration_date=registration_date;}
+    private void setIntake_number(int intake_number){ this.intake_number=intake_number;}
+
 //    Getters
-    private String getId(){ return this.id; }
-    private String getName(){ return this.name; }
-    private String getNic(){ return this.nic; }
-    private String getEmail(){ return this.email; }
-    private String getDateofBirth(){ return this.dateofBirth; }
-    private String getAddress(){ return this.address; }
-    private String getTp(){ return this.tp; }
+    private String getStudent_id(){ return this.student_id; }
+    private String getRegistration_date(){ return this.registration_date;}
+    private int getIntake_number(){ return this.intake_number;}
+
 //    DB Actions
     public void save() throws SQLException {
-        String query = "INSERT INTO students (id,name,nic,email,address,tp,dateofbirth) VALUES (?,?,?,?,?,?,?)";
+        super.save();
+        String query = "INSERT INTO students (student_id, intake_number, registration_date, nic) VALUES (?,?,?,?)";
         PreparedStatement queryins = con.prepareStatement(query);
-        queryins.setString(1,this.id);
-        queryins.setString(2,this.name);
-        queryins.setString(3,this.nic);
-        queryins.setString(4,this.email);
-        queryins.setString(5,this.address);
-        queryins.setString(6,this.tp);
-        queryins.setString(7,this.dateofBirth);
+        queryins.setString(1,this.student_id);
+        queryins.setInt(2,this.intake_number);
+        queryins.setString(3,this.registration_date);
+        queryins.setString(4,getNic());
 //        System.out.println(queryins);
         queryins.execute();
     }
     public void update() throws SQLException {
-        String query = "UPDATE students set name=?,nic=?,email=?,address=?,tp=?,dateofbirth=? where id=?";
+        super.update();
+        String query = "UPDATE students set intake_number=?,registration_date=?,nic=? where student_id=?";
         PreparedStatement queryupd = con.prepareStatement(query);
-        queryupd.setString(1,this.name);
-        queryupd.setString(2,this.nic);
-        queryupd.setString(3,this.email);
-        queryupd.setString(4,this.address);
-        queryupd.setString(5,this.tp);
-        queryupd.setString(6,this.dateofBirth);
-        queryupd.setString(7,this.id);
+        queryupd.setInt(1,this.intake_number);
+        queryupd.setString(2,registration_date);
+        queryupd.setString(3,getNic());
+        queryupd.setString(4,this.student_id);
         queryupd.execute();
     }
     public void delete() throws SQLException{
-        String query="DELETE from students where id=?";
+        String query="DELETE from students where student_id=?";
         PreparedStatement querydel=con.prepareStatement(query);
-        querydel.setString(1,this.id);
+        querydel.setString(1,this.student_id);
         querydel.execute();
     }
 }

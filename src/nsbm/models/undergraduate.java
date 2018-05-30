@@ -1,32 +1,29 @@
 package nsbm.models;
 
+import nsbm.controllers.ConnectionManager;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 public class undergraduate extends student {
+    private Connection con = ConnectionManager.getConnection();
     private int result_id,rank;
-    private String stream;
-    undergraduate(String id, String name,String nic,String email, String DOB, String address, String tp, int result_id, int rank, String stream){
-        super(id,name,nic,email,DOB,address,tp);
+    undergraduate(String student_id, String firstName,String lastName,String nic,String email, String DOB, String address, String tp, String registration_date, int intake_number,int result_id, int rank){
+        super(student_id,firstName,lastName,nic,email,DOB,address,tp,registration_date,intake_number);
         this.result_id=result_id;
         this.rank=rank;
-        this.stream=stream;
-    }
-    undergraduate(){
-        super();
-        this.result_id=0;
-        this.rank=0;
-        this.stream=null;
     }
 //    Setters
     public void setResult_id(int result_id){ this.result_id=result_id; }
     public void setRank(int rank){ this.rank=rank; }
-    public void setStream(String stream){ this.stream=stream; }
 // Getters
-    public int getRank(){
-        return this.rank;
-    }
-    public int getResult_id(){
-        return this.result_id;
-    }
-    public String getStream(){
-        return this.stream;
+    public int getRank(){ return this.rank; }
+    public int getResult_id(){ return this.result_id; }
+//    DB Save
+    public void save() throws SQLException{
+        super.save();
+        String query="";
+        PreparedStatement insQuery=con.prepareStatement(query);
     }
 }

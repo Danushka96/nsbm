@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import nsbm.models.student;
+import nsbm.models.*;
 
 import java.sql.SQLException;
 
@@ -21,7 +21,14 @@ public class Main extends Application {
 
     public static void main(String[] args) throws SQLException {
         //launch(args);
-        student st1 = new student("2016cs055","Danushka","961003059V","danushkaherat","1996-04-09","Alawwa","0717705526");
-        st1.save();
+        //student st1 = new student("2016cs055","Danushka","Herath","961003059V","danushkaherath96@gmail.com","1996-04-09","Alawwa","0717705526","2017-02-05",14);
+        //st1.setAddress("kurunegala");
+        //st1.update();
+        //UniversityMemeber mem1 =new UniversityMemeber("961003059V","danushka","herath","danushkaherath96@gmail.com","1996-04-09","Alawwa","0717705526");
+        //mem1.save();
+        UniversityMemeber finder = UniversityMemeber.finduser("961003059V");
+        finder.setAddress("Kurunegala");
+        System.out.println(finder.getAddress());
+        finder.update();
     }
 }
