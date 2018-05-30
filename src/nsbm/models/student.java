@@ -16,7 +16,7 @@ public class student {
     private String address;
     private String tp;
 //  Constructors
-    student(String id, String name,String nic,String email, String DOB, String address, String tp){
+    public student(String id, String name,String nic,String email, String DOB, String address, String tp){
         this.id = id;
         this.name = name;
         this.nic=nic;
@@ -25,7 +25,7 @@ public class student {
         this.address = address;
         this.tp = tp;
     }
-    student(){
+    public student(){
         this.id = null;
         this.name = null;
         this.nic = null;
@@ -61,6 +61,7 @@ public class student {
         queryins.setString(5,this.address);
         queryins.setString(6,this.tp);
         queryins.setString(7,this.dateofBirth);
+//        System.out.println(queryins);
         queryins.execute();
     }
     public void update() throws SQLException {
