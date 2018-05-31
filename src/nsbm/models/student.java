@@ -1,10 +1,7 @@
 package nsbm.models;
 import nsbm.controllers.ConnectionManager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class student extends UniversityMemeber{
     private Connection con = ConnectionManager.getConnection();
@@ -51,9 +48,33 @@ public class student extends UniversityMemeber{
         queryupd.execute();
     }
     public void delete() throws SQLException{
+        super.delete();
         String query="DELETE from students where student_id=?";
         PreparedStatement querydel=con.prepareStatement(query);
         querydel.setString(1,this.student_id);
         querydel.execute();
+    }
+    public static student findstudent(String nic) throws SQLException {
+        Connection con=ConnectionManager.getConnection();
+        UniversityMemeber memeber = UniversityMemeber.findmember(nic);
+        String query="SELECT * FROM students WHERE nic=? LIMIT 1";
+        PreparedStatement selectquery=con.prepareStatement(query);
+        selectquery.setString(1,nic);
+        String firstname=null,lastname=null,email=null,dob=null,mobile=null,address=null,registration_date=null,student_id=null;
+        int intake_number=0;
+        ResultSet result=selectquery.executeQuery();
+        while (result.next()){
+            firstname=memeber.getFirstName();
+            lastname=memeber.getLastName();
+            email=memeber.getEmail();
+            dob=memeber.getDob();
+            mobile=memeber.getMobile();
+            address=memeber.getAddress();
+            student_id=result.getString("student_id");
+            intake_number=result.getInt("intake_number");
+            registration_date=result.getString("registration_date");
+        }
+        con.close();
+        return new student(student_id,firstname,lastname,nic,email,dob,address,mobile,registration_date,intake_number);
     }
 }

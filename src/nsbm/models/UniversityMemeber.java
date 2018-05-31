@@ -87,8 +87,14 @@ public class UniversityMemeber {
         upquery.setString(7,this.nic);
         upquery.execute();
     }
-    public static UniversityMemeber finduser(String nic) throws SQLException{
-        String query="SELECT * from universitymembers where nic=?";
+    public void delete() throws SQLException{
+        String query="DELETE from universitymembers where nic=?";
+        PreparedStatement delquery=con.prepareStatement(query);
+        delquery.setString(1,this.nic);
+        delquery.execute();
+    }
+    public static UniversityMemeber findmember(String nic) throws SQLException{
+        String query="SELECT * from universitymembers where nic=? LIMIT 1";
         Connection con=ConnectionManager.getConnection();
         PreparedStatement findquery=con.prepareStatement(query);
         findquery.setInt(1,100);
