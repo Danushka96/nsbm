@@ -7,16 +7,21 @@ import java.sql.*;
 
 public class migrate implements Serializable{
     private static void mirateFresh() throws SQLException, IOException {
-        String[] files= new String[]{"create_universityMember_table.sql","create_students_table.sql"};
+        String current=new File("").getCanonicalPath();
+        String path=current+"\\"+ "src" +"\\"+"nsbm" +"\\" + "resources" +"\\"+"db"+"\\"+"migrations";
+
+        File migration = new File(path);
+
+        String[] files= migration.list();
         Connection con=ConnectionManager.getConnection();
         ScriptRunner runner=new ScriptRunner(con,false,false);
 
         dropdatabase();
-        String current=new File("").getCanonicalPath();
         String filesql;
+        assert files != null;
         for(String file:files){
-            //System.out.println(current);
-            filesql=current+"\\"+ "src" +"\\"+"nsbm" +"\\" + "resources" +"\\"+"db"+"\\"+"migrations"+"\\"+file;
+            System.out.println(current);
+            filesql=path+"\\"+file;
             //System.out.println(filesql);
             runner.runScript(new BufferedReader(new FileReader(filesql)));
         }
