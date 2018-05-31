@@ -9,11 +9,12 @@ import java.sql.SQLException;
 
 public class UniversityMemeber {
     private Connection con = ConnectionManager.getConnection();
-    private String nic,firstName,lastName,email,dob,address,mobile;
-    public UniversityMemeber(String nic,String firstName,String lastName,String email, String dob, String address, String mobile){
+    private String nic,firstName,lastName,gender,email,dob,address,mobile;
+    public UniversityMemeber(String nic,String firstName,String lastName,String gender,String email, String dob, String address, String mobile){
         this.nic=nic;
         this.firstName=firstName;
         this.lastName=lastName;
+        this.gender=gender;
         this.email=email;
         this.dob=dob;
         this.address=address;
@@ -28,6 +29,7 @@ public class UniversityMemeber {
     public void setLastName(String lastName){
         this.lastName=lastName;
     }
+    public void setGender(String gender){ this.gender=gender; }
     public void setEmail(String email){
         this.email=email;
     }
@@ -50,6 +52,7 @@ public class UniversityMemeber {
     public String getLastName(){
         return this.lastName;
     }
+    public String getGender() { return this.gender;}
     public String getEmail(){
         return this.email;
     }
@@ -64,27 +67,29 @@ public class UniversityMemeber {
     }
 //    DB Actions
     public void save() throws SQLException {
-        String query="INSERT INTO universitymembers(nic, firstName, lastName,email, dob, mobile, address) VALUES (?,?,?,?,?,?,?)";
+        String query="INSERT INTO universitymembers(nic, firstName, lastName,gender,email, dob, mobile, address) VALUES (?,?,?,?,?,?,?,?)";
         PreparedStatement insquery=con.prepareStatement(query);
         insquery.setString(1,this.nic);
         insquery.setString(2,this.firstName);
         insquery.setString(3,this.lastName);
-        insquery.setString(4,this.email);
-        insquery.setString(5,this.dob);
-        insquery.setString(6,this.mobile);
-        insquery.setString(7,this.address);
+        insquery.setString(4,this.gender);
+        insquery.setString(5,this.email);
+        insquery.setString(6,this.dob);
+        insquery.setString(7,this.mobile);
+        insquery.setString(8,this.address);
         insquery.execute();
     }
     public void update() throws SQLException{
-        String query="update universitymembers set firstName=?, lastName=?,email=?,dob=?,mobile=?,address=? where nic=?";
+        String query="update universitymembers set firstName=?, lastName=?,gender=?,email=?,dob=?,mobile=?,address=? where nic=?";
         PreparedStatement upquery=con.prepareStatement(query);
         upquery.setString(1,this.firstName);
         upquery.setString(2,this.lastName);
-        upquery.setString(3,this.email);
-        upquery.setString(4,this.dob);
-        upquery.setString(5,this.mobile);
-        upquery.setString(6,this.address);
-        upquery.setString(7,this.nic);
+        upquery.setString(3,this.gender);
+        upquery.setString(4,this.email);
+        upquery.setString(5,this.dob);
+        upquery.setString(6,this.mobile);
+        upquery.setString(7,this.address);
+        upquery.setString(8,this.nic);
         upquery.execute();
     }
     public void delete() throws SQLException{
@@ -100,16 +105,16 @@ public class UniversityMemeber {
         findquery.setInt(1,100);
         findquery.setString(1,nic);
         ResultSet result = findquery.executeQuery();
-        String firstname=null,lastname=null,email=null,dob=null,mobile=null,address=null;
+        String firstname=null,lastname=null,gender=null,email=null,dob=null,mobile=null,address=null;
         while(result.next()) {
             firstname = result.getString("firstname");
-            //System.out.println(firstname);
             lastname = result.getString("lastname");
+            gender=result.getString("gender");
             email = result.getString("email");
             dob = result.getString("dob");
             mobile = result.getString("mobile");
             address = result.getString("address");
         }
-        return new UniversityMemeber(nic,firstname,lastname,email,dob,address,mobile);
+        return new UniversityMemeber(nic,firstname,lastname,gender,email,dob,address,mobile);
     }
 }

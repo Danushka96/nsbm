@@ -993,5 +993,159 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
+    <table id="253" parent="10" name="students">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="254" parent="10" name="undergraduate">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="255" parent="10" name="universitymembers">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="256" parent="10" name="users">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="257" parent="253" name="reg_Number">
+      <Position>1</Position>
+      <DataType>varchar(9)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="258" parent="253" name="intake_number">
+      <Position>2</Position>
+      <DataType>int(2)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="259" parent="253" name="registration_date">
+      <Position>3</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="260" parent="253" name="nic">
+      <Position>4</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="261" parent="253" name="nic">
+      <ColNames>nic</ColNames>
+    </index>
+    <key id="262" parent="253" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>reg_Number</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="263" parent="253" name="students_ibfk_1">
+      <ColNames>nic</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>universitymembers</RefTableName>
+      <RefColNames>nic</RefColNames>
+    </foreign-key>
+    <column id="264" parent="254" name="student_id">
+      <Position>1</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="265" parent="254" name="rank">
+      <Position>2</Position>
+      <DataType>int(3)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="254" name="stream">
+      <Position>3</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="267" parent="254" name="reg_number">
+      <Position>4</Position>
+      <DataType>varchar(9)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="268" parent="254" name="reg_number">
+      <ColNames>reg_number</ColNames>
+    </index>
+    <key id="269" parent="254" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>student_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="270" parent="254" name="undergraduate_ibfk_1">
+      <ColNames>reg_number</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>students</RefTableName>
+      <RefColNames>reg_Number</RefColNames>
+    </foreign-key>
+    <column id="271" parent="255" name="nic">
+      <Position>1</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="272" parent="255" name="firstName">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="273" parent="255" name="lastName">
+      <Position>3</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="274" parent="255" name="email">
+      <Position>4</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="275" parent="255" name="dob">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="276" parent="255" name="mobile">
+      <Position>6</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="277" parent="255" name="address">
+      <Position>7</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="278" parent="255" name="email">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="279" parent="255" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>nic</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="280" parent="255" name="email">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>email</UnderlyingIndexName>
+    </key>
+    <column id="281" parent="256" name="username">
+      <Position>1</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="282" parent="256" name="password">
+      <Position>2</Position>
+      <DataType>varchar(12)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="283" parent="256" name="faculty_id">
+      <Position>3</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="284" parent="256" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>username</ColNames>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>

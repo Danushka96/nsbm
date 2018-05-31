@@ -20,7 +20,7 @@ public class migrate implements Serializable{
         String filesql;
         assert files != null;
         for(String file:files){
-            System.out.println(current);
+            System.out.println(file+"\t\t migrated Successfully");
             filesql=path+"\\"+file;
             //System.out.println(filesql);
             runner.runScript(new BufferedReader(new FileReader(filesql)));

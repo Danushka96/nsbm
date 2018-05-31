@@ -17,13 +17,13 @@ SET AUTOCOMMIT = 0
 START TRANSACTION 
 SET time_zone = "+00:00" 
 CREATE TABLE `students` (
-  student_id varchar(9),
+  reg_Number varchar(9),
   intake_number int(2),
   registration_date date,
   nic varchar(10)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 
 ALTER TABLE `students`
-  ADD PRIMARY KEY (`student_id`),
+  ADD PRIMARY KEY (`reg_Number`),
   ADD FOREIGN KEY (nic) references universitymembers(nic) 
 COMMIT 
 
@@ -45,13 +45,13 @@ SET AUTOCOMMIT = 0
 START TRANSACTION 
 SET time_zone = "+00:00" 
 CREATE TABLE `students` (
-  student_id varchar(9),
+  reg_Number varchar(9),
   intake_number int(2),
   registration_date date,
   nic varchar(10)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 
 ALTER TABLE `students`
-  ADD PRIMARY KEY (`student_id`),
+  ADD PRIMARY KEY (`reg_Number`),
   ADD FOREIGN KEY (nic) references universitymembers(nic) 
 COMMIT 
 CREATE TABLE users (
@@ -62,3 +62,82 @@ CREATE TABLE users (
 ALTER TABLE users
   ADD primary key (username) 
 COMMIT 
+
+-------
+31/35/2018 20:35:52
+-------
+
+create table universityMembers(
+  nic varchar(10) NOT NULL primary key ,
+  firstName varchar(20),
+  lastName varchar(20),
+  email varchar(30) UNIQUE,
+  dob date,
+  mobile varchar(10),
+  address varchar(50)
+) 
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO" 
+SET AUTOCOMMIT = 0 
+START TRANSACTION 
+SET time_zone = "+00:00" 
+CREATE TABLE `students` (
+  reg_Number varchar(9),
+  intake_number int(2),
+  registration_date date,
+  nic varchar(10)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`reg_Number`),
+  ADD FOREIGN KEY (nic) references universitymembers(nic) 
+COMMIT 
+CREATE TABLE users (
+  username varchar(10) NOT NULL,
+  password varchar(12) NOT NULL,
+  faculty_id varchar(8) NOT NULL
+) 
+ALTER TABLE users
+  ADD primary key (username) 
+COMMIT 
+
+-------
+31/43/2018 20:43:14
+-------
+
+create table universityMembers(
+  nic varchar(10) NOT NULL primary key ,
+  firstName varchar(20),
+  lastName varchar(20),
+  email varchar(30) UNIQUE,
+  dob date,
+  mobile varchar(10),
+  address varchar(50)
+) 
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO" 
+SET AUTOCOMMIT = 0 
+START TRANSACTION 
+SET time_zone = "+00:00" 
+CREATE TABLE `students` (
+  reg_Number varchar(9),
+  intake_number int(2),
+  registration_date date,
+  nic varchar(10)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`reg_Number`),
+  ADD FOREIGN KEY (nic) references universitymembers(nic) 
+COMMIT 
+CREATE TABLE users (
+  username varchar(10) NOT NULL,
+  password varchar(12) NOT NULL,
+  faculty_id varchar(8) NOT NULL
+) 
+ALTER TABLE users
+  ADD primary key (username) 
+COMMIT 
+CREATE TABLE undergraduate(
+  student_id varchar(20) PRIMARY KEY NOT NULL,
+  rank INT(3),
+  stream VARCHAR(20),
+  reg_number varchar(9),
+  FOREIGN KEY (reg_number) REFERENCES students(reg_Number)
+) 
