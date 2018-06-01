@@ -3,5 +3,7 @@ CREATE TABLE undergraduates(
   rank INT(3),
   stream VARCHAR(20),
   reg_number varchar(9),
-  FOREIGN KEY (reg_number) REFERENCES students(reg_Number)
+  course_id varchar(8),
+  FOREIGN KEY (reg_number) REFERENCES students(reg_Number),
+  FOREIGN KEY (course_id) REFERENCES courses(code)
 );

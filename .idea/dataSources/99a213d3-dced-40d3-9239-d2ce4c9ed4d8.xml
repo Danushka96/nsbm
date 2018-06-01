@@ -993,156 +993,823 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="253" parent="10" name="students">
+    <table id="253" parent="10" name="alresults">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="254" parent="10" name="undergraduate">
+    <table id="254" parent="10" name="assignments">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="255" parent="10" name="universitymembers">
+    <table id="255" parent="10" name="bachelors">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="256" parent="10" name="users">
+    <table id="256" parent="10" name="courses">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="257" parent="253" name="reg_Number">
+    <table id="257" parent="10" name="instructors">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="258" parent="10" name="instructorsubject">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="259" parent="10" name="labs">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="260" parent="10" name="labtime">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="261" parent="10" name="lecturers">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="262" parent="10" name="masters">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="263" parent="10" name="payments">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="264" parent="10" name="postgraduates">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="265" parent="10" name="reciept">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="266" parent="10" name="semester">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="267" parent="10" name="studentassignments">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="268" parent="10" name="students">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="269" parent="10" name="studentsubject">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="270" parent="10" name="subjects">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="271" parent="10" name="timeslots">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="272" parent="10" name="undergraduates">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="273" parent="10" name="universitymembers">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="274" parent="10" name="users">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="275" parent="253" name="student_id">
       <Position>1</Position>
-      <DataType>varchar(9)|0s</DataType>
+      <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="253" name="intake_number">
+    <column id="276" parent="253" name="subject_name">
       <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="277" parent="253" name="result">
+      <Position>3</Position>
+      <DataType>varchar(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="278" parent="253" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>student_id
+subject_name</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="279" parent="253" name="alresults_ibfk_1">
+      <ColNames>student_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>undergraduates</RefTableName>
+      <RefColNames>student_id</RefColNames>
+    </foreign-key>
+    <column id="280" parent="254" name="id">
+      <Position>1</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="281" parent="254" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="282" parent="254" name="marks">
+      <Position>3</Position>
       <DataType>int(2)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="253" name="registration_date">
-      <Position>3</Position>
-      <DataType>date|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="260" parent="253" name="nic">
+    <column id="283" parent="254" name="subject_id">
       <Position>4</Position>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>varchar(8)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="261" parent="253" name="nic">
-      <ColNames>nic</ColNames>
+    <index id="284" parent="254" name="subject_id">
+      <ColNames>subject_id</ColNames>
     </index>
-    <key id="262" parent="253" name="PRIMARY">
+    <key id="285" parent="254" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>reg_Number</ColNames>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="263" parent="253" name="students_ibfk_1">
+    <foreign-key id="286" parent="254" name="assignments_ibfk_1">
+      <ColNames>subject_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>subjects</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="287" parent="255" name="id">
+      <Position>1</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="288" parent="255" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="289" parent="256" name="code">
+      <Position>1</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="290" parent="256" name="name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="291" parent="256" name="credits">
+      <Position>3</Position>
+      <DataType>int(2)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="292" parent="256" name="numberofyears">
+      <Position>4</Position>
+      <DataType>int(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="293" parent="256" name="can_extend">
+      <Position>5</Position>
+      <DataType>int(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="294" parent="256" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="295" parent="257" name="id">
+      <Position>1</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="296" parent="257" name="nic">
+      <Position>2</Position>
+      <DataType>varchar(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="297" parent="257" name="nic">
+      <ColNames>nic</ColNames>
+    </index>
+    <key id="298" parent="257" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="299" parent="257" name="instructors_ibfk_1">
       <ColNames>nic</ColNames>
       <RefSchemaName>nsbm</RefSchemaName>
       <RefTableName>universitymembers</RefTableName>
       <RefColNames>nic</RefColNames>
     </foreign-key>
-    <column id="264" parent="254" name="student_id">
+    <column id="300" parent="258" name="instructor_id">
+      <Position>1</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="301" parent="258" name="subject_id">
+      <Position>2</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="302" parent="258" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>instructor_id
+subject_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="303" parent="258" name="instructorsubject_ibfk_1">
+      <ColNames>instructor_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>instructors</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="304" parent="259" name="id">
+      <Position>1</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="305" parent="259" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="306" parent="259" name="numberofSeats">
+      <Position>3</Position>
+      <DataType>int(2)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="307" parent="259" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="308" parent="260" name="lab_id">
+      <Position>1</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="309" parent="260" name="timeslot_id">
+      <Position>2</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="310" parent="260" name="instructor_id">
+      <Position>3</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="311" parent="260" name="timeslot_id">
+      <ColNames>timeslot_id</ColNames>
+    </index>
+    <index id="312" parent="260" name="instructor_id">
+      <ColNames>instructor_id</ColNames>
+    </index>
+    <key id="313" parent="260" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>lab_id
+timeslot_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="314" parent="260" name="labtime_ibfk_1">
+      <ColNames>lab_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>labs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="315" parent="260" name="labtime_ibfk_2">
+      <ColNames>timeslot_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>timeslots</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="316" parent="260" name="labtime_ibfk_3">
+      <ColNames>instructor_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>instructors</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="317" parent="261" name="id">
+      <Position>1</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="318" parent="261" name="researchSpeciality">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="319" parent="261" name="office_number">
+      <Position>3</Position>
+      <DataType>varchar(4)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="320" parent="261" name="nic">
+      <Position>4</Position>
+      <DataType>varchar(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="321" parent="261" name="nic">
+      <ColNames>nic</ColNames>
+    </index>
+    <key id="322" parent="261" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="323" parent="261" name="lecturers_ibfk_1">
+      <ColNames>nic</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>universitymembers</RefTableName>
+      <RefColNames>nic</RefColNames>
+    </foreign-key>
+    <column id="324" parent="262" name="id">
+      <Position>1</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="325" parent="262" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="326" parent="263" name="id">
+      <Position>1</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="327" parent="263" name="student_id">
+      <Position>2</Position>
+      <DataType>varchar(9)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="328" parent="263" name="subject_id">
+      <Position>3</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="329" parent="263" name="reciept_id">
+      <Position>4</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="330" parent="263" name="student_id">
+      <ColNames>student_id</ColNames>
+    </index>
+    <index id="331" parent="263" name="subject_id">
+      <ColNames>subject_id</ColNames>
+    </index>
+    <index id="332" parent="263" name="reciept_id">
+      <ColNames>reciept_id</ColNames>
+    </index>
+    <key id="333" parent="263" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="334" parent="263" name="payments_ibfk_1">
+      <ColNames>student_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>students</RefTableName>
+      <RefColNames>reg_Number</RefColNames>
+    </foreign-key>
+    <foreign-key id="335" parent="263" name="payments_ibfk_2">
+      <ColNames>subject_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>subjects</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="336" parent="263" name="payments_ibfk_3">
+      <ColNames>reciept_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>reciept</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="337" parent="264" name="student_id">
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="254" name="rank">
+    <column id="338" parent="264" name="qualification_type">
       <Position>2</Position>
-      <DataType>int(3)|0s</DataType>
+      <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="254" name="stream">
+    <column id="339" parent="264" name="institute">
       <Position>3</Position>
-      <DataType>varchar(20)|0s</DataType>
+      <DataType>varchar(40)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="254" name="reg_number">
+    <column id="340" parent="264" name="yearof_Completion">
       <Position>4</Position>
+      <DataType>varchar(4)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="341" parent="264" name="reg_number">
+      <Position>5</Position>
       <DataType>varchar(9)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="268" parent="254" name="reg_number">
+    <column id="342" parent="264" name="course_id">
+      <Position>6</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="343" parent="264" name="reg_number">
       <ColNames>reg_number</ColNames>
     </index>
-    <key id="269" parent="254" name="PRIMARY">
+    <index id="344" parent="264" name="course_id">
+      <ColNames>course_id</ColNames>
+    </index>
+    <key id="345" parent="264" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>student_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="270" parent="254" name="undergraduate_ibfk_1">
+    <foreign-key id="346" parent="264" name="postgraduates_ibfk_1">
       <ColNames>reg_number</ColNames>
       <RefSchemaName>nsbm</RefSchemaName>
       <RefTableName>students</RefTableName>
       <RefColNames>reg_Number</RefColNames>
     </foreign-key>
-    <column id="271" parent="255" name="nic">
+    <foreign-key id="347" parent="264" name="postgraduates_ibfk_2">
+      <ColNames>course_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>courses</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="348" parent="265" name="id">
       <Position>1</Position>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>varchar(8)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="255" name="firstName">
+    <column id="349" parent="265" name="issued_date">
       <Position>2</Position>
-      <DataType>varchar(20)|0s</DataType>
+      <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="255" name="lastName">
+    <key id="350" parent="265" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="351" parent="266" name="id">
+      <Position>1</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="352" parent="266" name="semesternumber">
+      <Position>2</Position>
+      <DataType>varchar(2)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="353" parent="266" name="yearof">
       <Position>3</Position>
-      <DataType>varchar(20)|0s</DataType>
+      <DataType>varchar(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="255" name="email">
+    <column id="354" parent="266" name="start_date">
       <Position>4</Position>
-      <DataType>varchar(30)|0s</DataType>
+      <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="255" name="dob">
+    <column id="355" parent="266" name="end_date">
       <Position>5</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="255" name="mobile">
-      <Position>6</Position>
-      <DataType>varchar(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="277" parent="255" name="address">
-      <Position>7</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="278" parent="255" name="email">
-      <ColNames>email</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="279" parent="255" name="PRIMARY">
+    <key id="356" parent="266" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>nic</ColNames>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="280" parent="255" name="email">
-      <ColNames>email</ColNames>
-      <UnderlyingIndexName>email</UnderlyingIndexName>
-    </key>
-    <column id="281" parent="256" name="username">
+    <column id="357" parent="267" name="assignment_id">
       <Position>1</Position>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>varchar(8)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="256" name="password">
+    <column id="358" parent="267" name="student_id">
       <Position>2</Position>
-      <DataType>varchar(12)|0s</DataType>
+      <DataType>varchar(9)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="256" name="faculty_id">
+    <column id="359" parent="267" name="marks">
+      <Position>3</Position>
+      <DataType>int(2)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="360" parent="267" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>assignment_id
+student_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="361" parent="268" name="reg_Number">
+      <Position>1</Position>
+      <DataType>varchar(9)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="362" parent="268" name="intake_number">
+      <Position>2</Position>
+      <DataType>int(2)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="363" parent="268" name="registration_date">
+      <Position>3</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="364" parent="268" name="nic">
+      <Position>4</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="365" parent="268" name="nic">
+      <ColNames>nic</ColNames>
+    </index>
+    <key id="366" parent="268" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>reg_Number</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="367" parent="268" name="students_ibfk_1">
+      <ColNames>nic</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>universitymembers</RefTableName>
+      <RefColNames>nic</RefColNames>
+    </foreign-key>
+    <column id="368" parent="269" name="sem_id">
+      <Position>1</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="369" parent="269" name="student_id">
+      <Position>2</Position>
+      <DataType>varchar(9)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="370" parent="269" name="subject_id">
       <Position>3</Position>
       <DataType>varchar(8)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="284" parent="256" name="PRIMARY">
+    <index id="371" parent="269" name="student_id">
+      <ColNames>student_id</ColNames>
+    </index>
+    <index id="372" parent="269" name="subject_id">
+      <ColNames>subject_id</ColNames>
+    </index>
+    <key id="373" parent="269" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sem_id
+subject_id
+student_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="374" parent="269" name="studentsubject_ibfk_1">
+      <ColNames>sem_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>semester</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="375" parent="269" name="studentsubject_ibfk_2">
+      <ColNames>student_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>students</RefTableName>
+      <RefColNames>reg_Number</RefColNames>
+    </foreign-key>
+    <foreign-key id="376" parent="269" name="studentsubject_ibfk_3">
+      <ColNames>subject_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>subjects</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="377" parent="270" name="code">
+      <Position>1</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="378" parent="270" name="name">
+      <Position>2</Position>
+      <DataType>varchar(25)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="379" parent="270" name="fee">
+      <Position>3</Position>
+      <DataType>decimal(7,2 digit)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="380" parent="270" name="numberofCredits">
+      <Position>4</Position>
+      <DataType>int(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="381" parent="270" name="numberofHours">
+      <Position>5</Position>
+      <DataType>int(3)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="382" parent="270" name="lecturer_id">
+      <Position>6</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="383" parent="270" name="course_id">
+      <Position>7</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="384" parent="270" name="lecturer_id">
+      <ColNames>lecturer_id</ColNames>
+    </index>
+    <index id="385" parent="270" name="course_id">
+      <ColNames>course_id</ColNames>
+    </index>
+    <key id="386" parent="270" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="387" parent="270" name="subjects_ibfk_1">
+      <ColNames>lecturer_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>lecturers</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="388" parent="270" name="subjects_ibfk_2">
+      <ColNames>course_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>courses</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="389" parent="271" name="id">
+      <Position>1</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="390" parent="271" name="fromtime">
+      <Position>2</Position>
+      <DataType>time|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="391" parent="271" name="totime">
+      <Position>3</Position>
+      <DataType>time|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="392" parent="271" name="dateof">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="393" parent="271" name="subject_id">
+      <Position>5</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="394" parent="271" name="subject_id">
+      <ColNames>subject_id</ColNames>
+    </index>
+    <key id="395" parent="271" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="396" parent="271" name="timeslots_ibfk_1">
+      <ColNames>subject_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>subjects</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="397" parent="272" name="student_id">
+      <Position>1</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="398" parent="272" name="rank">
+      <Position>2</Position>
+      <DataType>int(3)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="399" parent="272" name="stream">
+      <Position>3</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="400" parent="272" name="reg_number">
+      <Position>4</Position>
+      <DataType>varchar(9)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="401" parent="272" name="course_id">
+      <Position>5</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="402" parent="272" name="reg_number">
+      <ColNames>reg_number</ColNames>
+    </index>
+    <index id="403" parent="272" name="course_id">
+      <ColNames>course_id</ColNames>
+    </index>
+    <key id="404" parent="272" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>student_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="405" parent="272" name="undergraduates_ibfk_1">
+      <ColNames>reg_number</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>students</RefTableName>
+      <RefColNames>reg_Number</RefColNames>
+    </foreign-key>
+    <foreign-key id="406" parent="272" name="undergraduates_ibfk_2">
+      <ColNames>course_id</ColNames>
+      <RefSchemaName>nsbm</RefSchemaName>
+      <RefTableName>courses</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="407" parent="273" name="nic">
+      <Position>1</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="408" parent="273" name="firstName">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="409" parent="273" name="lastName">
+      <Position>3</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="410" parent="273" name="gender">
+      <Position>4</Position>
+      <DataType>varchar(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="411" parent="273" name="email">
+      <Position>5</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="412" parent="273" name="dob">
+      <Position>6</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="413" parent="273" name="mobile">
+      <Position>7</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="414" parent="273" name="address">
+      <Position>8</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="415" parent="273" name="email">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="416" parent="273" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>nic</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="417" parent="273" name="email">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>email</UnderlyingIndexName>
+    </key>
+    <column id="418" parent="274" name="username">
+      <Position>1</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="419" parent="274" name="password">
+      <Position>2</Position>
+      <DataType>varchar(12)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="420" parent="274" name="faculty_id">
+      <Position>3</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="421" parent="274" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>username</ColNames>
       <Primary>1</Primary>
