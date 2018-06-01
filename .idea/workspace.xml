@@ -2,37 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/003_create_course_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/004_create_bachelor_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/005_create_master_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/008_create_lecturers_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/009_create_instructor_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/010_create_subjects_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/011_create_lab_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/012_create_alResults_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/013_create_timeslots_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/014_create_labtime_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/015_create_instructorsubject_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/016_create_semester_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/017_create_studentsubject_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/018_create_reciept_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/019_create_payment_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/020_create_assignment_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/021_create_studentassignment_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nsbm/models/course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/001_create_faculty_table.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/99a213d3-dced-40d3-9239-d2ce4c9ed4d8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/99a213d3-dced-40d3-9239-d2ce4c9ed4d8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_db.log" beforeDir="false" afterPath="$PROJECT_DIR$/create_db.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_db_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/create_db_error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/models/UniversityMemeber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/models/UniversityMemeber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/models/student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/models/student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/models/undergraduate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/models/undergraduate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/001_create_universityMember_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/001_create_universityMember_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/003_create_systemUsers_table.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/004_create_undergraduate_table.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/003_create_undergraduate_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/006_create_undergraduate_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/004_create_postgraduate_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/007_create_postgraduate_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/020_create_users_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/022_create_users_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/create_universityMember_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/001_create_universityMember_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/002_create_students_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/003_create_course_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/004_create_bachelor_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/005_create_master_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/006_create_undergraduate_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/007_create_postgraduate_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/008_create_lecturers_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/009_create_instructor_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/010_create_subjects_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/011_create_lab_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/012_create_alResults_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/013_create_timeslots_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/014_create_labtime_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/015_create_instructorsubject_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/016_create_semester_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/017_create_studentsubject_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/018_create_reciept_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/019_create_payment_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/020_create_assignment_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/021_create_studentassignment_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/022_create_users_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/create_universityMember_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/001_create_universityMember_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/002_create_students_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/003_create_course_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/004_create_bachelor_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/005_create_master_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/006_create_undergraduate_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/007_create_postgraduate_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/008_create_lecturers_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/009_create_instructor_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/010_create_subjects_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/011_create_lab_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/012_create_alResults_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/013_create_timeslots_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/014_create_labtime_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/015_create_instructorsubject_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/016_create_semester_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/017_create_studentsubject_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/018_create_reciept_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/019_create_payment_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/020_create_assignment_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/021_create_studentassignment_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/022_create_users_table.sql" beforeDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,6 +99,13 @@
         <item name="nsbm@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="nsbm: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="nsbm@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="nsbm: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="courses: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -125,65 +153,97 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="015_create_instructorsubject_table.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/015_create_instructorsubject_table.sql">
+      <file leaf-file-name="course.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/models/course.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="73" column="27" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#406#407#0" expanded="true" />
+                <element signature="e#430#431#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
+                <element signature="e#498#499#0" expanded="true" />
+                <element signature="e#545#546#0" expanded="true" />
+                <element signature="e#572#573#0" expanded="true" />
+                <element signature="e#634#635#0" expanded="true" />
+                <element signature="e#667#668#0" expanded="true" />
+                <element signature="e#729#730#0" expanded="true" />
+                <element signature="e#748#749#0" expanded="true" />
+                <element signature="e#800#801#0" expanded="true" />
+                <element signature="e#832#833#0" expanded="true" />
+                <element signature="e#861#862#0" expanded="true" />
+                <element signature="e#892#893#0" expanded="true" />
+                <element signature="e#930#931#0" expanded="true" />
+                <element signature="e#966#967#0" expanded="true" />
+                <element signature="e#999#1000#0" expanded="true" />
+                <element signature="e#1032#1033#0" expanded="true" />
+                <element signature="e#1062#1063#0" expanded="true" />
+                <element signature="e#1092#1093#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="001_create_faculty_table.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/001_create_faculty_table.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="002_create_universityMember_table.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/002_create_universityMember_table.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="012_create_lab_table.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/012_create_lab_table.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="016_create_semester_table.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/016_create_semester_table.sql">
+      <file leaf-file-name="014_create_timeslots_table.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/014_create_timeslots_table.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="176">
+              <caret line="11" column="52" lean-forward="true" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="017_create_studentsubject_table.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/017_create_studentsubject_table.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="018_create_reciept_table.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/018_create_reciept_table.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="019_create_payment_table.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/019_create_payment_table.sql">
+      <file leaf-file-name="004_create_course_table.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/004_create_course_table.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="112">
-              <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+              <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="020_create_assignment_table.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/020_create_assignment_table.sql">
+      <file leaf-file-name="017_create_semester_table.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/017_create_semester_table.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="5" column="52" lean-forward="true" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+            <state relative-caret-position="128">
+              <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="021_create_studentassignment_table.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/021_create_studentassignment_table.sql">
+      <file leaf-file-name="023_create_users_table.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/023_create_users_table.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="6" column="58" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
+            <state relative-caret-position="16">
+              <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -208,14 +268,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/nsbm/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/nsbm/ConnectionManager.java" />
-        <option value="$PROJECT_DIR$/src/nsbm/Controller.java" />
-        <option value="$PROJECT_DIR$/src/nsbm/login.fxml" />
-        <option value="$PROJECT_DIR$/src/nsbm/loginadv.fxml" />
-        <option value="$PROJECT_DIR$/src/nsbm/resources/view/login.fxml" />
-        <option value="$PROJECT_DIR$/src/nsbm/controllers/Controller.java" />
-        <option value="$PROJECT_DIR$/src/nsbm/controllers/loginController.java" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/view/dberror.fxml" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/view/error.fxml" />
         <option value="$PROJECT_DIR$/src/nsbm/controllers/databaseAlert.java" />
@@ -259,6 +311,14 @@
         <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/019_create_payment_table.sql" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/020_create_assignment_table.sql" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/021_create_studentassignment_table.sql" />
+        <option value="$PROJECT_DIR$/src/nsbm/models/course.java" />
+        <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/001_create_faculty_table.sql" />
+        <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/002_create_universityMember_table.sql" />
+        <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/012_create_lab_table.sql" />
+        <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/014_create_timeslots_table.sql" />
+        <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/004_create_course_table.sql" />
+        <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/017_create_semester_table.sql" />
+        <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/023_create_users_table.sql" />
       </list>
     </option>
   </component>
@@ -335,14 +395,6 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NSBM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NSBM" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="nsbm" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NSBM" type="b2602c69:ProjectViewProjectNode" />
@@ -522,12 +574,12 @@
       <workItem from="1527347762437" duration="891000" />
       <workItem from="1527396847780" duration="9228000" />
       <workItem from="1527423752464" duration="1214000" />
-      <workItem from="1527654071889" duration="43986000" />
+      <workItem from="1527654071889" duration="47715000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84431000" />
+    <option name="totallyTimeSpent" value="88160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -540,12 +592,12 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2739274" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2739274" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="right" id="Coverage" sideWeight="0.5022523" side_tool="true" weight="0.14977308" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.26732674" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2632375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.28668684" />
       <window_info anchor="right" id="Database" order="3" sideWeight="0.49774775" visible="true" weight="0.14977308" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -614,50 +666,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/loginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/ConnectionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="23" column="80" selection-start-line="23" selection-start-column="80" selection-end-line="23" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/databaseAlert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/ConnectionManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/nsbm/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/nsbm/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/Controller.java" />
     <entry file="file://$PROJECT_DIR$/src/nsbm/ConnectionManager.java" />
     <entry file="file://$PROJECT_DIR$/src/nsbm/Controller.java" />
     <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/javafx.graphics/javafx/scene/image/Image.java">
@@ -810,16 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/008_create_lecturers_table.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -904,20 +902,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/016_create_semester_table.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/017_create_studentsubject_table.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/018_create_reciept_table.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -939,10 +923,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/021_create_studentassignment_table.sql">
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/017_create_studentsubject_table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/016_create_semester_table.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
-          <caret line="6" column="58" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/021_create_studentassignment_table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/models/course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="73" column="27" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#930#931#0" expanded="true" />
+            <element signature="e#966#967#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/001_create_faculty_table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/002_create_universityMember_table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/012_create_lab_table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/014_create_timeslots_table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="52" lean-forward="true" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/004_create_course_table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/017_create_semester_table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/023_create_users_table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
         </state>
       </provider>
     </entry>

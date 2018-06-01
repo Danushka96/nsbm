@@ -3,5 +3,7 @@ CREATE TABLE courses(
   name varchar(30),
   credits int(2),
   numberofyears int(1),
-  can_extend int(1)
+  can_extend int(1),
+  faculty varchar(8),
+  FOREIGN KEY (faculty) REFERENCES faculties(code)
 );
