@@ -9,9 +9,10 @@ import java.sql.SQLException;
 
 public class UniversityMemeber {
     private Connection con = ConnectionManager.getConnection();
-    private String nic,firstName,lastName,gender,email,dob,address,mobile;
-    public UniversityMemeber(String nic,String firstName,String lastName,String gender,String email, String dob, String address, String mobile){
+    private String nic,faculty,firstName,lastName,gender,email,dob,address,mobile;
+    public UniversityMemeber(String nic,String faculty,String firstName,String lastName,String gender,String email, String dob, String address, String mobile){
         this.nic=nic;
+        this.faculty=faculty;
         this.firstName=firstName;
         this.lastName=lastName;
         this.gender=gender;
@@ -22,6 +23,9 @@ public class UniversityMemeber {
     }
     public void setNic(String nic){
         this.nic=nic;
+    }
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
     }
     public void setFirstName(String firstName){
         this.firstName=firstName;
@@ -46,6 +50,9 @@ public class UniversityMemeber {
     String getNic(){
         return this.nic;
     }
+    public String getFaculty() {
+        return faculty;
+    }
     public String getFirstName(){
         return this.firstName;
     }
@@ -67,7 +74,7 @@ public class UniversityMemeber {
     }
 //    DB Actions
     public void save() throws SQLException {
-        String query="INSERT INTO universitymembers(nic, firstName, lastName,gender,email, dob, mobile, address) VALUES (?,?,?,?,?,?,?,?)";
+        String query="INSERT INTO universitymembers(nic ,firstName, lastName,gender,email, dob, mobile, address,faculty) VALUES (?,?,?,?,?,?,?,?,?)";
         PreparedStatement insquery=con.prepareStatement(query);
         insquery.setString(1,this.nic);
         insquery.setString(2,this.firstName);
@@ -77,10 +84,11 @@ public class UniversityMemeber {
         insquery.setString(6,this.dob);
         insquery.setString(7,this.mobile);
         insquery.setString(8,this.address);
+        insquery.setString(9,this.faculty);
         insquery.execute();
     }
     public void update() throws SQLException{
-        String query="update universitymembers set firstName=?, lastName=?,gender=?,email=?,dob=?,mobile=?,address=? where nic=?";
+        String query="update universitymembers set firstName=?, lastName=?,gender=?,email=?,dob=?,mobile=?,address=?,faculty=? where nic=?";
         PreparedStatement upquery=con.prepareStatement(query);
         upquery.setString(1,this.firstName);
         upquery.setString(2,this.lastName);
@@ -89,7 +97,8 @@ public class UniversityMemeber {
         upquery.setString(5,this.dob);
         upquery.setString(6,this.mobile);
         upquery.setString(7,this.address);
-        upquery.setString(8,this.nic);
+        upquery.setString(8,this.faculty);
+        upquery.setString(9,this.nic);
         upquery.execute();
     }
     public void delete() throws SQLException{
@@ -105,8 +114,9 @@ public class UniversityMemeber {
         findquery.setInt(1,100);
         findquery.setString(1,nic);
         ResultSet result = findquery.executeQuery();
-        String firstname=null,lastname=null,gender=null,email=null,dob=null,mobile=null,address=null;
+        String firstname=null,lastname=null,gender=null,email=null,dob=null,mobile=null,address=null,faculty=null;
         while(result.next()) {
+            faculty=result.getString("faculty");
             firstname = result.getString("firstname");
             lastname = result.getString("lastname");
             gender=result.getString("gender");
@@ -115,6 +125,6 @@ public class UniversityMemeber {
             mobile = result.getString("mobile");
             address = result.getString("address");
         }
-        return new UniversityMemeber(nic,firstname,lastname,gender,email,dob,address,mobile);
+        return new UniversityMemeber(nic,faculty,firstname,lastname,gender,email,dob,address,mobile);
     }
 }

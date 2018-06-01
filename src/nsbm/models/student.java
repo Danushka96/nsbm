@@ -9,8 +9,8 @@ public class student extends UniversityMemeber{
     private int intake_number;
 
 //  Constructors
-    public student(String reg_Number, String firstName ,String lastName,String gender ,String nic, String email, String DOB, String address, String tp, String registration_date, int intake_number){
-        super(nic,firstName,lastName,gender,email,DOB,address,tp);
+    public student(String reg_Number, String firstName ,String lastName,String gender ,String faculty,String nic, String email, String DOB, String address, String tp, String registration_date, int intake_number){
+        super(nic,faculty,firstName,lastName,gender,email,DOB,address,tp);
         this.reg_Number = reg_Number;
         this.registration_date=registration_date;
         this.intake_number=intake_number;
@@ -60,7 +60,7 @@ public class student extends UniversityMemeber{
         String query="SELECT * FROM students WHERE nic=? LIMIT 1";
         PreparedStatement selectquery=con.prepareStatement(query);
         selectquery.setString(1,nic);
-        String firstname=null,lastname=null,gender=null,email=null,dob=null,mobile=null,address=null,registration_date=null,reg_Number=null;
+        String firstname=null,lastname=null,gender=null,email=null,dob=null,mobile=null,address=null,registration_date=null,reg_Number=null,faculty=null;
         int intake_number=0;
         ResultSet result=selectquery.executeQuery();
         while (result.next()){
@@ -74,8 +74,9 @@ public class student extends UniversityMemeber{
             reg_Number=result.getString("reg_Number");
             intake_number=result.getInt("intake_number");
             registration_date=result.getString("registration_date");
+            faculty=result.getString("faculty");
         }
         con.close();
-        return new student(reg_Number,firstname,lastname,gender,nic,email,dob,address,mobile,registration_date,intake_number);
+        return new student(reg_Number,firstname,lastname,gender,faculty,nic,email,dob,address,mobile,registration_date,intake_number);
     }
 }
