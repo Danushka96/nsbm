@@ -16,14 +16,14 @@ public class student extends UniversityMemeber{
         this.intake_number=intake_number;
     }
 //    Setters
-    private void setReg_Number(String id){ this.reg_Number = id; }
-    private void setRegistration_date(String registration_date){ this.registration_date=registration_date;}
-    private void setIntake_number(int intake_number){ this.intake_number=intake_number;}
+    public void setReg_Number(String id){ this.reg_Number = id; }
+    public void setRegistration_date(String registration_date){ this.registration_date=registration_date;}
+    public void setIntake_number(int intake_number){ this.intake_number=intake_number;}
 
 //    Getters
-    private String getReg_Number(){ return this.reg_Number; }
-    private String getRegistration_date(){ return this.registration_date;}
-    private int getIntake_number(){ return this.intake_number;}
+    public String getReg_Number(){ return this.reg_Number; }
+    public String getRegistration_date(){ return this.registration_date;}
+    public int getIntake_number(){ return this.intake_number;}
 
 //    DB Actions
     public void save() throws SQLException {
@@ -54,29 +54,28 @@ public class student extends UniversityMemeber{
         querydel.setString(1,this.reg_Number);
         querydel.execute();
     }
-    public static student findstudent(String nic) throws SQLException {
+    public static student findstudent(String reg_Number) throws SQLException {
         Connection con=ConnectionManager.getConnection();
-        UniversityMemeber memeber = UniversityMemeber.findmember(nic);
-        String query="SELECT * FROM students WHERE nic=? LIMIT 1";
+        String query="SELECT * FROM students WHERE reg_Number=? LIMIT 1";
         PreparedStatement selectquery=con.prepareStatement(query);
-        selectquery.setString(1,nic);
-        String firstname=null,lastname=null,gender=null,email=null,dob=null,mobile=null,address=null,registration_date=null,reg_Number=null,faculty=null;
+        selectquery.setString(1,reg_Number);
+        String firstname=null,lastname=null,gender=null,email=null,dob=null,mobile=null,address=null,registration_date=null,nic=null,faculty=null;
         int intake_number=0;
         ResultSet result=selectquery.executeQuery();
         while (result.next()){
-            firstname=memeber.getFirstName();
-            lastname=memeber.getLastName();
-            gender=memeber.getGender();
-            email=memeber.getEmail();
-            dob=memeber.getDob();
-            mobile=memeber.getMobile();
-            address=memeber.getAddress();
-            reg_Number=result.getString("reg_Number");
+            nic=result.getString("nic");
             intake_number=result.getInt("intake_number");
             registration_date=result.getString("registration_date");
             faculty=result.getString("faculty");
         }
-        con.close();
+        UniversityMemeber memeber = UniversityMemeber.findmember(nic);
+        firstname=memeber.getFirstName();
+        lastname=memeber.getLastName();
+        gender=memeber.getGender();
+        email=memeber.getEmail();
+        dob=memeber.getDob();
+        mobile=memeber.getMobile();
+        address=memeber.getAddress();
         return new student(reg_Number,firstname,lastname,gender,faculty,nic,email,dob,address,mobile,registration_date,intake_number);
     }
 }
