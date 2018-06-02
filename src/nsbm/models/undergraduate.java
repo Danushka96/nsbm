@@ -71,7 +71,7 @@ public class undergraduate extends student {
     }
     public static undergraduate findUndergraduate(String student_id) throws SQLException{
         Connection con=ConnectionManager.getConnection();
-        String query="SELECT * FROM undergraduates WHERE student_id=?";
+        String query="SELECT * FROM undergraduates WHERE student_id=? LIMIT 1";
         PreparedStatement findq=con.prepareStatement(query);
         findq.setString(1,student_id);
         ResultSet result=findq.executeQuery();
