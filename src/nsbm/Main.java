@@ -34,6 +34,5 @@ public class Main extends Application {
         //System.out.println(student1.getAddress());
        // student1.setAddress("Alawwa2");
         //student1.update();
-
     }
 }

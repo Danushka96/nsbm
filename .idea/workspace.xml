@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/nsbm/models/instructor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/models/lecturer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/models/postgraduate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nsbm/models/subject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/models/undergraduate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/models/undergraduate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/models/UniversityMemeber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/models/UniversityMemeber.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/models/course.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/models/course.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/models/student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/models/student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/models/undergraduate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/models/undergraduate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/Main.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,7 +61,7 @@
         <item name="nsbm@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="nsbm: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="instructors: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="subjects: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -162,13 +165,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="instructor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="instructor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nsbm/models/instructor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="58" column="180" selection-start-line="58" selection-start-column="180" selection-end-line="58" selection-end-column="180" />
+            <state relative-caret-position="142">
+              <caret line="51" column="43" lean-forward="true" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="subject.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/models/subject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="118" column="94" selection-start-line="118" selection-start-column="94" selection-end-line="118" selection-end-column="94" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#542#543#0" expanded="true" />
+                <element signature="e#569#570#0" expanded="true" />
+                <element signature="e#600#601#0" expanded="true" />
+                <element signature="e#627#628#0" expanded="true" />
+                <element signature="e#657#658#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
+                <element signature="e#722#723#0" expanded="true" />
+                <element signature="e#760#761#0" expanded="true" />
+                <element signature="e#798#799#0" expanded="true" />
+                <element signature="e#832#833#0" expanded="true" />
+                <element signature="e#869#870#0" expanded="true" />
+                <element signature="e#905#906#0" expanded="true" />
+                <element signature="e#941#942#0" expanded="true" />
+                <element signature="e#973#974#0" expanded="true" />
+                <element signature="e#1011#1012#0" expanded="true" />
+                <element signature="e#1043#1044#0" expanded="true" />
+                <element signature="e#1083#1084#0" expanded="true" />
+                <element signature="e#1115#1116#0" expanded="true" />
+                <element signature="e#1153#1154#0" expanded="true" />
+                <element signature="e#1183#1184#0" expanded="true" />
+                <element signature="e#1242#1243#0" expanded="true" />
+                <element signature="e#1296#1297#0" expanded="true" />
+                <element signature="e#1350#1351#0" expanded="true" />
+                <element signature="e#1396#1397#0" expanded="true" />
+                <element signature="e#1451#1452#0" expanded="true" />
+                <element signature="e#1501#1502#0" expanded="true" />
+                <element signature="e#1551#1552#0" expanded="true" />
+                <element signature="e#1593#1594#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -230,14 +285,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/create_user_table.sql" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/create_student_table.sql" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/create_systemUsers_table.sql" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/create_universityMember_table.sql" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/create_students_table.sql" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/ScriptRunner.java" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/db/ScriptRunner.java" />
-        <option value="$PROJECT_DIR$/src/nsbm/Main.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/99a213d3-dced-40d3-9239-d2ce4c9ed4d8/console.sql" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/004_create_undergraduate_table.sql" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/005_create_alresults_table.sql" />
@@ -281,6 +334,8 @@
         <option value="$PROJECT_DIR$/src/nsbm/models/postgraduate.java" />
         <option value="$PROJECT_DIR$/src/nsbm/models/lecturer.java" />
         <option value="$PROJECT_DIR$/src/nsbm/models/instructor.java" />
+        <option value="$PROJECT_DIR$/src/nsbm/Main.java" />
+        <option value="$PROJECT_DIR$/src/nsbm/models/subject.java" />
       </list>
     </option>
   </component>
@@ -361,6 +416,14 @@
             </path>
             <path>
               <item name="NSBM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NSBM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nsbm" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NSBM" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -414,7 +477,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.migrate">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -537,12 +600,12 @@
       <workItem from="1527396847780" duration="9228000" />
       <workItem from="1527423752464" duration="1214000" />
       <workItem from="1527654071889" duration="59045000" />
-      <workItem from="1527917912597" duration="5747000" />
+      <workItem from="1527917912597" duration="12834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105237000" />
+    <option name="totallyTimeSpent" value="112324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -550,13 +613,14 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32838285" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32838285" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2739274" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.26732674" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2739274" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.26732674" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.19894099" />
       <window_info active="true" anchor="right" id="Database" order="3" sideWeight="0.49774775" visible="true" weight="0.14977308" />
@@ -566,7 +630,6 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
       <window_info anchor="right" id="JetGradle" order="3" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32838285" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Problems" order="7" />
@@ -629,13 +692,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/databaseAlert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -660,16 +716,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/ScriptRunner.java" />
-    <entry file="file://$PROJECT_DIR$/src/nsbm/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/99a213d3-dced-40d3-9239-d2ce4c9ed4d8/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -917,10 +963,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/models/instructor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="58" column="180" selection-start-line="58" selection-start-column="180" selection-end-line="58" selection-end-column="180" />
+        <state relative-caret-position="142">
+          <caret line="51" column="43" lean-forward="true" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/newlogin.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/models/subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="118" column="94" selection-start-line="118" selection-start-column="94" selection-end-line="118" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1083#1084#0" expanded="true" />
+            <element signature="e#1115#1116#0" expanded="true" />
+            <element signature="e#1153#1154#0" expanded="true" />
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="e#1242#1243#0" expanded="true" />
+            <element signature="e#1296#1297#0" expanded="true" />
+            <element signature="e#1350#1351#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+            <element signature="e#1451#1452#0" expanded="true" />
+            <element signature="e#1501#1502#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
           </folding>
         </state>
       </provider>
