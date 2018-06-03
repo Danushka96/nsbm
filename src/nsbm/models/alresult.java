@@ -72,6 +72,7 @@ public class alresult {
             subjectname=resultset.getString("subject_name");
             result=resultset.getString("result");
             all[count-1]=new alresult(student_id,subjectname,result);
+            count--;
         }
         return all;
     }
