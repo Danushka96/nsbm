@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.resources.view.MainInterface">
+   <children>
+      <AnchorPane layoutX="254.0" layoutY="-14.0" prefHeight="600.0" prefWidth="647.0" />
+      <AnchorPane layoutX="-1.0" prefHeight="600.0" prefWidth="255.0" style="-fx-background-color: CADETBLUE;">
+         <children>
+            <AnchorPane prefHeight="600.0" prefWidth="42.0" style="-fx-background-color: white;">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <Button layoutY="123.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: transparent;" text="Home">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutY="187.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: null;" text="Manage Students">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutY="251.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: null;" text="Manage Staff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutY="315.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: null;" text="Manage Faculty">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutY="383.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: null;" text="Manage University">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutY="450.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: null;" text="Manage Users">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="91.0" fitWidth="184.0" layoutX="58.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/nsbm-team-logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="4.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/computer.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="5.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/graduate.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="7.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/uniform.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="62.0" layoutX="7.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/high-school.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="7.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/history.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="39.0" layoutX="3.0" layoutY="459.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/hands.png" />
+               </image>
+            </ImageView>
+            <Button layoutY="518.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: null;" text="Logout">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="10.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/paper-plane.png" />
+               </image>
+            </ImageView>
+
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+   </children>
+</AnchorPane>
