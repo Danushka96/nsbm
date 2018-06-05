@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,44 +10,102 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.mainInterface">
    <children>
-      <AnchorPane layoutX="253.0" prefHeight="600.0" prefWidth="647.0" />
-      <AnchorPane layoutX="-1.0" prefHeight="600.0" prefWidth="255.0" style="-fx-background-color: CADETBLUE;">
+      <AnchorPane fx:id="mainIn" layoutX="255.0" layoutY="7.0" prefHeight="600.0" prefWidth="647.0" style="-fx-background-color: #a2dff9;" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane prefHeight="600.0" prefWidth="42.0" style="-fx-background-color: white;">
+            <AnchorPane fx:id="mainIn1" layoutX="38.0" layoutY="63.0" prefHeight="122.0" prefWidth="242.0" style="-fx-background-color: #3ff463;">
+               <children>
+                  <ImageView fitHeight="77.0" fitWidth="76.0" layoutX="-4.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/student.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="100.0" layoutY="14.0" text="STUDENTS">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="100.0" layoutY="61.0" text="586">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="mainIn11" layoutX="341.0" layoutY="63.0" prefHeight="122.0" prefWidth="242.0" style="-fx-background-color: #f43f75;">
+               <children>
+                  <ImageView fitHeight="77.0" fitWidth="76.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/classroom.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="100.0" layoutY="14.0" text="LECTURERS">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="100.0" layoutY="61.0" text="56">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXButton layoutX="38.0" layoutY="286.0" prefHeight="76.0" prefWidth="242.0" style="-fx-border-color: #57a8f9;" text="Register New Students">
+               <graphic>
+                  <ImageView fitHeight="79.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/graduate_2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="341.0" layoutY="286.0" prefHeight="76.0" prefWidth="242.0" style="-fx-border-color: #57a8f9;" text="Manage Timetable">
+               <graphic>
+                  <ImageView fitHeight="79.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/clock.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="38.0" layoutY="401.0" prefHeight="76.0" prefWidth="242.0" style="-fx-border-color: #57a8f9;" text="Assignments">
+               <graphic>
+                  <ImageView fitHeight="79.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/pencil-case.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="341.0" layoutY="401.0" prefHeight="76.0" prefWidth="242.0" style="-fx-border-color: #57a8f9;" text="Student Payments">
+               <graphic>
+                  <ImageView fitHeight="79.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/money.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+      <AnchorPane layoutX="-1.0" prefHeight="600.0" prefWidth="255.0" style="-fx-background-color: CADETBLUE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="600.0" prefWidth="42.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
                <effect>
                   <DropShadow />
                </effect>
             </AnchorPane>
-            <Button layoutY="123.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: transparent;" text="Home">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button layoutY="187.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: null;" text="Manage Students">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button layoutY="251.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: null;" text="Manage Staff">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button layoutY="315.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: null;" text="Manage Faculty">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button layoutY="383.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: null;" text="Manage University">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
-            <Button layoutY="450.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: null;" text="Manage Users">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
             <ImageView fitHeight="91.0" fitWidth="184.0" layoutX="58.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/nsbm-team-logo.png" />
@@ -82,16 +141,46 @@
                   <Image url="@../icons/hands.png" />
                </image>
             </ImageView>
-            <Button layoutY="518.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="255.0" style="-fx-background-color: null;" text="Logout">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Button>
             <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="10.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../icons/paper-plane.png" />
                </image>
             </ImageView>
+            <JFXButton graphicTextGap="0.0" layoutY="125.0" prefHeight="44.0" prefWidth="255.0" text="Home">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton graphicTextGap="0.0" layoutY="191.0" prefHeight="44.0" prefWidth="255.0" text="Manage Students">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton graphicTextGap="0.0" layoutY="255.0" prefHeight="44.0" prefWidth="255.0" text="Manage Staff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton graphicTextGap="0.0" layoutY="318.0" prefHeight="44.0" prefWidth="255.0" text="Manage Faculty">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton graphicTextGap="0.0" layoutY="386.0" prefHeight="44.0" prefWidth="255.0" text="Manage University">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton graphicTextGap="0.0" layoutY="455.0" prefHeight="44.0" prefWidth="255.0" text="Manage Users">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton graphicTextGap="0.0" layoutY="518.0" prefHeight="44.0" prefWidth="255.0" text="Logout">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
 
          </children>
          <effect>
