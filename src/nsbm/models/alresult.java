@@ -42,8 +42,8 @@ public class alresult {
         String query="INSERT INTO alresults (student_id, subject_name, result) VALUES (?,?,?)";
         PreparedStatement insq=con.prepareStatement(query);
         insq.setString(1,this.student_id);
-        insq.setString(1,this.subject_id);
-        insq.setString(1,this.result);
+        insq.setString(2,this.subject_id);
+        insq.setString(3,this.result);
         insq.execute();
     }
 

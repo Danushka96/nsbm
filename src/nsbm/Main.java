@@ -20,7 +20,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) throws SQLException {
-        //launch(args);
+        launch(args);
         //student st1 = new student("2016cs055","Danushka","Herath","961003059V","danushkaherath96@gmail.com","1996-04-09","Alawwa","0717705526","2017-02-05",14);
         //st1.setAddress("kurunegala");
         //st1.update();

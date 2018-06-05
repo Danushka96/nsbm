@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,50 +9,10 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.mainInterface">
    <children>
-      <AnchorPane fx:id="mainIn" layoutX="253.0" prefHeight="600.0" prefWidth="647.0" style="-fx-background-color: #d1d3d6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="253.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="253.0" prefHeight="600.0" prefWidth="647.0" />
+      <AnchorPane layoutX="-1.0" prefHeight="600.0" prefWidth="255.0" style="-fx-background-color: CADETBLUE;">
          <children>
-            <AnchorPane fx:id="mainIn1" layoutX="38.0" layoutY="63.0" prefHeight="122.0" prefWidth="242.0" style="-fx-background-color: #3ff463;">
-               <children>
-                  <ImageView fitHeight="77.0" fitWidth="76.0" layoutX="-4.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/student.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="100.0" layoutY="14.0" text="STUDENTS">
-                     <font>
-                        <Font name="System Bold" size="19.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="100.0" layoutY="61.0" text="586">
-                     <font>
-                        <Font size="26.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="mainIn11" layoutX="341.0" layoutY="63.0" prefHeight="122.0" prefWidth="242.0" style="-fx-background-color: #f43f75;">
-               <children>
-                  <ImageView fitHeight="77.0" fitWidth="76.0" layoutX="-4.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/classroom.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="100.0" layoutY="14.0" text="LECTURERS">
-                     <font>
-                        <Font name="System Bold" size="19.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="100.0" layoutY="61.0" text="56">
-                     <font>
-                        <Font size="26.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </children></AnchorPane>
-      <AnchorPane layoutX="-1.0" prefHeight="600.0" prefWidth="255.0" style="-fx-background-color: CADETBLUE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <AnchorPane prefHeight="600.0" prefWidth="42.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane prefHeight="600.0" prefWidth="42.0" style="-fx-background-color: white;">
                <effect>
                   <DropShadow />
                </effect>
