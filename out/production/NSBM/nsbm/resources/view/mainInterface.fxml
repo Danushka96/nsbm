@@ -347,7 +347,7 @@
             </JFXButton>
          </children>
       </AnchorPane>
-      <AnchorPane id="home" fx:id="menuhome" layoutX="255.0" layoutY="7.0" prefHeight="600.0" prefWidth="647.0" style="-fx-background-color: #a2dff9;" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane id="home" fx:id="menuhome" layoutX="255.0" layoutY="7.0" prefHeight="600.0" prefWidth="647.0" style="-fx-background-color: #a2dff9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane fx:id="mainIn1" layoutX="38.0" layoutY="97.0" prefHeight="122.0" prefWidth="242.0" style="-fx-background-color: #3ff463;">
                <children>
@@ -361,7 +361,7 @@
                         <Font name="System Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="61.0" text="586">
+                  <Label fx:id="studentcount" layoutX="100.0" layoutY="61.0" text="586">
                      <font>
                         <Font size="26.0" />
                      </font>
@@ -380,7 +380,7 @@
                         <Font name="System Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="61.0" text="56">
+                  <Label fx:id="lecturecount" layoutX="100.0" layoutY="61.0" text="56">
                      <font>
                         <Font size="26.0" />
                      </font>
@@ -535,7 +535,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Text>
-            <Text fill="#fffdfd" layoutX="14.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2018/05/06    08:11 PM">
+            <Text fx:id="systemtime" fill="#fffdfd" layoutX="14.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2018/05/06    08:11 PM">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
