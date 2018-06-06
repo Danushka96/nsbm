@@ -7,12 +7,349 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.mainInterface">
    <children>
-      <AnchorPane fx:id="mainIn" layoutX="255.0" layoutY="7.0" prefHeight="600.0" prefWidth="647.0" style="-fx-background-color: #a2dff9;" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="menuuni" layoutX="270.0" layoutY="45.0" prefHeight="600.0" prefWidth="695.0" style="-fx-background-color: #a2dff9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane fx:id="mainIn1" layoutX="38.0" layoutY="63.0" prefHeight="122.0" prefWidth="242.0" style="-fx-background-color: #3ff463;">
+            <JFXButton layoutX="66.0" layoutY="143.0" prefHeight="67.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Add Faculty">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/plus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Text layoutX="129.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage University Resources">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="392.0" layoutY="143.0" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Edit Faculty ">
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/pen.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="66.0" layoutY="227.0" prefHeight="67.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Delete Faculty">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/garbage.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menufaculty" layoutX="260.0" layoutY="35.0" prefHeight="600.0" prefWidth="695.0" style="-fx-background-color: #a2dff9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton layoutX="66.0" layoutY="143.0" prefHeight="67.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Courses">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/books.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Text layoutX="175.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Faculty Resources">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="392.0" layoutY="143.0" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Subjects">
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/open-book2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="66.0" layoutY="227.0" prefHeight="61.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Timetable">
+               <graphic>
+                  <ImageView fitHeight="63.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/alarm-clock.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="392.0" layoutY="227.0" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Laboratories">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/desk.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="66.0" layoutY="312.0" prefHeight="51.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Semesters">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/blackboard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="392.0" layoutY="312.0" prefHeight="65.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Assignments">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/notebook.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="66.0" layoutY="389.0" prefHeight="51.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Payments">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/money.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="392.0" layoutY="389.0" prefHeight="51.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Examinations">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/test.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menustaff" layoutX="257.0" layoutY="9.0" prefHeight="600.0" prefWidth="695.0" style="-fx-background-color: #a2dff9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton layoutX="66.0" layoutY="143.0" prefHeight="67.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Register Lecturer">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/login.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Text layoutX="191.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage University Staff">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="392.0" layoutY="143.0" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Register Instructor">
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/login.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="66.0" layoutY="227.0" prefHeight="61.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="View Lecturers">
+               <graphic>
+                  <ImageView fitHeight="63.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/eye.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="392.0" layoutY="227.0" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="View Instructors">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/eye.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="74.0" layoutY="342.0" prefHeight="51.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Find Staff Member">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/search-engine.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="350.0" layoutY="342.0" prefHeight="65.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Delete Staff Member">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/garbage.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menustudent" layoutX="255.0" layoutY="-1.0" prefHeight="600.0" prefWidth="647.0" style="-fx-background-color: #a2dff9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="253.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton layoutX="66.0" layoutY="143.0" prefHeight="67.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Register Undergraduate">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/login.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Text layoutX="164.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage University Students">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="392.0" layoutY="143.0" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Register Postgraduate">
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/login.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="66.0" layoutY="227.0" prefHeight="61.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="View Undergraduates">
+               <graphic>
+                  <ImageView fitHeight="63.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/eye.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="392.0" layoutY="227.0" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="View Postgraduates">
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/eye.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="74.0" layoutY="342.0" prefHeight="51.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Find Student">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/search-engine.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="350.0" layoutY="342.0" prefHeight="65.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Delete Student">
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/garbage.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="74.0" layoutY="420.0" prefHeight="51.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Student Payments">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/cash-register2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="350.0" layoutY="420.0" prefHeight="51.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Subject Selection">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/languages.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="home" fx:id="menuhome" layoutX="255.0" layoutY="7.0" prefHeight="600.0" prefWidth="647.0" style="-fx-background-color: #a2dff9;" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="mainIn1" layoutX="38.0" layoutY="97.0" prefHeight="122.0" prefWidth="242.0" style="-fx-background-color: #3ff463;">
                <children>
                   <ImageView fitHeight="77.0" fitWidth="76.0" layoutX="-4.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -31,7 +368,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="mainIn11" layoutX="341.0" layoutY="63.0" prefHeight="122.0" prefWidth="242.0" style="-fx-background-color: #f43f75;">
+            <AnchorPane fx:id="mainIn11" layoutX="341.0" layoutY="97.0" prefHeight="122.0" prefWidth="242.0" style="-fx-background-color: #f43f75;">
                <children>
                   <ImageView fitHeight="77.0" fitWidth="76.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -146,37 +483,37 @@
                   <Image url="@../icons/paper-plane.png" />
                </image>
             </ImageView>
-            <JFXButton graphicTextGap="0.0" layoutY="125.0" prefHeight="44.0" prefWidth="255.0" text="Home">
+            <JFXButton fx:id="btnhome" graphicTextGap="0.0" layoutY="125.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="255.0" text="Home">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton graphicTextGap="0.0" layoutY="191.0" prefHeight="44.0" prefWidth="255.0" text="Manage Students">
+            <JFXButton fx:id="btnstudent" graphicTextGap="0.0" layoutY="191.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="255.0" text="Manage Students">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton graphicTextGap="0.0" layoutY="255.0" prefHeight="44.0" prefWidth="255.0" text="Manage Staff">
+            <JFXButton fx:id="btnstaff" graphicTextGap="0.0" layoutY="255.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="255.0" text="Manage Staff">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton graphicTextGap="0.0" layoutY="318.0" prefHeight="44.0" prefWidth="255.0" text="Manage Faculty">
+            <JFXButton fx:id="btnfaculty" graphicTextGap="0.0" layoutY="318.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="255.0" text="Manage Faculty">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton graphicTextGap="0.0" layoutY="386.0" prefHeight="44.0" prefWidth="255.0" text="Manage University">
+            <JFXButton fx:id="btnuniversity" graphicTextGap="0.0" layoutY="386.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="255.0" text="Manage University">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton graphicTextGap="0.0" layoutY="455.0" prefHeight="44.0" prefWidth="255.0" text="Manage Users">
+            <JFXButton fx:id="btnusers" graphicTextGap="0.0" layoutY="455.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="255.0" text="Manage Users">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton graphicTextGap="0.0" layoutY="518.0" prefHeight="44.0" prefWidth="255.0" text="Logout">
+            <JFXButton fx:id="btnlogout" graphicTextGap="0.0" layoutY="518.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="255.0" text="Logout">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -186,5 +523,24 @@
          <effect>
             <DropShadow />
          </effect></AnchorPane>
+      <AnchorPane layoutX="257.0" prefHeight="35.0" prefWidth="693.0" style="-fx-background-color: #64a9ef;" AnchorPane.leftAnchor="257.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="20.0" fitWidth="29.0" layoutX="675.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0">
+               <image>
+                  <Image url="@../icons/man.png" />
+               </image>
+            </ImageView>
+            <Text fill="#fffdfd" layoutX="553.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Admin, " AnchorPane.rightAnchor="25.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#fffdfd" layoutX="14.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2018/05/06    08:11 PM">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
