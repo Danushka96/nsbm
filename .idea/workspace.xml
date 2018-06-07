@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/nsbm/controllers/Regpostgrad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/024_insert_dummy_data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/view/regpostgrad.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_db.log" beforeDir="false" afterPath="$PROJECT_DIR$/create_db.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_db_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/create_db_error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/controllers/mainInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/controllers/mainInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/001_create_faculty_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/db/migrations/001_create_faculty_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/view/mainInterface.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/view/mainInterface.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nsbm/controllers/Regundergrad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/controllers/Regundergrad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/models/course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/models/course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/models/faculty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/models/faculty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/models/undergraduate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/models/undergraduate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/001_create_faculty_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/db/migrations/001_create_faculty_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/view/mainInterface.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/view/mainInterface.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/models/postgraduate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/models/postgraduate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nsbm/resources/view/regundergrad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/view/regundergrad.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -153,8 +140,8 @@
       <file leaf-file-name="Regundergrad.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/Regundergrad.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="133" column="34" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
+            <state relative-caret-position="295">
+              <caret line="206" column="9" lean-forward="true" selection-start-line="206" selection-start-column="9" selection-end-line="206" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -186,8 +173,8 @@
       <file leaf-file-name="faculty.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nsbm/models/faculty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="74" selection-start-line="74" selection-end-line="85" selection-end-column="5" />
+            <state relative-caret-position="197">
+              <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
               <folding>
                 <element signature="e#2708#2716#0" expanded="true" />
               </folding>
@@ -198,8 +185,8 @@
       <file leaf-file-name="regundergrad.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/regundergrad.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="33" column="87" selection-start-line="33" selection-start-column="87" selection-end-line="33" selection-end-column="87" />
+            <state relative-caret-position="321">
+              <caret line="60" column="102" selection-start-line="60" selection-start-column="102" selection-end-line="60" selection-end-column="102" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -275,7 +262,6 @@
         <option value="$PROJECT_DIR$/src/nsbm/models/master.java" />
         <option value="$PROJECT_DIR$/src/nsbm/models/student.java" />
         <option value="$PROJECT_DIR$/src/nsbm/models/undergraduate.java" />
-        <option value="$PROJECT_DIR$/src/nsbm/models/postgraduate.java" />
         <option value="$PROJECT_DIR$/src/nsbm/models/lecturer.java" />
         <option value="$PROJECT_DIR$/src/nsbm/models/instructor.java" />
         <option value="$PROJECT_DIR$/src/nsbm/models/subject.java" />
@@ -297,11 +283,12 @@
         <option value="$PROJECT_DIR$/src/nsbm/resources/view/mainInterface.fxml" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/view/regpostgrad.fxml" />
         <option value="$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java" />
-        <option value="$PROJECT_DIR$/src/nsbm/resources/view/regundergrad.fxml" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/001_create_faculty_table.sql" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/024_insert_dummy_data.sql" />
         <option value="$PROJECT_DIR$/src/nsbm/models/faculty.java" />
         <option value="$PROJECT_DIR$/src/nsbm/models/course.java" />
+        <option value="$PROJECT_DIR$/src/nsbm/models/postgraduate.java" />
+        <option value="$PROJECT_DIR$/src/nsbm/resources/view/regundergrad.fxml" />
         <option value="$PROJECT_DIR$/src/nsbm/controllers/Regundergrad.java" />
       </list>
     </option>
@@ -583,12 +570,12 @@
       <workItem from="1528265580907" duration="8951000" />
       <workItem from="1528356802958" duration="3646000" />
       <workItem from="1528378759893" duration="101000" />
-      <workItem from="1528385693735" duration="9213000" />
+      <workItem from="1528385693735" duration="13093000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190288000" />
+    <option name="totallyTimeSpent" value="194168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -733,13 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="73" column="77" selection-start-line="73" selection-start-column="77" selection-end-line="73" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/models/postgraduate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="98" column="306" selection-start-line="98" selection-start-column="306" selection-end-line="98" selection-end-column="306" />
         </state>
       </provider>
     </entry>
@@ -974,16 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/models/faculty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="74" selection-start-line="74" selection-end-line="85" selection-end-column="5" />
-          <folding>
-            <element signature="e#2708#2716#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://99a213d3-dced-40d3-9239-d2ce4c9ed4d8/schema/nsbm/table/courses">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -993,14 +963,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/regpostgrad.fxml">
       <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/regundergrad.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="33" column="87" selection-start-line="33" selection-start-column="87" selection-end-line="33" selection-end-column="87" />
-        </state>
-      </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/models/course.java">
@@ -1013,10 +975,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/Regundergrad.java">
+    <entry file="file://$PROJECT_DIR$/src/nsbm/models/postgraduate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/regundergrad.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="60" column="102" selection-start-line="60" selection-start-column="102" selection-end-line="60" selection-end-column="102" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/models/faculty.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
-          <caret line="133" column="34" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
+          <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+          <folding>
+            <element signature="e#2708#2716#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/Regundergrad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="206" column="9" lean-forward="true" selection-start-line="206" selection-start-column="9" selection-end-line="206" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

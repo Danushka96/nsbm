@@ -73,6 +73,7 @@ public class Regundergrad {
 
     public void initialize() throws SQLException {
         setfaculty();
+        setStream();
     }
 
     @FXML
@@ -136,6 +137,73 @@ public class Regundergrad {
         ArrayList<String> all=nsbm.models.course.getall(fac);
         for(String code:all){
             course.getItems().add(code);
+        }
+    }
+    private void setStream(){
+        stream.getItems().addAll(
+          "Science",
+          "Commerce",
+          "Art",
+          "Technology"
+        );
+    }
+    @FXML
+    private void setSubjects(){
+        subject1.getItems().clear();
+        subject2.getItems().clear();
+        subject3.getItems().clear();
+
+        String[] science={"Combined Maths", "Biology", "Physics", "Chemistry","ICT","Agriculture"};
+        String[] arts={"ICT", "Geography", "Law","Agriculture"};
+        String[] tech={"Science for Technology","Agriculture","Engineering Science","Biology for Technology"};
+        String[] commerce={"Buisness Studies","Accounting","Managment","ICT"};
+
+        String st=stream.getSelectionModel().getSelectedItem().toString();
+        switch (st) {
+            case "Science":
+                for (String subject : science) {
+                    subject1.getItems().add(subject);
+                    subject2.getItems().add(subject);
+                    subject3.getItems().add(subject);
+                }
+                break;
+            case "Commerce":
+                for (String subject : commerce) {
+                    subject1.getItems().add(subject);
+                    subject2.getItems().add(subject);
+                    subject3.getItems().add(subject);
+                }
+                break;
+            case "Art":
+                for (String subject : arts) {
+                    subject1.getItems().add(subject);
+                    subject2.getItems().add(subject);
+                    subject3.getItems().add(subject);
+                }
+                break;
+            case "Technology":
+                for (String subject : tech) {
+                    subject1.getItems().add(subject);
+                    subject2.getItems().add(subject);
+                    subject3.getItems().add(subject);
+                }
+                break;
+        }
+    }
+
+    public void removeSub(ActionEvent actionEvent) {
+        if(actionEvent.getSource()==subject1){
+            int removesub=subject1.getSelectionModel().getSelectedIndex();
+            subject2.getItems().remove(removesub);
+            subject3.getItems().remove(removesub);
+        }else if(actionEvent.getSource()==subject2){
+            int removesub=subject2.getSelectionModel().getSelectedIndex();
+            subject1.getItems().remove(removesub);
+            subject3.getItems().remove(removesub);
+        }else if(actionEvent.getSource()==subject3){
+            int removesub=subject3.getSelectionModel().getSelectedIndex();
+            subject1.getItems().remove(removesub);
+            subject2.getItems().remove(removesub);
         }
     }
 }

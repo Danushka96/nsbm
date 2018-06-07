@@ -11,7 +11,7 @@ import java.time.Period;
 public class postgraduate extends student{
     private Connection con=ConnectionManager.getConnection();
     private String student_id, qualification_type, institiue, yearofcompletion,course_id;
-    postgraduate(String reg_Number, String firstName ,String lastName,String gender ,String faculty,String nic, String email, String DOB, String address, String tp, String registration_date, int intake_number,String student_id, String qualification_type, String institiue, String yearofcompletion,String course_id){
+    public postgraduate(String reg_Number, String firstName ,String lastName,String gender ,String faculty,String nic, String email, String DOB, String address, String tp, String registration_date, int intake_number,String student_id, String qualification_type, String institiue, String yearofcompletion,String course_id){
         super(reg_Number, firstName, lastName, gender, faculty, nic, email, DOB, address, tp, registration_date, intake_number);
         this.student_id=student_id;
         this.qualification_type=qualification_type;

@@ -51,23 +51,23 @@
             <JFXTextField fx:id="alindex" layoutX="70.0" layoutY="135.0" prefHeight="25.0" prefWidth="174.0" promptText="A/L Index Number" />
             <JFXTextField fx:id="zscore" layoutX="70.0" layoutY="188.0" prefHeight="25.0" prefWidth="174.0" promptText="Z Score" />
             <JFXTextField fx:id="rank" layoutX="388.0" layoutY="188.0" prefHeight="25.0" prefWidth="155.0" promptText="Rank" />
-            <JFXComboBox fx:id="stream" layoutX="388.0" layoutY="135.0" prefHeight="25.0" prefWidth="155.0" promptText="Stream" />
+            <JFXComboBox fx:id="stream" layoutX="388.0" layoutY="135.0" onAction="#setSubjects" prefHeight="25.0" prefWidth="155.0" promptText="Stream" />
             <Text layoutX="68.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A/L Results">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Text>
-            <JFXComboBox fx:id="subject1" layoutX="72.0" layoutY="287.0" prefHeight="25.0" prefWidth="155.0" promptText="Subject1" />
-            <JFXComboBox fx:id="subject2" layoutX="72.0" layoutY="329.0" prefHeight="25.0" prefWidth="155.0" promptText="Subject2" />
-            <JFXComboBox fx:id="subject3" layoutX="72.0" layoutY="369.0" prefHeight="25.0" prefWidth="155.0" promptText="Subject3" />
-            <JFXTextField fx:id="score1" layoutX="278.0" layoutY="287.0" prefHeight="25.0" prefWidth="54.0" promptText="Z Score" />
-            <JFXTextField fx:id="score2" layoutX="278.0" layoutY="329.0" prefHeight="25.0" prefWidth="54.0" promptText="Z Score" />
-            <JFXTextField fx:id="score3" layoutX="278.0" layoutY="369.0" prefHeight="25.0" prefWidth="54.0" promptText="Z Score" />
+            <JFXComboBox fx:id="subject1" layoutX="72.0" layoutY="287.0" onAction="#removeSub" prefHeight="25.0" prefWidth="155.0" promptText="Subject1" />
+            <JFXComboBox fx:id="subject2" layoutX="72.0" layoutY="329.0" onAction="#removeSub" prefHeight="25.0" prefWidth="155.0" promptText="Subject2" />
+            <JFXComboBox fx:id="subject3" layoutX="72.0" layoutY="369.0" onAction="#removeSub" prefHeight="25.0" prefWidth="155.0" promptText="Subject3" />
+            <JFXTextField fx:id="score1" layoutX="278.0" layoutY="287.0" prefHeight="25.0" prefWidth="54.0" promptText="Result" />
+            <JFXTextField fx:id="score2" layoutX="278.0" layoutY="329.0" prefHeight="25.0" prefWidth="54.0" promptText="Result" />
+            <JFXTextField fx:id="score3" layoutX="278.0" layoutY="369.0" prefHeight="25.0" prefWidth="54.0" promptText="Result" />
             <JFXButton fx:id="tothird" layoutX="489.0" layoutY="453.0" onAction="#changepane" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #38ea52;" text="Next" />
             <JFXButton fx:id="tofirst" layoutX="374.0" layoutY="452.0" onAction="#changepane" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #6a35f2;" text="Previous" />
             <JFXButton fx:id="cancel2" layoutX="257.0" layoutY="453.0" onAction="#closewindow" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #ea4738;" text="Cancel" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="first" prefHeight="508.0" prefWidth="600.0" style="-fx-background-color: #b8f0f2;">
+      <AnchorPane fx:id="first" prefHeight="508.0" prefWidth="600.0" style="-fx-background-color: #b8f0f2;" visible="false">
          <children>
             <Text layoutX="163.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Undergarduate">
                <font>
