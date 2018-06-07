@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class course {
     private String code,name,faculty;
@@ -100,5 +101,19 @@ public class course {
             numberofyears=result.getInt("numberofyears");
         }
         return new course(code,faculty,name,credits,numberofyears,can_extend);
+    }
+
+    public static ArrayList<String> getall(String faculty_id) throws SQLException{
+        Connection con=ConnectionManager.getConnection();
+        String query="SELECT * FROM courses where faculty=?";
+        PreparedStatement findq=con.prepareStatement(query);
+        findq.setString(1,faculty_id);
+        ResultSet result=findq.executeQuery();
+        ArrayList<String> arr = new ArrayList<String>();
+        while (result.next()){
+//            System.out.println(result.getString("code"));
+            arr.add(result.getString("code"));
+        }
+        return arr;
     }
 }

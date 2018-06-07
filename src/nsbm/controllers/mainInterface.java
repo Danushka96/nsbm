@@ -2,11 +2,16 @@ package nsbm.controllers;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.awt.event.ActionEvent;
+import java.io.IOException;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -22,6 +27,12 @@ public class mainInterface {
 
     @FXML
     public Label lecturecount;
+
+    @FXML
+    public JFXButton regpost;
+
+    @FXML
+    public JFXButton regunder;
 
     @FXML
     private AnchorPane menuuni;
@@ -113,5 +124,23 @@ public class mainInterface {
         }
         studentcount.setText(Integer.toString(students));
         lecturecount.setText(Integer.toString(lecturers));
+    }
+
+    public void regunder(javafx.event.ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/regundergrad.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Undergraduate Registration");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+
+    public void regpost(javafx.event.ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/regpostgrad.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Postgraduate Registration");
+        stage.setScene(new Scene(root1));
+        stage.show();
     }
 }

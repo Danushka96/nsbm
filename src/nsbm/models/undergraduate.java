@@ -11,7 +11,7 @@ public class undergraduate extends student {
     private Connection con = ConnectionManager.getConnection();
     private int rank;
     private String stream,student_id,course_id;
-    undergraduate(String registrationNumber, String firstName,String lastName,String gender,String faculty,String nic,String email, String DOB, String address, String tp, String registration_date, int intake_number,String student_id,String stream, String course_id, int rank){
+    public undergraduate(String registrationNumber, String firstName, String lastName, String gender, String faculty, String nic, String email, String DOB, String address, String tp, String registration_date, int intake_number, String student_id, String stream, String course_id, int rank){
         super(registrationNumber,firstName,lastName,gender,faculty,nic,email,DOB,address,tp,registration_date,intake_number);
         this.student_id=student_id;
         this.rank=rank;

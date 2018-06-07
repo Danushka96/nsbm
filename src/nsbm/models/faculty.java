@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class faculty {
     private Connection con=ConnectionManager.getConnection();
@@ -58,7 +59,8 @@ public class faculty {
         delquery.setString(1,this.code);
         delquery.execute();
     }
-    public faculty find(String code) throws SQLException{
+    public static faculty find(String code) throws SQLException{
+        Connection con=ConnectionManager.getConnection();
         String query="SELECT * FROM faculties where code=? LIMIT 1";
         PreparedStatement selectq=con.prepareStatement(query);
         selectq.setString(1,code);
@@ -69,5 +71,17 @@ public class faculty {
             telephone=result.getString("telephone");
         }
         return new faculty(code,name,telephone);
+    }
+    public static ArrayList<String> getall() throws SQLException{
+        Connection con=ConnectionManager.getConnection();
+        String query="SELECT * FROM faculties";
+        PreparedStatement findq=con.prepareStatement(query);
+        ResultSet result=findq.executeQuery();
+
+        ArrayList<String> arr = new ArrayList<String>();
+        while (result.next()){
+            arr.add(result.getString("code"));
+        }
+        return arr;
     }
 }

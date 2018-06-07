@@ -97,3 +97,31 @@ Error executing 'CREATE TABLE users (
 05/50/2018 23:50:20
 -------
 
+
+-------
+07/14/2018 21:14:27
+-------
+
+Error executing 'INSERT INTO users(username, password, faculty_id) VALUES ('danushka','1234','1') ' (line 5): Cannot add or update a child row: a foreign key constraint fails (`nsbm`.`users`, CONSTRAINT `users_ibfk_1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`code`))
+
+-------
+07/52/2018 21:52:08
+-------
+
+Error executing 'INSERT INTO users(username, password, faculty_id) VALUES ('danushka','1234','1') ' (line 5): Cannot add or update a child row: a foreign key constraint fails (`nsbm`.`users`, CONSTRAINT `users_ibfk_1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`code`))
+
+-------
+07/53/2018 21:53:08
+-------
+
+
+-------
+07/53/2018 21:53:30
+-------
+
+Error executing 'INSERT INTO users(username, password, faculty_id) VALUES ('danushka','1234','1') ' (line 5): Cannot add or update a child row: a foreign key constraint fails (`nsbm`.`users`, CONSTRAINT `users_ibfk_1` FOREIGN KEY (`faculty_id`) REFERENCES `faculties` (`code`))
+
+-------
+07/54/2018 21:54:10
+-------
+

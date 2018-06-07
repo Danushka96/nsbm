@@ -244,7 +244,7 @@
       </AnchorPane>
       <AnchorPane fx:id="menustudent" layoutX="255.0" layoutY="-1.0" prefHeight="600.0" prefWidth="647.0" style="-fx-background-color: #a2dff9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="253.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXButton layoutX="66.0" layoutY="143.0" prefHeight="67.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Register Undergraduate">
+            <JFXButton fx:id="regunder" layoutX="66.0" layoutY="143.0" onAction="#regunder" prefHeight="67.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Register Undergraduate">
                <graphic>
                   <ImageView fitHeight="64.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -261,7 +261,7 @@
                   <Font name="System Bold" size="28.0" />
                </font>
             </Text>
-            <JFXButton layoutX="392.0" layoutY="143.0" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Register Postgraduate">
+            <JFXButton fx:id="regpost" layoutX="392.0" layoutY="143.0" onAction="#regpost" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Register Postgraduate">
                <graphic>
                   <ImageView fitHeight="59.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
                      <image>
