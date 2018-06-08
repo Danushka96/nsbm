@@ -5,7 +5,7 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 CREATE TABLE `students` (
-  reg_Number varchar(9),
+  reg_Number varchar(15),
   intake_number int(2),
   registration_date date,
   nic varchar(10)

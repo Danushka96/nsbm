@@ -3072,3 +3072,420 @@ INSERT INTO faculties(code, name, telephone) VALUES ('FOS', 'Faculty of Science'
 INSERT INTO faculties(code, name, telephone) VALUES ('FOA', 'Faculty of Art','0115865235') 
 INSERT INTO users(username, password, faculty_id) VALUES ('danushka','1234','UCSC') 
 # INSERT INTO courses(code, name, credits, numberofyears, can_extend, faculty) VALUES ('CS','Computer Science',34,3,1,'UCSC') 
+
+-------
+08/34/2018 21:34:30
+-------
+
+CREATE TABLE faculties(
+  code varchar(8) PRIMARY KEY,
+  name varchar(50),
+  telephone varchar(10)
+)
+
+create table universityMembers(
+  nic varchar(10) NOT NULL primary key ,
+  firstName varchar(20),
+  lastName varchar(20),
+  gender varchar(1),
+  email varchar(30) UNIQUE,
+  dob date,
+  mobile varchar(10),
+  address varchar(50),
+  faculty varchar(8),
+  FOREIGN KEY (faculty) references faculties(code)
+) 
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO" 
+SET AUTOCOMMIT = 0 
+START TRANSACTION 
+SET time_zone = "+00:00" 
+CREATE TABLE `students` (
+  reg_Number varchar(15),
+  intake_number int(2),
+  registration_date date,
+  nic varchar(10)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`reg_Number`),
+  ADD FOREIGN KEY (nic) references universitymembers(nic) 
+COMMIT 
+CREATE TABLE courses(
+  code VARCHAR(8) PRIMARY KEY,
+  name varchar(60),
+  credits int(2),
+  numberofyears int(1),
+  can_extend int(1),
+  faculty varchar(8),
+  FOREIGN KEY (faculty) REFERENCES faculties(code)
+) 
+CREATE TABLE bachelors(
+  id varchar(8) PRIMARY KEY
+) 
+CREATE TABLE masters(
+  id varchar(8) PRIMARY KEY
+)
+
+CREATE TABLE undergraduates(
+  student_id varchar(20) PRIMARY KEY NOT NULL,
+  rank INT(3),
+  stream VARCHAR(20),
+  reg_number varchar(9),
+  course_id varchar(8),
+  FOREIGN KEY (reg_number) REFERENCES students(reg_Number),
+  FOREIGN KEY (course_id) REFERENCES courses(code)
+) 
+CREATE TABLE postgraduates(
+  student_id varchar(20) NOT NULL PRIMARY KEY,
+  qualification_type varchar(30),
+  institute VARCHAR(40),
+  yearof_Completion varchar(4),
+  reg_number varchar(9),
+  course_id varchar(8),
+  FOREIGN KEY (reg_number) REFERENCES students(reg_Number),
+  FOREIGN KEY (course_id) REFERENCES courses(code)
+)
+
+CREATE TABLE lecturers(
+  id varchar(8) PRIMARY KEY,
+  researchSpeciality varchar(20),
+  office_number varchar(4),
+  nic varchar(11),
+  FOREIGN KEY (nic) REFERENCES universitymembers(nic)
+) 
+CREATE TABLE instructors(
+  id varchar(8) PRIMARY KEY,
+  nic varchar(11),
+  FOREIGN KEY (nic) REFERENCES universitymembers(nic)
+) 
+CREATE TABLE subjects(
+  code varchar(8) PRIMARY KEY,
+  name varchar(25),
+  fee decimal(7,2),
+  numberofCredits int(1),
+  numberofHours int(3),
+  lecturer_id varchar(8),
+  course_id varchar(8),
+  FOREIGN KEY (lecturer_id) REFERENCES lecturers(id),
+  FOREIGN KEY (course_id) REFERENCES courses(code)
+) 
+CREATE TABLE labs(
+  id varchar(8) PRIMARY KEY,
+  name varchar(20),
+  numberofSeats int(2),
+  faculty varchar(8),
+  FOREIGN KEY (faculty) REFERENCES faculties(code)
+)
+
+CREATE TABLE alresults(
+  student_id varchar(20),
+  subject_name varchar(30),
+  result varchar(1),
+  PRIMARY KEY (student_id,subject_name),
+  FOREIGN KEY (student_id) REFERENCES undergraduates(student_id)
+) 
+CREATE TABLE timeslots(
+  id varchar(8),
+  course_id varchar(8),
+  faculty_id varchar(8),
+  fromtime time,
+  totime time,
+  dateof date,
+  subject_id varchar(8),
+  PRIMARY KEY (id,course_id,faculty_id),
+  FOREIGN KEY (course_id) REFERENCES courses(code),
+  FOREIGN KEY (faculty_id) REFERENCES faculties(code),
+  FOREIGN KEY (subject_id) REFERENCES subjects(code)
+) 
+CREATE TABLE labtime(
+  lab_id varchar(8),
+  timeslot_id varchar(8),
+  instructor_id varchar(8),
+  PRIMARY KEY (lab_id,timeslot_id),
+  FOREIGN KEY (lab_id) REFERENCES labs(id),
+  FOREIGN KEY (timeslot_id) REFERENCES timeslots(id),
+  FOREIGN KEY (instructor_id) REFERENCES instructors(id)
+) 
+CREATE TABLE instructorsubject(
+  instructor_id varchar(8),
+  subject_id varchar(8),
+  PRIMARY KEY (instructor_id,subject_id),
+  FOREIGN KEY (instructor_id) REFERENCES instructors(id)
+)
+
+CREATE TABLE semester(
+  id varchar(8),
+  faculty varchar(8),
+  semesternumber varchar(2),
+  yearof varchar(4),
+  start_date date,
+  end_date date,
+  PRIMARY KEY (id,faculty),
+  FOREIGN KEY (faculty) REFERENCES faculties(code)
+)
+
+CREATE TABLE studentsubject(
+  sem_id varchar(8),
+  student_id varchar(9),
+  subject_id varchar(8),
+  PRIMARY KEY (sem_id,subject_id,student_id),
+  FOREIGN KEY (sem_id) REFERENCES semester(id),
+  FOREIGN KEY (student_id) REFERENCES students(reg_Number),
+  FOREIGN KEY (subject_id) REFERENCES subjects(code)
+)
+
+CREATE TABLE reciept(
+  id varchar(8) PRIMARY KEY,
+  issued_date date
+)
+
+CREATE TABLE payments(
+  id varchar(8) PRIMARY KEY ,
+  student_id varchar(9),
+  subject_id varchar(8),
+  reciept_id varchar(8),
+  FOREIGN KEY (student_id) REFERENCES students(reg_Number),
+  FOREIGN KEY (subject_id) REFERENCES subjects(code),
+  FOREIGN KEY (reciept_id) REFERENCES reciept(id)
+)
+
+CREATE TABLE assignments(
+  id varchar(8) PRIMARY KEY,
+  name varchar(20),
+  marks int(2),
+  subject_id varchar(8),
+  FOREIGN KEY (subject_id) REFERENCES subjects(code)
+)
+
+CREATE TABLE studentassignments(
+  assignment_id varchar(8),
+  student_id varchar(9),
+  marks int(2),
+  PRIMARY KEY (assignment_id,student_id),
+  FOREIGN KEY (assignment_id) REFERENCES assignments(id),
+  FOREIGN KEY (student_id) REFERENCES students(reg_Number)
+)
+
+CREATE TABLE users (
+  username varchar(10) NOT NULL PRIMARY KEY,
+  password varchar(64) NOT NULL,
+  faculty_id varchar(8) NOT NULL,
+  FOREIGN KEY (faculty_id) REFERENCES faculties(code)
+) 
+INSERT INTO faculties(code, name, telephone) VALUES ('UCSC','University of Colombo School of Computing','0112506585') 
+INSERT INTO faculties(code, name, telephone) VALUES ('FOS', 'Faculty of Science','0115865235') 
+INSERT INTO faculties(code, name, telephone) VALUES ('FOA', 'Faculty of Art','0115865235') 
+INSERT INTO users(username, password, faculty_id) VALUES ('danushka','1234','UCSC') 
+INSERT INTO courses(code, name, credits, numberofyears, can_extend, faculty) VALUES ('CS','Computer Science',34,3,1,'UCSC') 
+
+-------
+08/05/2018 22:05:23
+-------
+
+CREATE TABLE faculties(
+  code varchar(8) PRIMARY KEY,
+  name varchar(50),
+  telephone varchar(10)
+)
+
+create table universityMembers(
+  nic varchar(10) NOT NULL primary key ,
+  firstName varchar(20),
+  lastName varchar(20),
+  gender varchar(1),
+  email varchar(30) UNIQUE,
+  dob date,
+  mobile varchar(10),
+  address varchar(50),
+  faculty varchar(8),
+  FOREIGN KEY (faculty) references faculties(code)
+) 
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO" 
+SET AUTOCOMMIT = 0 
+START TRANSACTION 
+SET time_zone = "+00:00" 
+CREATE TABLE `students` (
+  reg_Number varchar(15),
+  intake_number int(2),
+  registration_date date,
+  nic varchar(10)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`reg_Number`),
+  ADD FOREIGN KEY (nic) references universitymembers(nic) 
+COMMIT 
+CREATE TABLE courses(
+  code VARCHAR(8) PRIMARY KEY,
+  name varchar(60),
+  credits int(2),
+  numberofyears int(1),
+  can_extend int(1),
+  faculty varchar(8),
+  FOREIGN KEY (faculty) REFERENCES faculties(code)
+) 
+CREATE TABLE bachelors(
+  id varchar(8) PRIMARY KEY
+) 
+CREATE TABLE masters(
+  id varchar(8) PRIMARY KEY
+)
+
+CREATE TABLE undergraduates(
+  student_id varchar(20) PRIMARY KEY NOT NULL,
+  rank INT(3),
+  stream VARCHAR(20),
+  reg_number varchar(9),
+  course_id varchar(8),
+  FOREIGN KEY (reg_number) REFERENCES students(reg_Number),
+  FOREIGN KEY (course_id) REFERENCES courses(code)
+) 
+CREATE TABLE postgraduates(
+  student_id varchar(20) NOT NULL PRIMARY KEY,
+  qualification_type varchar(30),
+  institute VARCHAR(40),
+  yearof_Completion varchar(4),
+  reg_number varchar(9),
+  course_id varchar(8),
+  FOREIGN KEY (reg_number) REFERENCES students(reg_Number),
+  FOREIGN KEY (course_id) REFERENCES courses(code)
+)
+
+CREATE TABLE lecturers(
+  id varchar(8) PRIMARY KEY,
+  researchSpeciality varchar(20),
+  office_number varchar(4),
+  nic varchar(11),
+  FOREIGN KEY (nic) REFERENCES universitymembers(nic)
+) 
+CREATE TABLE instructors(
+  id varchar(8) PRIMARY KEY,
+  nic varchar(11),
+  FOREIGN KEY (nic) REFERENCES universitymembers(nic)
+) 
+CREATE TABLE subjects(
+  code varchar(8) PRIMARY KEY,
+  name varchar(25),
+  fee decimal(7,2),
+  numberofCredits int(1),
+  numberofHours int(3),
+  lecturer_id varchar(8),
+  course_id varchar(8),
+  FOREIGN KEY (lecturer_id) REFERENCES lecturers(id),
+  FOREIGN KEY (course_id) REFERENCES courses(code)
+) 
+CREATE TABLE labs(
+  id varchar(8) PRIMARY KEY,
+  name varchar(20),
+  numberofSeats int(2),
+  faculty varchar(8),
+  FOREIGN KEY (faculty) REFERENCES faculties(code)
+)
+
+CREATE TABLE alresults(
+  student_id varchar(20),
+  subject_name varchar(30),
+  result varchar(1),
+  PRIMARY KEY (student_id,subject_name),
+  FOREIGN KEY (student_id) REFERENCES undergraduates(student_id)
+) 
+CREATE TABLE timeslots(
+  id varchar(8),
+  course_id varchar(8),
+  faculty_id varchar(8),
+  fromtime time,
+  totime time,
+  dateof date,
+  subject_id varchar(8),
+  PRIMARY KEY (id,course_id,faculty_id),
+  FOREIGN KEY (course_id) REFERENCES courses(code),
+  FOREIGN KEY (faculty_id) REFERENCES faculties(code),
+  FOREIGN KEY (subject_id) REFERENCES subjects(code)
+) 
+CREATE TABLE labtime(
+  lab_id varchar(8),
+  timeslot_id varchar(8),
+  instructor_id varchar(8),
+  PRIMARY KEY (lab_id,timeslot_id),
+  FOREIGN KEY (lab_id) REFERENCES labs(id),
+  FOREIGN KEY (timeslot_id) REFERENCES timeslots(id),
+  FOREIGN KEY (instructor_id) REFERENCES instructors(id)
+) 
+CREATE TABLE instructorsubject(
+  instructor_id varchar(8),
+  subject_id varchar(8),
+  PRIMARY KEY (instructor_id,subject_id),
+  FOREIGN KEY (instructor_id) REFERENCES instructors(id)
+)
+
+CREATE TABLE semester(
+  id varchar(8),
+  faculty varchar(8),
+  semesternumber varchar(2),
+  yearof varchar(4),
+  start_date date,
+  end_date date,
+  PRIMARY KEY (id,faculty),
+  FOREIGN KEY (faculty) REFERENCES faculties(code)
+)
+
+CREATE TABLE studentsubject(
+  sem_id varchar(8),
+  student_id varchar(9),
+  subject_id varchar(8),
+  PRIMARY KEY (sem_id,subject_id,student_id),
+  FOREIGN KEY (sem_id) REFERENCES semester(id),
+  FOREIGN KEY (student_id) REFERENCES students(reg_Number),
+  FOREIGN KEY (subject_id) REFERENCES subjects(code)
+)
+
+CREATE TABLE reciept(
+  id varchar(8) PRIMARY KEY,
+  issued_date date
+)
+
+CREATE TABLE payments(
+  id varchar(8) PRIMARY KEY ,
+  student_id varchar(9),
+  subject_id varchar(8),
+  reciept_id varchar(8),
+  FOREIGN KEY (student_id) REFERENCES students(reg_Number),
+  FOREIGN KEY (subject_id) REFERENCES subjects(code),
+  FOREIGN KEY (reciept_id) REFERENCES reciept(id)
+)
+
+CREATE TABLE assignments(
+  id varchar(8) PRIMARY KEY,
+  name varchar(20),
+  marks int(2),
+  subject_id varchar(8),
+  FOREIGN KEY (subject_id) REFERENCES subjects(code)
+)
+
+CREATE TABLE studentassignments(
+  assignment_id varchar(8),
+  student_id varchar(9),
+  marks int(2),
+  PRIMARY KEY (assignment_id,student_id),
+  FOREIGN KEY (assignment_id) REFERENCES assignments(id),
+  FOREIGN KEY (student_id) REFERENCES students(reg_Number)
+)
+
+CREATE TABLE users (
+  username varchar(10) NOT NULL PRIMARY KEY,
+  password varchar(64) NOT NULL,
+  faculty_id varchar(8) NOT NULL,
+  FOREIGN KEY (faculty_id) REFERENCES faculties(code)
+) 
+INSERT INTO faculties(code, name, telephone) VALUES ('SOB','School of Business','0112506585') 
+INSERT INTO faculties(code, name, telephone) VALUES ('SOC', 'School of Computing','0115865235') 
+INSERT INTO faculties(code, name, telephone) VALUES ('SOE', 'School of Engineering','0115865235') 
+INSERT INTO users(username, password, faculty_id) VALUES ('danushka','1234','SOB') 
+INSERT INTO courses(code, name, credits, numberofyears, can_extend, faculty) VALUES ('MIT','Management Information',34,3,1,'SOC') 
+INSERT INTO courses(code, name, credits, numberofyears, can_extend, faculty) VALUES ('SE','Software Engineering',34,3,1,'SOC') 
+INSERT INTO courses(code, name, credits, numberofyears, can_extend, faculty) VALUES ('MM','Multimedia',34,3,1,'SOC') 
+INSERT INTO courses(code, name, credits, numberofyears, can_extend, faculty) VALUES ('CS','Computer Science',34,3,1,'SOC') 
+INSERT INTO courses(code, name, credits, numberofyears, can_extend, faculty) VALUES ('CN','Computer Networks',34,3,1,'SOC') 
+INSERT INTO courses(code, name, credits, numberofyears, can_extend, faculty) VALUES ('BM','Business Management',34,3,1,'SOB') 
+INSERT INTO courses(code, name, credits, numberofyears, can_extend, faculty) VALUES ('BC','Business Management',34,3,1,'SOB') 
+INSERT INTO courses(code, name, credits, numberofyears, can_extend, faculty) VALUES ('AF','Accounting and Finance',34,3,1,'SOB') 
+INSERT INTO courses(code, name, credits, numberofyears, can_extend, faculty) VALUES ('ID','Interior Design',34,3,1,'SOB') 
+INSERT INTO courses(code, name, credits, numberofyears, can_extend, faculty) VALUES ('CSE','Computer System Engineering',34,3,1,'SOE') 

@@ -192,18 +192,18 @@ public class Regundergrad {
     }
 
     public void removeSub(ActionEvent actionEvent) {
-        if(actionEvent.getSource()==subject1){
-            int removesub=subject1.getSelectionModel().getSelectedIndex();
-            subject2.getItems().remove(removesub);
-            subject3.getItems().remove(removesub);
-        }else if(actionEvent.getSource()==subject2){
-            int removesub=subject2.getSelectionModel().getSelectedIndex();
-            subject1.getItems().remove(removesub);
-            subject3.getItems().remove(removesub);
-        }else if(actionEvent.getSource()==subject3){
-            int removesub=subject3.getSelectionModel().getSelectedIndex();
-            subject1.getItems().remove(removesub);
-            subject2.getItems().remove(removesub);
-        }
+//        if(actionEvent.getSource()==subject1){
+//            int removesub=subject1.getSelectionModel().getSelectedIndex();
+//            subject2.getItems().remove(removesub);
+//            subject3.getItems().remove(removesub);
+//        }else if(actionEvent.getSource()==subject2){
+//            int removesub=subject2.getSelectionModel().getSelectedIndex();
+//            subject1.getItems().remove(removesub);
+//            subject3.getItems().remove(removesub);
+//        }else if(actionEvent.getSource()==subject3){
+//            int removesub=subject3.getSelectionModel().getSelectedIndex();
+//            subject1.getItems().remove(removesub);
+//            subject2.getItems().remove(removesub);
+//        }
     }
 }

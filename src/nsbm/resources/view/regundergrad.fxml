@@ -67,7 +67,7 @@
             <JFXButton fx:id="cancel2" layoutX="257.0" layoutY="453.0" onAction="#closewindow" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #ea4738;" text="Cancel" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="first" prefHeight="508.0" prefWidth="600.0" style="-fx-background-color: #b8f0f2;" visible="false">
+      <AnchorPane fx:id="first" prefHeight="508.0" prefWidth="600.0" style="-fx-background-color: #b8f0f2;">
          <children>
             <Text layoutX="163.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Undergarduate">
                <font>
