@@ -6,9 +6,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.Period;
 
-public class postgraduate extends student{
+public final class postgraduate extends student{
     private Connection con=ConnectionManager.getConnection();
     private String student_id, qualification_type, institiue, yearofcompletion,course_id;
     public postgraduate(String reg_Number, String firstName ,String lastName,String gender ,String faculty,String nic, String email, String DOB, String address, String tp, String registration_date, int intake_number,String student_id, String qualification_type, String institiue, String yearofcompletion,String course_id){
@@ -52,7 +51,7 @@ public class postgraduate extends student{
         this.course_id = course_id;
     }
 
-    public void save() throws SQLException{
+    public boolean save() throws SQLException{
         super.save();
         String query="INSERT INTO postgraduates(student_id, qualification_type, institute, yearof_Completion, reg_number, course_id) VALUE (?,?,?,?,?,?)";
         PreparedStatement insq=con.prepareStatement(query);
@@ -62,7 +61,7 @@ public class postgraduate extends student{
         insq.setString(4,this.yearofcompletion);
         insq.setString(5,super.getReg_Number());
         insq.setString(6,this.course_id);
-        insq.execute();
+        return insq.execute();
     }
     public void update() throws SQLException{
         super.update();

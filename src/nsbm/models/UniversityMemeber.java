@@ -73,7 +73,7 @@ public class UniversityMemeber {
         return this.mobile;
     }
 //    DB Actions
-    public void save() throws SQLException {
+    public boolean save() throws SQLException {
         String query="INSERT INTO universitymembers(nic ,firstName, lastName,gender,email, dob, mobile, address,faculty) VALUES (?,?,?,?,?,?,?,?,?)";
         PreparedStatement insquery=con.prepareStatement(query);
         insquery.setString(1,this.nic);
@@ -85,7 +85,7 @@ public class UniversityMemeber {
         insquery.setString(7,this.mobile);
         insquery.setString(8,this.address);
         insquery.setString(9,this.faculty);
-        insquery.execute();
+        return insquery.execute();
     }
     public void update() throws SQLException{
         String query="update universitymembers set firstName=?, lastName=?,gender=?,email=?,dob=?,mobile=?,address=?,faculty=? where nic=?";

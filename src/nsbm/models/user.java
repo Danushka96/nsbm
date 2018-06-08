@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.PropertyPermission;
 
-public class user {
+public final class user {
     private Connection con=ConnectionManager.getConnection();
     private String username, password, faculty_id;
     private user(String username, String password, String faculty_id){

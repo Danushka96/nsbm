@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="147.0" prefWidth="481.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.alert.saveFailed">
+    <children>
+        <ImageView fitHeight="55.0" fitWidth="66.0" layoutX="73.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../icons/warning.png" />
+            </image>
+        </ImageView>
+        <Text layoutX="169.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Save Failed">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Text>
+        <JFXButton fx:id="close" layoutX="388.0" layoutY="108.0" onAction="#close" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #f7112c;" text="Close" />
+    </children>
+</AnchorPane>

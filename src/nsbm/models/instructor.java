@@ -7,22 +7,22 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class instructor extends UniversityMemeber {
+public final class instructor extends UniversityMemeber {
     private String instructor_id;
     private Connection con=ConnectionManager.getConnection();
-    instructor(String nic,String faculty,String firstName,String lastName,String gender,String email, String dob, String address, String mobile,String instructor_id){
+    public instructor(String nic,String faculty,String firstName,String lastName,String gender,String email, String dob, String address, String mobile,String instructor_id){
         super(nic, faculty, firstName, lastName, gender, email, dob, address, mobile);
         this.instructor_id=instructor_id;
     }
 
     @Override
-    public void save() throws SQLException {
+    public boolean save() throws SQLException {
         super.save();
         String query="INSERT INTO instructors (id, nic) VALUE (?,?)";
         PreparedStatement insq=con.prepareStatement(query);
         insq.setString(1,this.instructor_id);
         insq.setString(2,super.getNic());
-        insq.execute();
+        return insq.execute();
     }
 
     @Override

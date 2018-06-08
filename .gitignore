@@ -1,4 +1,4 @@
-out
-.idea
+/out
+/.idea
 create_db.log
 create_db_error.log

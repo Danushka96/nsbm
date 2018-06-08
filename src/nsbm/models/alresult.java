@@ -11,7 +11,7 @@ import java.util.PropertyPermission;
 public class alresult {
     Connection con=ConnectionManager.getConnection();
     String student_id, subject_id, result;
-    alresult(String student_id, String subject_id, String result){
+    public alresult(String student_id, String subject_id, String result){
         this.student_id=student_id;
         this.subject_id=subject_id;
         this.result=result;
@@ -38,13 +38,14 @@ public class alresult {
     }
 
 
-    public void save() throws SQLException{
+    public boolean save() throws SQLException{
         String query="INSERT INTO alresults (student_id, subject_name, result) VALUES (?,?,?)";
         PreparedStatement insq=con.prepareStatement(query);
         insq.setString(1,this.student_id);
         insq.setString(2,this.subject_id);
         insq.setString(3,this.result);
-        insq.execute();
+        int action= insq.executeUpdate();
+        return action > 0;
     }
 
     public void update() throws SQLException{

@@ -1,13 +1,24 @@
 package nsbm.controllers;
+import nsbm.models.undergraduate;
+import nsbm.models.alresult;
 
 import com.jfoenix.controls.*;
+import javafx.beans.value.ChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Dialog;
+import javafx.scene.control.Toggle;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-import nsbm.models.undergraduate;
+import javafx.util.Pair;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -71,10 +82,19 @@ public class Regundergrad {
     @FXML
     private JFXButton cancel1;
 
+    ToggleGroup group=new ToggleGroup();
+
     public void initialize() throws SQLException {
         setfaculty();
         setStream();
+
+        male.setToggleGroup(group);
+        male.setUserData("M");
+        male.setSelected(true);
+        female.setToggleGroup(group);
+        female.setUserData("F");
     }
+
 
     @FXML
     void changepane(ActionEvent event) {
@@ -99,29 +119,72 @@ public class Regundergrad {
     }
 
     @FXML
-    void save(ActionEvent event) throws SQLException {
+    void save(ActionEvent event) throws SQLException, IOException {
         int intakenum=Integer.parseInt(intake.getText());
         int ranknum=Integer.parseInt(rank.getText());
-//        String streamid=stream.getSelectionModel().getSelectedItem().toString();
-//        String fac=faculty.getSelectionModel().getSelectedItem().toString();
+        String gender="M";
+        if(group.getSelectedToggle()!=null) {
+            gender = group.getSelectedToggle().getUserData().toString();
+            System.out.println("hi");
+        }
+        String streamid=stream.getSelectionModel().getSelectedItem().toString();
+        String fac=faculty.getSelectionModel().getSelectedItem().toString();
+        String courseid=course.getSelectionModel().getSelectedItem().toString();
         undergraduate undergrad=new undergraduate(
                 regnumber.getText(),
                 firstname.getText(),
                 lastname.getText(),
-                "M",
-                "UCSC",
+                gender,
+                fac,
                 nic.getText(),
                 email.getText(),
                 dob.getValue().toString(),
                 address.getText(),
                 mobile.getText(),
                 regdate.getValue().toString(),
-                intakenum,studentid.getText(),
-                "Maths",
-                "cs",
+                intakenum,
+                studentid.getText(),
+                streamid,
+                courseid,
                 ranknum
         );
-        undergrad.save();
+        boolean insresult=undergrad.save();
+
+//  Save in A/L Result Table
+        String subj1=subject1.getSelectionModel().getSelectedItem().toString();
+        String subj2=subject2.getSelectionModel().getSelectedItem().toString();
+        String subj3=subject3.getSelectionModel().getSelectedItem().toString();
+        String student=studentid.getText();
+        alresult result1=new alresult(student,subj1,score1.getText());
+        alresult result2=new alresult(student,subj2,score2.getText());
+        alresult result3=new alresult(student,subj3,score3.getText());
+        result1.save();
+        result2.save();
+        result3.save();
+
+//        Alert Box
+        System.out.println("Insert Success");
+        Dialog<Pair<String, String>> dialog = new Dialog<>();
+        dialog.setTitle("Student Registration");
+        if(insresult){
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/alertbox/saveSuccess.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Undergraduate Registration");
+            stage.setScene(new Scene(root1));
+            stage.showAndWait();
+            Stage thiswin=(Stage) firstname.getScene().getWindow();
+            thiswin.close();
+        }else{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/alertbox/saveFailed.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Undergraduate Registration");
+            stage.setScene(new Scene(root1));
+            stage.showAndWait();
+        }
     }
 
     private void setfaculty() throws SQLException {

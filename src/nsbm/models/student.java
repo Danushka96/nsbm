@@ -26,7 +26,7 @@ public class student extends UniversityMemeber{
     public int getIntake_number(){ return this.intake_number;}
 
 //    DB Actions
-    public void save() throws SQLException {
+    public boolean save() throws SQLException {
         super.save();
         String query = "INSERT INTO students (reg_Number, intake_number, registration_date, nic) VALUES (?,?,?,?)";
         PreparedStatement queryins = con.prepareStatement(query);
@@ -35,7 +35,7 @@ public class student extends UniversityMemeber{
         queryins.setString(3,this.registration_date);
         queryins.setString(4,getNic());
 //        System.out.println(queryins);
-        queryins.execute();
+        return queryins.execute();
     }
     public void update() throws SQLException {
         super.update();

@@ -1145,7 +1145,7 @@ subject_name</ColNames>
     </column>
     <column id="291" parent="256" name="name">
       <Position>2</Position>
-      <DataType>varchar(30)|0s</DataType>
+      <DataType>varchar(60)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="292" parent="256" name="credits">
@@ -1590,7 +1590,7 @@ student_id</ColNames>
     </foreign-key>
     <column id="378" parent="269" name="reg_Number">
       <Position>1</Position>
-      <DataType>varchar(9)|0s</DataType>
+      <DataType>varchar(15)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>

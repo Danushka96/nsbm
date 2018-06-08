@@ -2,7 +2,7 @@ package nsbm.models;
 
 import java.sql.SQLException;
 
-public class master extends course{
+public final class master extends course{
     master(String code,String faculty,String name, int credits,int numberofyears, int can_extend){
         super(code, faculty, name, credits, numberofyears, can_extend);
     }

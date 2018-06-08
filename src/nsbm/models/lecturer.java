@@ -7,10 +7,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class lecturer extends UniversityMemeber{
+public final class lecturer extends UniversityMemeber{
     Connection con=ConnectionManager.getConnection();
     private String lecture_id,researchSpeciality,office_number;
-    lecturer(String nic,String faculty,String firstName,String lastName,String gender,String email, String dob, String address, String mobile,String lecture_id, String researchSpeciality, String office_number){
+    public lecturer(String nic,String faculty,String firstName,String lastName,String gender,String email, String dob, String address, String mobile,String lecture_id, String researchSpeciality, String office_number){
         super(nic, faculty, firstName, lastName, gender, email, dob, address, mobile);
         this.lecture_id=lecture_id;
         this.researchSpeciality=researchSpeciality;
@@ -38,7 +38,7 @@ public class lecturer extends UniversityMemeber{
     }
 
     @Override
-    public void save() throws SQLException {
+    public boolean save() throws SQLException {
         super.save();
         String query="INSERT INTO lecturers (id, researchSpeciality, office_number, nic) VALUE (?,?,?,?)";
         PreparedStatement insq=con.prepareStatement(query);
@@ -46,7 +46,7 @@ public class lecturer extends UniversityMemeber{
         insq.setString(2,this.researchSpeciality);
         insq.setString(3,this.office_number);
         insq.setString(4,super.getNic());
-        insq.execute();
+        return insq.execute();
     }
 
     @Override

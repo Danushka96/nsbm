@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class undergraduate extends student {
+public final class undergraduate extends student {
     private Connection con = ConnectionManager.getConnection();
     private int rank;
     private String stream,student_id,course_id;
@@ -41,7 +41,7 @@ public class undergraduate extends student {
     }
 
     //    DB Save
-    public void save() throws SQLException{
+    public boolean save() throws SQLException{
         super.save();
         String query="INSERT INTO undergraduates(student_id, rank, stream, reg_number, course_id) VALUES (?,?,?,?,?)";
         PreparedStatement insQuery=con.prepareStatement(query);
@@ -50,7 +50,8 @@ public class undergraduate extends student {
         insQuery.setString(3,this.stream);
         insQuery.setString(4,super.getReg_Number());
         insQuery.setString(5,this.course_id);
-        insQuery.execute();
+        int action= insQuery.executeUpdate();
+        return action > 0;
     }
     public void update() throws SQLException{
         super.update();
