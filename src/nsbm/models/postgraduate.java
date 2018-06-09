@@ -61,7 +61,9 @@ public final class postgraduate extends student{
         insq.setString(4,this.yearofcompletion);
         insq.setString(5,super.getReg_Number());
         insq.setString(6,this.course_id);
-        return insq.execute();
+        System.out.println(insq);
+        int result=insq.executeUpdate();
+        return result>0;
     }
     public void update() throws SQLException{
         super.update();

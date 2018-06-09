@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.awt.event.ActionEvent;
@@ -33,6 +34,7 @@ public class mainInterface {
 
     @FXML
     public JFXButton regunder;
+    public JFXButton regnew;
 
     @FXML
     private AnchorPane menuuni;
@@ -140,6 +142,16 @@ public class mainInterface {
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Postgraduate Registration");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+
+    public void regnewstudent(javafx.event.ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/studenttype.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Register new Student");
         stage.setScene(new Scene(root1));
         stage.show();
     }

@@ -125,7 +125,6 @@ public class Regundergrad {
         String gender="M";
         if(group.getSelectedToggle()!=null) {
             gender = group.getSelectedToggle().getUserData().toString();
-            System.out.println("hi");
         }
         String streamid=stream.getSelectionModel().getSelectedItem().toString();
         String fac=faculty.getSelectionModel().getSelectedItem().toString();

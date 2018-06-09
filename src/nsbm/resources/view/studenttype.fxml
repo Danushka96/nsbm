@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.studenttype">
+   <children>
+      <JFXButton fx:id="undergrad" alignment="CENTER" buttonType="RAISED" layoutX="61.0" layoutY="58.0" onAction="#openundergrad" prefHeight="168.0" prefWidth="181.0" text=" " textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="136.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/undergrad.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="postgrad" alignment="CENTER" contentDisplay="CENTER" layoutX="329.0" layoutY="58.0" onAction="#openpostgrad" prefHeight="168.0" prefWidth="181.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="144.0" fitWidth="149.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/postgrad.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Text layoutX="138.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the Student Type">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="89.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="undergraduate">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="364.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postgraduate">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="close" layoutX="443.0" layoutY="286.0" onAction="#closewindow" prefHeight="40.0" prefWidth="86.0" style="-fx-background-color: #f40000;" text="Close" />
+   </children>
+</AnchorPane>

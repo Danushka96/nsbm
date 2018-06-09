@@ -387,7 +387,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <JFXButton layoutX="38.0" layoutY="286.0" prefHeight="76.0" prefWidth="242.0" style="-fx-border-color: #57a8f9;" text="Register New Students">
+            <JFXButton fx:id="regnew" layoutX="38.0" layoutY="286.0" onAction="#regnewstudent" prefHeight="76.0" prefWidth="242.0" style="-fx-border-color: #57a8f9;" text="Register New Students">
                <graphic>
                   <ImageView fitHeight="79.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
                      <image>
