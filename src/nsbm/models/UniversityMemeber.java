@@ -47,7 +47,7 @@ public class UniversityMemeber {
         this.mobile=mobile;
     }
 //    Getter
-    String getNic(){
+public String getNic(){
         return this.nic;
     }
     public String getFaculty() {

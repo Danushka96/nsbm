@@ -66,7 +66,6 @@ public class student extends UniversityMemeber{
             nic=result.getString("nic");
             intake_number=result.getInt("intake_number");
             registration_date=result.getString("registration_date");
-            faculty=result.getString("faculty");
         }
         UniversityMemeber memeber = UniversityMemeber.findmember(nic);
         firstname=memeber.getFirstName();
@@ -76,6 +75,7 @@ public class student extends UniversityMemeber{
         dob=memeber.getDob();
         mobile=memeber.getMobile();
         address=memeber.getAddress();
+        faculty=memeber.getFaculty();
         return new student(reg_Number,firstname,lastname,gender,faculty,nic,email,dob,address,mobile,registration_date,intake_number);
     }
 }

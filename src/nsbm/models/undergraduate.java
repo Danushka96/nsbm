@@ -2,10 +2,8 @@ package nsbm.models;
 
 import nsbm.controllers.ConnectionManager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 public final class undergraduate extends student {
     private Connection con = ConnectionManager.getConnection();
@@ -86,5 +84,17 @@ public final class undergraduate extends student {
         }
         student st1=findstudent(reg_number);
         return new undergraduate(reg_number,st1.getFirstName(),st1.getLastName(),st1.getGender(),st1.getFaculty(),st1.getNic(),st1.getEmail(),st1.getDob(),st1.getAddress(),st1.getMobile(),st1.getRegistration_date(),st1.getIntake_number(),student_id,stream,course_id,rank);
+    }
+    public static ArrayList<undergraduate> getall() throws SQLException{
+        ArrayList<undergraduate> all=new ArrayList<>();
+        Connection con=ConnectionManager.getConnection();
+        String query="SELECT student_id FROM undergraduates";
+        Statement allq=con.prepareStatement(query);
+        ResultSet result=((PreparedStatement) allq).executeQuery();
+        while (result.next()){
+            String student_id=result.getString("student_id");
+            all.add(findUndergraduate(student_id));
+        }
+        return all;
     }
 }

@@ -16,7 +16,7 @@
    <children>
       <AnchorPane fx:id="third" prefHeight="508.0" prefWidth="600.0" style="-fx-background-color: #b8f0f2;">
          <children>
-            <Text layoutX="163.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Undergarduate">
+            <Text layoutX="172.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Postgraduate">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -38,7 +38,7 @@
       </AnchorPane>
       <AnchorPane fx:id="second" prefHeight="508.0" prefWidth="600.0" style="-fx-background-color: #b8f0f2;">
          <children>
-            <Text layoutX="163.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Undergarduate">
+            <Text layoutX="172.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Postgraduate">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -58,7 +58,7 @@
       </AnchorPane>
       <AnchorPane fx:id="first" prefHeight="508.0" prefWidth="600.0" style="-fx-background-color: #b8f0f2;">
          <children>
-            <Text layoutX="163.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Undergarduate">
+            <Text layoutX="172.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Postgraduate">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>

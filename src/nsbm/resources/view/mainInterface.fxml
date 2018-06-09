@@ -273,7 +273,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="66.0" layoutY="227.0" prefHeight="61.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="View Undergraduates">
+            <JFXButton layoutX="66.0" layoutY="227.0" onAction="#undergradindex" prefHeight="61.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="View Undergraduates">
                <graphic>
                   <ImageView fitHeight="63.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
