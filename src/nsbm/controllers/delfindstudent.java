@@ -31,9 +31,9 @@ public class delfindstudent {
     @FXML
     private JFXButton postsearch;
 
-    public static int type=0;
-    public static undergraduate under;
-    public static postgraduate post;
+    private static int type=0;
+    private static undergraduate under;
+    private static postgraduate post;
 
     @FXML
     void searchpostgrad(ActionEvent event) throws IOException, SQLException {
@@ -70,8 +70,8 @@ public class delfindstudent {
     public static String getStudent_id(){
         return student_id;
     }
-    public static undergraduate getUnder(){return under;}
-    public static postgraduate getPost(){return post;}
-    public static int getType(){return type;}
+    static undergraduate getUnder(){return under;}
+    static postgraduate getPost(){return post;}
+    static int getType(){return type;}
 
 }

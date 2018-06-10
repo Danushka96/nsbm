@@ -333,7 +333,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="350.0" layoutY="420.0" prefHeight="51.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Subject Selection">
+            <JFXButton layoutX="350.0" layoutY="420.0" onAction="#subselect" prefHeight="51.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Subject Selection">
                <graphic>
                   <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
                      <image>
