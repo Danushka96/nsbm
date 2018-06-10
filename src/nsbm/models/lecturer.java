@@ -50,7 +50,7 @@ public final class lecturer extends UniversityMemeber{
     }
 
     @Override
-    public void update() throws SQLException {
+    public boolean update() throws SQLException {
         super.update();
         String query="UPDATE lecturers SET researchSpeciality=?,office_number=?, nic=? WHERE id=?";
         PreparedStatement upq=con.prepareStatement(query);
@@ -58,7 +58,7 @@ public final class lecturer extends UniversityMemeber{
         upq.setString(2,this.office_number);
         upq.setString(3,super.getNic());
         upq.setString(4,this.lecture_id);
-        upq.execute();
+        return upq.execute();
     }
 
     @Override

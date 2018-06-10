@@ -165,4 +165,24 @@ public class mainInterface {
         stage.setScene(new Scene(root1));
         stage.show();
     }
+
+    public void postgradindex(javafx.event.ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/indexpostgrad.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("All Postgraduates");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+
+    public void findstudent(javafx.event.ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/findbox.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Find Student");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
 }

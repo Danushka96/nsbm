@@ -285,7 +285,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="392.0" layoutY="227.0" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="View Postgraduates">
+            <JFXButton layoutX="392.0" layoutY="227.0" onAction="#postgradindex" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="View Postgraduates">
                <graphic>
                   <ImageView fitHeight="51.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -297,7 +297,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="74.0" layoutY="342.0" prefHeight="51.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Find Student">
+            <JFXButton layoutX="74.0" layoutY="342.0" onAction="#findstudent" prefHeight="51.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Find Student">
                <graphic>
                   <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
                      <image>

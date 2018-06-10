@@ -2,10 +2,8 @@ package nsbm.models;
 
 import nsbm.controllers.ConnectionManager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 public final class postgraduate extends student{
     private Connection con=ConnectionManager.getConnection();
@@ -65,7 +63,7 @@ public final class postgraduate extends student{
         int result=insq.executeUpdate();
         return result>0;
     }
-    public void update() throws SQLException{
+    public boolean update() throws SQLException{
         super.update();
         String query="UPDATE postgraduates SET qualification_type=?, institute=?, yearof_Completion=?, course_id=? WHERE student_id=?";
         PreparedStatement upq=con.prepareStatement(query);
@@ -74,7 +72,8 @@ public final class postgraduate extends student{
         upq.setString(3,this.yearofcompletion);
         upq.setString(4,this.course_id);
         upq.setString(5,this.student_id);
-        upq.execute();
+        int result=upq.executeUpdate();
+        return result>0;
     }
     public void delete() throws SQLException{
         String query="DELETE FROM postgraduates WHERE student_id=?";
@@ -98,5 +97,17 @@ public final class postgraduate extends student{
         }
         student stu = findstudent(reg_number);
         return new postgraduate(reg_number,stu.getFirstName(),stu.getLastName(),stu.getGender(),stu.getFaculty(),stu.getNic(),stu.getEmail(),stu.getDob(),stu.getAddress(),stu.getMobile(),stu.getRegistration_date(),stu.getIntake_number(),student_id,qualification_type,institute,yearof_Completion,course_id);
+    }
+    public static ArrayList<postgraduate> getall() throws SQLException{
+        ArrayList<postgraduate> all=new ArrayList<>();
+        Connection con=ConnectionManager.getConnection();
+        String query="SELECT student_id FROM postgraduates";
+        Statement allq=con.prepareStatement(query);
+        ResultSet result=((PreparedStatement) allq).executeQuery();
+        while (result.next()){
+            String student_id=result.getString("student_id");
+            all.add(findPostgraduate(student_id));
+        }
+        return all;
     }
 }

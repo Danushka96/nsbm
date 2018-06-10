@@ -26,14 +26,14 @@ public final class instructor extends UniversityMemeber {
     }
 
     @Override
-    public void update() throws SQLException {
+    public boolean update() throws SQLException {
         super.update();
         String quety="UPDATE instructors set id=?, nic=? WHERE id=?";
         PreparedStatement upq=con.prepareStatement(quety);
         upq.setString(1,this.instructor_id);
         upq.setString(2,super.getNic());
         upq.setString(3,this.instructor_id);
-        upq.execute();
+        return upq.execute();
     }
 
     @Override

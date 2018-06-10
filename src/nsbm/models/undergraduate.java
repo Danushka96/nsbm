@@ -51,7 +51,7 @@ public final class undergraduate extends student {
         int action= insQuery.executeUpdate();
         return action > 0;
     }
-    public void update() throws SQLException{
+    public boolean update() throws SQLException{
         super.update();
         String query="UPDATE undergraduates set rank=?, stream=?, reg_number=?, course_id=? WHERE student_id=?";
         PreparedStatement upquery=con.prepareStatement(query);
@@ -60,7 +60,8 @@ public final class undergraduate extends student {
         upquery.setString(3,super.getReg_Number());
         upquery.setString(4,this.course_id);
         upquery.setString(5,this.student_id);
-        upquery.execute();
+        int action= upquery.executeUpdate();
+        return action > 0;
     }
     public void delete() throws SQLException{
         String query="DELETE FROM undergraduates WHERE student_id=?";

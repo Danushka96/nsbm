@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.PropertyPermission;
 
 public class alresult {
@@ -57,23 +58,18 @@ public class alresult {
         upq.execute();
     }
 
-    public static alresult[] find(String student_id) throws SQLException{
+    public static ArrayList<alresult> find(String student_id) throws SQLException{
         Connection con=ConnectionManager.getConnection();
         String query="SELECT * FROM alresults WHERE student_id=?";
         PreparedStatement selectq=con.prepareStatement(query);
         selectq.setString(1,student_id);
         ResultSet resultset=selectq.executeQuery();
         String subjectname=null,result=null;
-        int count=0;
-        while (resultset.next()){
-            count++;
-        }
-        alresult[] all = new alresult[count];
+        ArrayList<alresult> all = new ArrayList<>();
         while (resultset.next()){
             subjectname=resultset.getString("subject_name");
             result=resultset.getString("result");
-            all[count-1]=new alresult(student_id,subjectname,result);
-            count--;
+            all.add(new alresult(student_id,subjectname,result));
         }
         return all;
     }

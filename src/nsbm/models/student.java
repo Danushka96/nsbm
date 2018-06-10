@@ -37,7 +37,7 @@ public class student extends UniversityMemeber{
 //        System.out.println(queryins);
         return queryins.execute();
     }
-    public void update() throws SQLException {
+    public boolean update() throws SQLException {
         super.update();
         String query = "UPDATE students set intake_number=?,registration_date=?,nic=? where reg_Number=?";
         PreparedStatement queryupd = con.prepareStatement(query);
@@ -45,7 +45,7 @@ public class student extends UniversityMemeber{
         queryupd.setString(2,registration_date);
         queryupd.setString(3,getNic());
         queryupd.setString(4,this.reg_Number);
-        queryupd.execute();
+        return queryupd.execute();
     }
     public void delete() throws SQLException{
         super.delete();

@@ -87,7 +87,7 @@ public String getNic(){
         insquery.setString(9,this.faculty);
         return insquery.execute();
     }
-    public void update() throws SQLException{
+    public boolean update() throws SQLException{
         String query="update universitymembers set firstName=?, lastName=?,gender=?,email=?,dob=?,mobile=?,address=?,faculty=? where nic=?";
         PreparedStatement upquery=con.prepareStatement(query);
         upquery.setString(1,this.firstName);
@@ -99,7 +99,7 @@ public String getNic(){
         upquery.setString(7,this.address);
         upquery.setString(8,this.faculty);
         upquery.setString(9,this.nic);
-        upquery.execute();
+        return upquery.execute();
     }
     public void delete() throws SQLException{
         String query="DELETE from universitymembers where nic=?";
