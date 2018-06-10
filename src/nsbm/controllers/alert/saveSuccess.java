@@ -27,7 +27,7 @@ public class saveSuccess {
     public void addnew(ActionEvent actionEvent) throws IOException {
         Stage thiswin= (Stage)close.getScene().getWindow();
         thiswin.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../resources/view/regundergrad.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../resources/view/student/create/regundergrad.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Undergraduate Registration");

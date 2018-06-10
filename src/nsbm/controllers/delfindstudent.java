@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class findstudent {
+public class delfindstudent {
 
     private static String student_id;
 

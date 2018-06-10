@@ -27,7 +27,7 @@ public class updateSuccess {
     public void addnew(ActionEvent actionEvent) throws IOException {
         Stage thiswin= (Stage)close.getScene().getWindow();
         thiswin.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../resources/view/findbox.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../resources/view/student/findbox.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Main Interface");

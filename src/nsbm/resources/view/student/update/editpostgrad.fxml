@@ -12,11 +12,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="508.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.Regpostgrad">
+<AnchorPane prefHeight="508.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.editpostgrad">
    <children>
       <AnchorPane fx:id="third" prefHeight="508.0" prefWidth="600.0" style="-fx-background-color: #b8f0f2;">
          <children>
-            <Text layoutX="172.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Postgraduate">
+            <Text layoutX="200.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Postgraduate">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -26,7 +26,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Text>
-            <JFXButton fx:id="save" layoutX="489.0" layoutY="453.0" onAction="#save" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #38ea52;" text="Save" />
+            <JFXButton fx:id="save" layoutX="489.0" layoutY="453.0" onAction="#update" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #38ea52;" text="Update" />
             <JFXButton fx:id="tosecond1" layoutX="374.0" layoutY="452.0" onAction="#changepane" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #6a35f2;" text="Previous" />
             <JFXDatePicker fx:id="regdate" layoutX="50.0" layoutY="206.0" prefHeight="28.0" prefWidth="232.0" promptText="Registration Date" />
             <JFXTextField fx:id="intake" layoutX="369.0" layoutY="146.0" promptText="Intake Number" />
@@ -38,7 +38,7 @@
       </AnchorPane>
       <AnchorPane fx:id="second" prefHeight="508.0" prefWidth="600.0" style="-fx-background-color: #b8f0f2;">
          <children>
-            <Text layoutX="172.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Postgraduate">
+            <Text layoutX="200.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Postgraduate">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -58,7 +58,7 @@
       </AnchorPane>
       <AnchorPane fx:id="first" prefHeight="508.0" prefWidth="600.0" style="-fx-background-color: #b8f0f2;">
          <children>
-            <Text layoutX="172.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Postgraduate">
+            <Text layoutX="200.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Postgraduate">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -80,12 +80,12 @@
             <JFXTextArea fx:id="address" layoutX="44.0" layoutY="349.0" prefHeight="59.0" prefWidth="190.0" promptText="Address" />
             <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="141.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../icons/mars.png" />
+                  <Image url="@../../../icons/mars.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="141.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../icons/venus.png" />
+                  <Image url="@../../../icons/venus.png" />
                </image>
             </ImageView>
             <JFXButton fx:id="tosecond" layoutX="489.0" layoutY="453.0" onAction="#changepane" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #38ea52;" text="Next" />

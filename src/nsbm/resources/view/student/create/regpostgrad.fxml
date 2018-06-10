@@ -12,11 +12,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="508.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.editundergrad">
+<AnchorPane prefHeight="508.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.Regpostgrad">
    <children>
       <AnchorPane fx:id="third" prefHeight="508.0" prefWidth="600.0" style="-fx-background-color: #b8f0f2;">
          <children>
-            <Text layoutX="174.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Undergarduate">
+            <Text layoutX="172.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Postgraduate">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -26,7 +26,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Text>
-            <JFXButton fx:id="save" layoutX="489.0" layoutY="453.0" onAction="#update" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #38ea52;" text="Update" />
+            <JFXButton fx:id="save" layoutX="489.0" layoutY="453.0" onAction="#save" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #38ea52;" text="Save" />
             <JFXButton fx:id="tosecond1" layoutX="374.0" layoutY="452.0" onAction="#changepane" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #6a35f2;" text="Previous" />
             <JFXDatePicker fx:id="regdate" layoutX="50.0" layoutY="206.0" prefHeight="28.0" prefWidth="232.0" promptText="Registration Date" />
             <JFXTextField fx:id="intake" layoutX="369.0" layoutY="146.0" promptText="Intake Number" />
@@ -38,7 +38,7 @@
       </AnchorPane>
       <AnchorPane fx:id="second" prefHeight="508.0" prefWidth="600.0" style="-fx-background-color: #b8f0f2;">
          <children>
-            <Text layoutX="192.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Undergarduate">
+            <Text layoutX="172.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Postgraduate">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -48,18 +48,9 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Text>
-            <JFXTextField fx:id="rank" layoutX="65.0" layoutY="148.0" prefHeight="25.0" prefWidth="155.0" promptText="Rank" />
-            <JFXComboBox fx:id="stream" layoutX="388.0" layoutY="147.0" onAction="#setSubjects" prefHeight="25.0" prefWidth="155.0" promptText="Stream" />
-            <Text layoutX="68.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A/L Results">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font></Text>
-            <JFXComboBox fx:id="subject1" layoutX="72.0" layoutY="287.0" onAction="#removeSub" prefHeight="25.0" prefWidth="155.0" promptText="Subject1" />
-            <JFXComboBox fx:id="subject2" layoutX="72.0" layoutY="329.0" onAction="#removeSub" prefHeight="25.0" prefWidth="155.0" promptText="Subject2" />
-            <JFXComboBox fx:id="subject3" layoutX="72.0" layoutY="369.0" onAction="#removeSub" prefHeight="25.0" prefWidth="155.0" promptText="Subject3" />
-            <JFXTextField fx:id="score1" layoutX="278.0" layoutY="287.0" prefHeight="25.0" prefWidth="54.0" promptText="Result" />
-            <JFXTextField fx:id="score2" layoutX="278.0" layoutY="329.0" prefHeight="25.0" prefWidth="54.0" promptText="Result" />
-            <JFXTextField fx:id="score3" layoutX="278.0" layoutY="369.0" prefHeight="25.0" prefWidth="54.0" promptText="Result" />
+            <JFXTextField fx:id="qualification" layoutX="70.0" layoutY="135.0" prefHeight="25.0" prefWidth="174.0" promptText="Qualification type" />
+            <JFXTextField fx:id="year" layoutX="70.0" layoutY="188.0" prefHeight="25.0" prefWidth="174.0" promptText="Year of Completion" />
+            <JFXTextField fx:id="institute" layoutX="383.0" layoutY="135.0" prefHeight="25.0" prefWidth="155.0" promptText="Institute" />
             <JFXButton fx:id="tothird" layoutX="489.0" layoutY="453.0" onAction="#changepane" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #38ea52;" text="Next" />
             <JFXButton fx:id="tofirst" layoutX="374.0" layoutY="452.0" onAction="#changepane" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #6a35f2;" text="Previous" />
             <JFXButton fx:id="cancel2" layoutX="257.0" layoutY="453.0" onAction="#closewindow" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #ea4738;" text="Cancel" />
@@ -67,7 +58,7 @@
       </AnchorPane>
       <AnchorPane fx:id="first" prefHeight="508.0" prefWidth="600.0" style="-fx-background-color: #b8f0f2;">
          <children>
-            <Text layoutX="192.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Undergarduate">
+            <Text layoutX="172.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Postgraduate">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -89,12 +80,12 @@
             <JFXTextArea fx:id="address" layoutX="44.0" layoutY="349.0" prefHeight="59.0" prefWidth="190.0" promptText="Address" />
             <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="141.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../icons/mars.png" />
+                  <Image url="@../../../icons/mars.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="141.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../icons/venus.png" />
+                  <Image url="@../../../icons/venus.png" />
                </image>
             </ImageView>
             <JFXButton fx:id="tosecond" layoutX="489.0" layoutY="453.0" onAction="#changepane" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #38ea52;" text="Next" />
