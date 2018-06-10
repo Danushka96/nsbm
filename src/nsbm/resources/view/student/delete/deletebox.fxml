@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="283.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="nsbm.controllers.deletestudent" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="223.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Details">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="147.0" fitWidth="154.0" layoutX="32.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icons/learning.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="225.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIC :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="225.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="225.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Faculty:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="224.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="nic" editable="false" layoutX="321.0" layoutY="76.0" prefHeight="25.0" prefWidth="170.0" />
+      <JFXTextField fx:id="name" editable="false" layoutX="321.0" layoutY="113.0" prefHeight="25.0" prefWidth="170.0" />
+      <JFXTextField fx:id="faculty" editable="false" layoutX="321.0" layoutY="150.0" prefHeight="25.0" prefWidth="170.0" />
+      <JFXTextField fx:id="course" editable="false" layoutX="321.0" layoutY="183.0" prefHeight="25.0" prefWidth="170.0" />
+      <JFXButton layoutX="467.0" layoutY="237.0" onAction="#delete" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #f90000;" text="Confirm Delete" />
+      <JFXButton layoutX="359.0" layoutY="238.0" onAction="#close" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #f99900;" text="Close" />
+   </children>
+</AnchorPane>

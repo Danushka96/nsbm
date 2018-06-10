@@ -2,25 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/nsbm/controllers/delfindstudent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/view/student/findbox.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nsbm/controllers/deletestudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nsbm/resources/icons/learning.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/controllers/mainInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NSBM/nsbm/controllers/mainInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/view/regpostgrad.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NSBM/nsbm/resources/view/regundergrad.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/controllers/alert/saveSuccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/controllers/alert/saveSuccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/controllers/alert/updateSuccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/controllers/alert/updateSuccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/controllers/findstudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/controllers/findstudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/controllers/delfindstudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/controllers/delfindstudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/controllers/editundergrad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/controllers/editundergrad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/controllers/studenttype.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/controllers/studenttype.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/view/editpostgrad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/view/student/update/editpostgrad.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/view/editundergrad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/view/student/update/editundergrad.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/view/findbox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/view/student/delete/delfindstudent.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/view/indexpostgrad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/view/student/index/indexpostgrad.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/view/indexundergrad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/view/student/index/indexundergrad.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/view/regpostgrad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/view/student/create/regpostgrad.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/view/regundergrad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/view/student/create/regundergrad.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/view/studenttype.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/view/student/studenttype.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/view/mainInterface.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/view/mainInterface.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/view/student/delete/delfindstudent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/view/student/delete/delfindstudent.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -141,43 +130,19 @@
       </file>
       <file leaf-file-name="delfindstudent.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/student/delete/delfindstudent.fxml">
-          <provider selected="true" editor-type-id="text-editor" />
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file leaf-file-name="delfindstudent.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/delfindstudent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editpostgrad.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/student/update/editpostgrad.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="14" column="160" selection-start-line="14" selection-start-column="160" selection-end-line="14" selection-end-column="160" />
+            <state relative-caret-position="144">
+              <caret line="9" column="284" selection-start-line="9" selection-start-column="284" selection-end-line="9" selection-end-column="284" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file leaf-file-name="editpostgrad.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/editpostgrad.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="128" column="21" selection-start-line="128" selection-start-column="21" selection-end-line="128" selection-end-column="21" />
-            </state>
-          </provider>
         </entry>
       </file>
       <file leaf-file-name="editundergrad.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/editundergrad.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-104">
-              <caret line="91" column="21" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
+            <state relative-caret-position="238">
+              <caret line="304" selection-start-line="304" selection-end-line="304" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -185,11 +150,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postgraduates" pinned="false" current-in-tab="false">
-        <entry file="das://99a213d3-dced-40d3-9239-d2ce4c9ed4d8/schema/nsbm/table/postgraduates">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="deletebox.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/student/delete/deletebox.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-191">
+              <caret line="11" column="213" selection-start-line="11" selection-start-column="213" selection-end-line="11" selection-end-column="213" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file leaf-file-name="deletestudent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/deletestudent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="delfindstudent.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/delfindstudent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="63" column="53" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainInterface.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/mainInterface.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="311" column="68" selection-start-line="311" selection-start-column="68" selection-end-line="311" selection-end-column="68" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file leaf-file-name="mainInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="194" column="21" lean-forward="true" selection-start-line="194" selection-start-column="21" selection-end-line="194" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -228,9 +237,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/nsbm/Main.java" />
-        <option value="$PROJECT_DIR$/src/nsbm/controllers/loginController.java" />
-        <option value="$PROJECT_DIR$/src/nsbm/resources/css/button.css" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/view/mainInterface.fxml" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/db/migrations/001_create_faculty_table.sql" />
         <option value="$PROJECT_DIR$/src/nsbm/models/faculty.java" />
@@ -259,10 +265,8 @@
         <option value="$PROJECT_DIR$/src/nsbm/resources/view/indexundergrad.fxml" />
         <option value="$PROJECT_DIR$/src/nsbm/controllers/indexUndergrad.java" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/view/indexpostgrad.fxml" />
-        <option value="$PROJECT_DIR$/src/nsbm/controllers/indexPostgrad.java" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/view/findbox.fxml" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/view/editundergrad.fxml" />
-        <option value="$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java" />
         <option value="$PROJECT_DIR$/src/nsbm/models/alresult.java" />
         <option value="$PROJECT_DIR$/src/nsbm/models/undergraduate.java" />
         <option value="$PROJECT_DIR$/src/nsbm/models/student.java" />
@@ -270,7 +274,6 @@
         <option value="$PROJECT_DIR$/src/nsbm/models/postgraduate.java" />
         <option value="$PROJECT_DIR$/src/nsbm/models/lecturer.java" />
         <option value="$PROJECT_DIR$/src/nsbm/models/instructor.java" />
-        <option value="$PROJECT_DIR$/src/nsbm/controllers/editundergrad.java" />
         <option value="$PROJECT_DIR$/src/nsbm/controllers/alert/updateFailed.java" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/view/alertbox/updateSuccess.fxml" />
         <option value="$PROJECT_DIR$/src/nsbm/controllers/alert/updateSuccess.java" />
@@ -278,6 +281,12 @@
         <option value="$PROJECT_DIR$/src/nsbm/resources/view/editpostgrad.fxml" />
         <option value="$PROJECT_DIR$/src/nsbm/controllers/editpostgrad.java" />
         <option value="$PROJECT_DIR$/src/nsbm/controllers/findstudent.java" />
+        <option value="$PROJECT_DIR$/src/nsbm/resources/view/student/delete/delfindstudent.fxml" />
+        <option value="$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java" />
+        <option value="$PROJECT_DIR$/src/nsbm/resources/view/student/delete/deletebox.fxml" />
+        <option value="$PROJECT_DIR$/src/nsbm/controllers/indexPostgrad.java" />
+        <option value="$PROJECT_DIR$/src/nsbm/controllers/editundergrad.java" />
+        <option value="$PROJECT_DIR$/src/nsbm/controllers/deletestudent.java" />
         <option value="$PROJECT_DIR$/src/nsbm/controllers/delfindstudent.java" />
       </list>
     </option>
@@ -331,14 +340,6 @@
               <item name="NSBM" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="nsbm" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="students" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NSBM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NSBM" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="nsbm" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -363,6 +364,25 @@
               <item name="nsbm" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NSBM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NSBM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nsbm" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NSBM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NSBM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nsbm" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+              <item name="delete" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NSBM" type="b2602c69:ProjectViewProjectNode" />
@@ -401,9 +421,9 @@
       <recent name="nsbm.controllers.students.index" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Danushka Herath\Desktop\java\NSBM\src\nsbm\resources\icons" />
       <recent name="C:\Users\Danushka Herath\Desktop\java\NSBM\src\nsbm\resources\view" />
       <recent name="C:\Users\Danushka Herath\Desktop\java\NSBM\src\nsbm\resources\view\alertbox" />
-      <recent name="C:\Users\Danushka Herath\Desktop\java\NSBM\src\nsbm\resources\icons" />
       <recent name="C:\Users\Danushka Herath\Desktop\java\NSBM\src\nsbm\resources\css" />
       <recent name="C:\Users\Danushka Herath\Desktop\java\NSBM\src\nsbm" />
     </key>
@@ -566,12 +586,12 @@
       <workItem from="1528378759893" duration="101000" />
       <workItem from="1528385693735" duration="13138000" />
       <workItem from="1528473268872" duration="34488000" />
-      <workItem from="1528657385730" duration="9200000" />
+      <workItem from="1528657385730" duration="12232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237901000" />
+    <option name="totallyTimeSpent" value="240933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -585,12 +605,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32838285" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25412542" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25412542" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924356" weight="0.26732674" />
-      <window_info anchor="bottom" id="Database Console" order="9" weight="0.32838285" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20272315" />
-      <window_info anchor="right" id="Database" order="3" sideWeight="0.49774775" visible="true" weight="0.17776097" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20272315" />
+      <window_info anchor="right" id="Database" order="3" sideWeight="0.49774775" weight="0.17776097" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -600,6 +619,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Problems" order="7" />
+      <window_info anchor="bottom" id="Database Console" order="9" weight="0.32838285" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
       <window_info anchor="bottom" id="Changes" order="7" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -610,36 +630,36 @@
       <window_info anchor="bottom" id="Application Servers" order="7" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Application Servers" order="7" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25412542" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.32838285" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2739274" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="JetGradle" order="4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="8" sideWeight="0.5022523" side_tool="true" weight="0.14977308" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="bottom" id="Profiler" order="8" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Changes" order="9" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.26732674" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32838285" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.16944024" />
       <window_info anchor="bottom" id="Problems" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32838285" />
       <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="bottom" id="Terminal" order="15" weight="0.26732674" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="15" sideWeight="0.49924356" weight="0.26732674" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20272315" />
       <window_info anchor="right" id="Database" order="6" sideWeight="0.49774775" visible="true" weight="0.17776097" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="8" sideWeight="0.5022523" side_tool="true" weight="0.14977308" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
     </layout-to-restore>
   </component>
@@ -660,26 +680,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/findstudent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/editundergrad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1504">
-          <caret line="94" column="31" lean-forward="true" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/resources/db/migrations/001_create_faculty_table.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -856,13 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/indexUndergrad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="29" lean-forward="true" selection-end-line="135" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/Regundergrad.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -870,23 +863,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/indexPostgrad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2064">
-          <caret line="132" column="24" lean-forward="true" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="181" column="34" lean-forward="true" selection-start-line="181" selection-start-column="34" selection-end-line="181" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1005,16 +981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/editundergrad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-104">
-          <caret line="91" column="21" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://99a213d3-dced-40d3-9239-d2ce4c9ed4d8/schema/nsbm/table/postgraduates">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1032,14 +998,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="194" column="21" lean-forward="true" selection-start-line="194" selection-start-column="21" selection-end-line="194" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/student/delete/delfindstudent.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="284" selection-start-line="9" selection-start-column="284" selection-end-line="9" selection-end-column="284" />
+        </state>
+      </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/student/delete/deletebox.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-191">
+          <caret line="11" column="213" selection-start-line="11" selection-start-column="213" selection-end-line="11" selection-end-column="213" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/editundergrad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="304" selection-start-line="304" selection-end-line="304" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/indexUndergrad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="131" column="9" lean-forward="true" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/indexPostgrad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="120" column="59" lean-forward="true" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4019#4029#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/mainInterface.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="311" column="68" selection-start-line="311" selection-start-column="68" selection-end-line="311" selection-end-column="68" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/deletestudent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/delfindstudent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        <state relative-caret-position="284">
+          <caret line="63" column="53" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

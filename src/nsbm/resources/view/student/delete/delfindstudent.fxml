@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="660.0" style="-fx-background-color: #04edca;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.findstudent">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="660.0" style="-fx-background-color: #04edca;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.delfindstudent">
    <children>
       <Text layoutX="209.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Students">
          <font>

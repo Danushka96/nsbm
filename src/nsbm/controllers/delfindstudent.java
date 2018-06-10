@@ -7,9 +7,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import nsbm.models.postgraduate;
+import nsbm.models.undergraduate;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class delfindstudent {
 
@@ -27,29 +31,37 @@ public class delfindstudent {
     @FXML
     private JFXButton postsearch;
 
+    public static int type=0;
+    public static undergraduate under;
+    public static postgraduate post;
+
     @FXML
-    void searchpostgrad(ActionEvent event) throws IOException {
+    void searchpostgrad(ActionEvent event) throws IOException, SQLException {
         String typed=postgrad.getText();
         if(!typed.equals("")){
-            student_id=typed;
+            post=postgraduate.findPostgraduate(typed);
+            type=1;
         }
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/student/update/editpostgrad.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/student/delete/deletebox.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
         stage.setTitle("Postgraduate Update");
         stage.setScene(new Scene(root1));
         stage.show();
     }
 
     @FXML
-    void searchundergrad(ActionEvent event) throws IOException {
+    void searchundergrad(ActionEvent event) throws IOException, SQLException {
         String typed=undergrad.getText();
         if(!typed.equals("")){
-            student_id=typed;
+            under=undergraduate.findUndergraduate(typed);
+            type=0;
         }
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/student/update/editundergrad.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/student/delete/deletebox.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
         stage.setTitle("Undergraduate Update");
         stage.setScene(new Scene(root1));
         stage.show();
@@ -58,5 +70,8 @@ public class delfindstudent {
     public static String getStudent_id(){
         return student_id;
     }
+    public static undergraduate getUnder(){return under;}
+    public static postgraduate getPost(){return post;}
+    public static int getType(){return type;}
 
 }

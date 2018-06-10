@@ -309,7 +309,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="350.0" layoutY="342.0" prefHeight="65.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Delete Student">
+            <JFXButton layoutX="350.0" layoutY="342.0" onAction="#delete" prefHeight="65.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Delete Student">
                <graphic>
                   <ImageView fitHeight="59.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                      <image>

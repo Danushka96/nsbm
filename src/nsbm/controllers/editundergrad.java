@@ -303,6 +303,5 @@ public class editundergrad {
 
     public void removeSub(ActionEvent actionEvent) {
 
-//        }
     }
 }
