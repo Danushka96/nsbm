@@ -29,7 +29,16 @@ public class findstudent {
 
     @FXML
     void searchpostgrad(ActionEvent event) throws IOException {
-
+        String typed=postgrad.getText();
+        if(!typed.equals("")){
+            student_id=typed;
+        }
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/editpostgrad.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Postgraduate Update");
+        stage.setScene(new Scene(root1));
+        stage.show();
     }
 
     @FXML
