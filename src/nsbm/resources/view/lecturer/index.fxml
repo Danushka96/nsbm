@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00c7f4;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.indexLecturer">
+    <children>
+        <JFXTreeTableView fx:id="treeview" layoutX="5.0" layoutY="100.0" prefHeight="292.0" prefWidth="587.0" />
+        <Text layoutX="150.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecturers">
+            <font>
+                <Font size="27.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="77.0" fitWidth="74.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../icons/presentation.png" />
+            </image>
+        </ImageView>
+      <JFXButton fx:id="addlecturer" layoutX="435.0" layoutY="32.0" onAction="#addlecturer" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #1fef22;" text="Add Lecturer" />
+    </children>
+</AnchorPane>

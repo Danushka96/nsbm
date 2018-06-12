@@ -163,7 +163,7 @@
       </AnchorPane>
       <AnchorPane fx:id="menustaff" layoutX="257.0" layoutY="9.0" prefHeight="600.0" prefWidth="695.0" style="-fx-background-color: #a2dff9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXButton layoutX="66.0" layoutY="143.0" prefHeight="67.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Register Lecturer">
+            <JFXButton layoutX="66.0" layoutY="143.0" onAction="#reglec" prefHeight="67.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Register Lecturer">
                <graphic>
                   <ImageView fitHeight="64.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -192,7 +192,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="66.0" layoutY="227.0" prefHeight="61.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="View Lecturers">
+            <JFXButton layoutX="66.0" layoutY="227.0" onAction="#viewlec" prefHeight="61.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="View Lecturers">
                <graphic>
                   <ImageView fitHeight="63.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>

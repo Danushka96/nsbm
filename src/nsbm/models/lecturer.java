@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public final class lecturer extends UniversityMemeber{
     Connection con=ConnectionManager.getConnection();
@@ -46,7 +47,8 @@ public final class lecturer extends UniversityMemeber{
         insq.setString(2,this.researchSpeciality);
         insq.setString(3,this.office_number);
         insq.setString(4,super.getNic());
-        return insq.execute();
+        int action= insq.executeUpdate();
+        return action > 0;
     }
 
     @Override
@@ -58,7 +60,8 @@ public final class lecturer extends UniversityMemeber{
         upq.setString(2,this.office_number);
         upq.setString(3,super.getNic());
         upq.setString(4,this.lecture_id);
-        return upq.execute();
+        int action= upq.executeUpdate();
+        return action > 0;
     }
 
     @Override
@@ -84,5 +87,18 @@ public final class lecturer extends UniversityMemeber{
         }
         UniversityMemeber mem=findmember(nic);
         return new lecturer(nic,mem.getFaculty(),mem.getFirstName(),mem.getLastName(),mem.getGender(),mem.getEmail(),mem.getDob(),mem.getAddress(),mem.getMobile(),lecture_id,researchSpeciality,office_number);
+    }
+
+    public static ArrayList<lecturer> getall() throws SQLException{
+        Connection con=ConnectionManager.getConnection();
+        String query="SELECT * FROM lecturers";
+        PreparedStatement selectq=con.prepareStatement(query);
+        ResultSet result=selectq.executeQuery();
+        ArrayList<lecturer> all=new ArrayList<>();
+        while (result.next()){
+            String lecturer_id = result.getString("id");
+            all.add(findLecturer(lecturer_id));
+        }
+        return all;
     }
 }

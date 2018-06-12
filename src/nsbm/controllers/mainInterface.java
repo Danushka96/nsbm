@@ -203,4 +203,22 @@ public class mainInterface {
         stage.setScene(new Scene(root1));
         stage.show();
     }
+
+    public void viewlec(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/lecturer/index.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("View Lecturers");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+
+    public void reglec(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/lecturer/create.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Register Lecturer");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
 }
