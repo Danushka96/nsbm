@@ -34,6 +34,7 @@ public class mainInterface {
     @FXML
     public JFXButton regunder;
     public JFXButton regnew;
+    public JFXButton indexins;
 
     @FXML
     private AnchorPane menuuni;
@@ -218,6 +219,24 @@ public class mainInterface {
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Register Lecturer");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+
+    public void regins(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/instructor/create.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Register Instructor");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+
+    public void indexins(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/instructor/index.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Register Instructor");
         stage.setScene(new Scene(root1));
         stage.show();
     }

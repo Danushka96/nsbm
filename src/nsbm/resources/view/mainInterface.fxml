@@ -180,7 +180,7 @@
                   <Font name="System Bold" size="28.0" />
                </font>
             </Text>
-            <JFXButton layoutX="392.0" layoutY="143.0" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Register Instructor">
+            <JFXButton layoutX="392.0" layoutY="143.0" onAction="#regins" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Register Instructor">
                <graphic>
                   <ImageView fitHeight="59.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -204,7 +204,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="392.0" layoutY="227.0" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="View Instructors">
+            <JFXButton layoutX="392.0" layoutY="227.0" onAction="#indexins" prefHeight="73.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="View Instructors">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

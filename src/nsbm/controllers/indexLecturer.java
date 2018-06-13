@@ -19,6 +19,7 @@ import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import jdk.nashorn.api.tree.Tree;
 import nsbm.models.lecturer;
 
 import java.io.IOException;
@@ -36,7 +37,7 @@ public class indexLecturer {
     public void initialize() throws SQLException {
 
         // Lecturer Name
-        JFXTreeTableColumn<indexLecturer.lect, String> name = new JFXTreeTableColumn<>("Lecturer ID");
+        JFXTreeTableColumn<indexLecturer.lect, String> name = new JFXTreeTableColumn<>("Lecturer Name");
         name.setPrefWidth(150);
         name.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<indexLecturer.lect, String>, ObservableValue<String>>() {
             @Override
@@ -56,7 +57,7 @@ public class indexLecturer {
         });
 
         // Office
-        JFXTreeTableColumn<indexLecturer.lect, String> office = new JFXTreeTableColumn<>("NIC");
+        JFXTreeTableColumn<indexLecturer.lect, String> office = new JFXTreeTableColumn<>("Office");
         office.setPrefWidth(150);
         office.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<indexLecturer.lect, String>, ObservableValue<String>>() {
             @Override
@@ -116,6 +117,7 @@ public class indexLecturer {
 
     @FXML
     void addlecturer(ActionEvent event) throws IOException {
+        System.out.println(getSelecter());
         Stage button=(Stage) addlecturer.getScene().getWindow();
         button.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/lecturer/create.fxml"));
@@ -124,6 +126,11 @@ public class indexLecturer {
         stage.setTitle("Subject Enroll");
         stage.setScene(new Scene(root1));
         stage.show();
+    }
+
+    private lect getSelecter(){
+        TreeItem<lect> slected= treeview.getSelectionModel().getSelectedItem();
+        return slected==null?null:slected.getValue();
     }
 
 }
