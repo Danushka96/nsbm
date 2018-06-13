@@ -117,14 +117,16 @@ public class indexInstructor {
     @FXML
     void editins(ActionEvent event) throws IOException {
         //System.out.println(getSelecter());
-        Stage button=(Stage) editins.getScene().getWindow();
-        button.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/instructor/edit.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        stage.setTitle("Edit Instructor");
-        stage.setScene(new Scene(root1));
-        stage.show();
+        if (getSelecter()!=null) {
+            Stage button = (Stage) editins.getScene().getWindow();
+            button.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/instructor/edit.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Edit Instructor");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }
     }
 
     static String getSelecter(){

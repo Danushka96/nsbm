@@ -123,14 +123,16 @@ public class indexLecturer {
 
     @FXML
     void editlecturer(ActionEvent event) throws IOException {
-        Stage button=(Stage) editlecturer.getScene().getWindow();
-        button.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/lecturer/edit.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        stage.setTitle("Edit Lecturer");
-        stage.setScene(new Scene(root1));
-        stage.show();
+        if (getSelecter()!=null) {
+            Stage button = (Stage) editlecturer.getScene().getWindow();
+            button.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/lecturer/edit.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Edit Lecturer");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }
     }
 
     public static String getSelecter(){
