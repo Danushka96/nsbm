@@ -21,6 +21,6 @@
                 <Image url="@../../icons/presentation.png" />
             </image>
         </ImageView>
-      <JFXButton fx:id="addlecturer" layoutX="435.0" layoutY="32.0" onAction="#addlecturer" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #1fef22;" text="Add Lecturer" />
+      <JFXButton fx:id="editlecturer" layoutX="435.0" layoutY="32.0" onAction="#editlecturer" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #1fef22;" text="Edit Lecturer" />
     </children>
 </AnchorPane>

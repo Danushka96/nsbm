@@ -30,9 +30,10 @@ public class indexLecturer {
 
     @FXML
     private JFXTreeTableView<lect> treeview;
+    private static JFXTreeTableView<lect> treeview1;
 
     @FXML
-    private JFXButton addlecturer;
+    private JFXButton editlecturer;
 
     public void initialize() throws SQLException {
 
@@ -91,18 +92,23 @@ public class indexLecturer {
         treeview.getColumns().setAll(name,nic,office,faculty,Research);
         treeview.setRoot(root);
         treeview.setShowRoot(false);
+        treeview1 = treeview;
     }
+
 
     class lect extends RecursiveTreeObject<indexLecturer.lect> {
         StringProperty name, nic, office, faculty, researchSpeciality;
+        String id;
 
-        lect(String name, String nic, String office, String faculty, String researchSpeciality) {
+        lect(String id, String name, String nic, String office, String faculty, String researchSpeciality) {
+            this.id=id;
             this.name = new SimpleStringProperty(name);
             this.nic = new SimpleStringProperty(nic);
             this.office = new SimpleStringProperty(office);
             this.faculty = new SimpleStringProperty(faculty);
             this.researchSpeciality = new SimpleStringProperty(researchSpeciality);
         }
+        String getId(){ return this.id; }
     }
 
     private ObservableList<indexLecturer.lect> getall() throws SQLException {
@@ -110,27 +116,26 @@ public class indexLecturer {
         ArrayList<lecturer> all= lecturer.getall();
         for(lecturer lectr:all){
             String name=lectr.getFirstName()+" "+lectr.getLastName();
-            lecturers.add(new lect(name, lectr.getNic(), lectr.getOffice_number(), lectr.getFaculty(), lectr.getResearchSpeciality()));
+            lecturers.add(new lect(lectr.getLecture_id(),name, lectr.getNic(), lectr.getOffice_number(), lectr.getFaculty(), lectr.getResearchSpeciality()));
         }
         return lecturers;
     }
 
     @FXML
-    void addlecturer(ActionEvent event) throws IOException {
-        System.out.println(getSelecter());
-        Stage button=(Stage) addlecturer.getScene().getWindow();
+    void editlecturer(ActionEvent event) throws IOException {
+        Stage button=(Stage) editlecturer.getScene().getWindow();
         button.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/lecturer/create.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/lecturer/edit.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
-        stage.setTitle("Subject Enroll");
+        stage.setTitle("Edit Lecturer");
         stage.setScene(new Scene(root1));
         stage.show();
     }
 
-    private lect getSelecter(){
-        TreeItem<lect> slected= treeview.getSelectionModel().getSelectedItem();
-        return slected==null?null:slected.getValue();
+    public static String getSelecter(){
+        TreeItem<lect> slected= treeview1.getSelectionModel().getSelectedItem();
+        return slected==null?null:slected.getValue().getId();
     }
 
 }
