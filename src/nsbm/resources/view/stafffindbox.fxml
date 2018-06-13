@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="660.0" style="-fx-background-color: #04edca;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.findstaff">
+   <children>
+      <Text layoutX="241.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Staff">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="lecturer" layoutX="79.0" layoutY="109.0" prefHeight="29.0" prefWidth="241.0" promptText="Lecturer ID" />
+      <JFXTextField fx:id="Instructor" layoutX="79.0" layoutY="168.0" prefHeight="29.0" prefWidth="241.0" promptText="Instructor ID" />
+      <JFXButton fx:id="lecturesearch" layoutX="392.0" layoutY="118.0" onAction="#searchlect" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #04afed;" text="Search" />
+      <JFXButton fx:id="instructorsearch" layoutX="392.0" layoutY="178.0" onAction="#searchins" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #04afed;" text="Search" />
+   </children>
+</AnchorPane>

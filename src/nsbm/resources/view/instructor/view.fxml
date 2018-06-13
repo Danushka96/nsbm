@@ -13,11 +13,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="508.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.editins">
+<AnchorPane prefHeight="508.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.viewins">
     <children>
         <AnchorPane fx:id="first" prefHeight="508.0" prefWidth="600.0" style="-fx-background-color: #b8f0f2;">
             <children>
-                <Text layoutX="233.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Instructor">
+                <Text layoutX="228.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Instructor">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
@@ -50,8 +50,7 @@
                         <Image url="@../../icons/venus.png" />
                     </image>
                 </ImageView>
-                <JFXButton fx:id="save" layoutX="489.0" layoutY="453.0" onAction="#update" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #38ea52;" text="Update" />
-                <JFXButton fx:id="cancel1" layoutX="374.0" layoutY="452.0" onAction="#closewindow" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #ea4738;" text="Cancel" />
+                <JFXButton fx:id="cancel1" layoutX="448.0" layoutY="450.0" onAction="#closewindow" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: #ea4738;" text="Cancel" />
             <JFXTextField fx:id="register" layoutX="361.0" layoutY="129.0" prefHeight="25.0" prefWidth="174.0" promptText="Registration Number" />
             <JFXComboBox fx:id="faculty" layoutX="362.0" layoutY="346.0" prefHeight="25.0" prefWidth="171.0" promptText="select Faculty" />
             </children>

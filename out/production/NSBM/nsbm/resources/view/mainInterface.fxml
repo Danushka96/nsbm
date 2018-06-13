@@ -216,7 +216,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton layoutX="74.0" layoutY="342.0" prefHeight="51.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Find Staff Member">
+            <JFXButton layoutX="74.0" layoutY="342.0" onAction="#findstaff" prefHeight="51.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Find Staff Member">
                <graphic>
                   <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
                      <image>
