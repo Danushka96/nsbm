@@ -249,4 +249,13 @@ public class mainInterface {
         stage.setScene(new Scene(root1));
         stage.show();
     }
+
+    public void opencourse(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/course/index.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Index Courses");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
 }

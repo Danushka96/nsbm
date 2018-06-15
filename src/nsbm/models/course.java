@@ -56,7 +56,7 @@ public class course {
     public int getCredits() {
         return credits;
     }
-    public void save() throws SQLException {
+    public boolean save() throws SQLException {
         String query="INSERT INTO courses(code, name, credits, numberofyears, can_extend,faculty) values (?,?,?,?,?,?)";
         PreparedStatement insquery=con.prepareStatement(query);
         insquery.setString(1,this.code);
@@ -65,9 +65,10 @@ public class course {
         insquery.setInt(4,this.numberofyears);
         insquery.setInt(5,this.can_extend);
         insquery.setString(6,this.faculty);
-        insquery.execute();
+        int resutl=insquery.executeUpdate();
+        return resutl>0;
     }
-    public void update() throws SQLException{
+    public boolean update() throws SQLException{
         String query="UPDATE courses set code=?, name=?, credits=?, numberofyears=?, can_extend=?,faculty=? where code=?";
         PreparedStatement updatequery=con.prepareStatement(query);
         updatequery.setString(1,this.code);
@@ -77,7 +78,8 @@ public class course {
         updatequery.setInt(5,this.can_extend);
         updatequery.setString(6,this.faculty);
         updatequery.setString(7,this.code);
-        updatequery.execute();
+        int result=updatequery.executeUpdate();
+        return result>0;
     }
     public void delete() throws SQLException{
         String query="DELETE FROM courses where code=?";
@@ -115,5 +117,17 @@ public class course {
             arr.add(result.getString("code"));
         }
         return arr;
+    }
+    public static ArrayList<course> getall() throws SQLException{
+        Connection con=ConnectionManager.getConnection();
+        String query="SELECT * FROM courses";
+        PreparedStatement selectq=con.prepareStatement(query);
+        ResultSet result=selectq.executeQuery();
+        ArrayList<course> all=new ArrayList<>();
+        while (result.next()){
+            String insid = result.getString("code");
+            all.add(find(insid));
+        }
+        return all;
     }
 }

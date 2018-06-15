@@ -58,7 +58,7 @@
       </AnchorPane>
       <AnchorPane fx:id="menufaculty" layoutX="260.0" layoutY="35.0" prefHeight="600.0" prefWidth="695.0" style="-fx-background-color: #a2dff9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXButton layoutX="66.0" layoutY="143.0" prefHeight="67.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Courses">
+            <JFXButton layoutX="66.0" layoutY="143.0" onAction="#opencourse" prefHeight="67.0" prefWidth="226.0" style="-fx-border-color: #57a8f9;" text="Courses">
                <graphic>
                   <ImageView fitHeight="64.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
                      <image>
