@@ -258,4 +258,68 @@ public class mainInterface {
         stage.setScene(new Scene(root1));
         stage.show();
     }
+
+    public void opensubjects(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/subject/index.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Index Subjects");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+
+    public void opentimetable(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/timetable/select.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Index Timetable");
+        stage.setScene(new Scene(root1));
+        stage.show();
+
+    }
+
+    public void openlabs(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/lab/index.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Index Labs");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+
+    public void opensem(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/semester/index.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Index Semesters");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+
+    public void openassignment(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/assignment/index.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Index Assignments");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+
+    public void openpayment(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/payment/index.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Index Payments");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+
+    public void openexam(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/exam/index.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Index Exam");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
 }

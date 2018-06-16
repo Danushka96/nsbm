@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class timeslot {
     Connection con=ConnectionManager.getConnection();
@@ -114,5 +115,19 @@ public class timeslot {
             subject_id=result.getString("subject_id");
         }
         return new timeslot(timeslot_id,course_id,faculty_id,from,to,date,subject_id);
+    }
+
+    public static ArrayList<timeslot> getall(String course_id) throws SQLException{
+        Connection con=ConnectionManager.getConnection();
+        String query="SELECT * FROM timeslots WHERE course_id=?";
+        PreparedStatement selectq=con.prepareStatement(query);
+        selectq.setString(1,course_id);
+        ResultSet result=selectq.executeQuery();
+        ArrayList<timeslot> all=new ArrayList<>();
+        while (result.next()){
+            String insid = result.getString("id");
+            all.add(findtimeslot(insid));
+        }
+        return all;
     }
 }

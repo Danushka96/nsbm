@@ -6,13 +6,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class subject {
     Connection con = ConnectionManager.getConnection();
     String code, name, lecturer_id, course_id;
     Double fee;
     int numberofCredits, numberofHours;
-    subject(String code, String name, Double fee, int numberofCredits, String lecturer_id, int numberofHours, String course_id){
+    public subject(String code, String name, Double fee, int numberofCredits, String lecturer_id, int numberofHours, String course_id){
         this.code=code;
         this.name=name;
         this.fee=fee;
@@ -66,7 +67,7 @@ public class subject {
         this.course_id = course_id;
     }
 
-    public void save() throws SQLException{
+    public boolean save() throws SQLException{
         String query="INSERT INTO subjects (code, name, fee, numberofCredits, numberofHours, lecturer_id, course_id) VALUES (?,?,?,?,?,?,?)";
         PreparedStatement insq=con.prepareStatement(query);
         insq.setString(1,this.code);
@@ -76,10 +77,11 @@ public class subject {
         insq.setInt(5,this.numberofHours);
         insq.setString(6,this.lecturer_id);
         insq.setString(7,this.course_id);
-        insq.execute();
+        int resut=insq.executeUpdate();
+        return resut>0;
     }
 
-    public void update() throws SQLException{
+    public boolean update() throws SQLException{
         String query="UPDATE subjects SET name=?, fee=?, numberofCredits=?, numberofHours=?, lecturer_id=?, course_id=? WHERE code=?";
         PreparedStatement upq=con.prepareStatement(query);
         upq.setString(1,this.name);
@@ -89,7 +91,8 @@ public class subject {
         upq.setString(5,this.lecturer_id);
         upq.setString(6,this.course_id);
         upq.setString(7,this.code);
-        upq.execute();
+        int resut=upq.executeUpdate();
+        return resut>0;
     }
 
     public void delete() throws SQLException{
@@ -117,5 +120,18 @@ public class subject {
             numberofHours=result.getInt("numberofHours");
         }
         return new subject(code,name,fee,numberofCredits,lecturer_id,numberofHours,course_id);
+    }
+
+    public static ArrayList<subject> getall() throws SQLException{
+        Connection con=ConnectionManager.getConnection();
+        String query="SELECT * FROM subjects";
+        PreparedStatement selectq=con.prepareStatement(query);
+        ResultSet result=selectq.executeQuery();
+        ArrayList<subject> all=new ArrayList<>();
+        while (result.next()){
+            String insid = result.getString("code");
+            all.add(findsubject(insid));
+        }
+        return all;
     }
 }

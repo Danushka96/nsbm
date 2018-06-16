@@ -22,13 +22,13 @@ public final class bachelor extends course{
         return result > 0;
     }
     public boolean update() throws SQLException{
-        super.update();
+        boolean result=super.update();
         String query="UPDATE bachelors SET id=? where id=?";
         PreparedStatement upq=con.prepareStatement(query);
         upq.setString(1,this.code);
         upq.setString(2,this.code);
-        int result=upq.executeUpdate();
-        return result>0;
+        upq.executeUpdate();
+        return result;
     }
     public void delete() throws SQLException{
 

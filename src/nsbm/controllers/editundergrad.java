@@ -178,7 +178,7 @@ public class editundergrad {
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setTitle("Undergraduate Registration");
+            stage.setTitle("Undergraduate Update");
             stage.setScene(new Scene(root1));
             stage.showAndWait();
             Stage thiswin=(Stage) firstname.getScene().getWindow();
@@ -188,7 +188,7 @@ public class editundergrad {
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setTitle("Undergraduate Registration");
+            stage.setTitle("Undergraduate Update");
             stage.setScene(new Scene(root1));
             stage.showAndWait();
         }
