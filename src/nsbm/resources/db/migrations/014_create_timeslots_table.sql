@@ -4,7 +4,7 @@ CREATE TABLE timeslots(
   faculty_id varchar(8),
   fromtime time,
   totime time,
-  dateof date,
+  dateof varchar(10),
   subject_id varchar(8),
   PRIMARY KEY (id,course_id,faculty_id),
   FOREIGN KEY (course_id) REFERENCES courses(code),

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class timeslot {
     Connection con=ConnectionManager.getConnection();
     String timeslot_id, course_id, faculty_id, from, to, date, subject_id;
-    timeslot(String timeslot_id, String course_id, String faculty_id, String from, String to, String date, String subject_id){
+    public timeslot(String timeslot_id, String course_id, String faculty_id, String from, String to, String date, String subject_id){
         this.timeslot_id=timeslot_id;
         this.course_id=course_id;
         this.faculty_id=faculty_id;
@@ -66,7 +66,7 @@ public class timeslot {
         this.to = to;
     }
 
-    public void save() throws SQLException{
+    public boolean save() throws SQLException{
         String query="INSERT INTO timeslots (id, course_id, faculty_id, fromtime, totime, dateof, subject_id) VALUES (?,?,?,?,?,?,?)";
         PreparedStatement insq=con.prepareStatement(query);
         insq.setString(1,this.timeslot_id);
@@ -76,10 +76,11 @@ public class timeslot {
         insq.setString(5,this.to);
         insq.setString(6,this.date);
         insq.setString(7,this.subject_id);
-        insq.execute();
+        int result=insq.executeUpdate();
+        return result>0;
     }
 
-    public void update() throws SQLException{
+    public boolean update() throws SQLException{
         String query="UPDATE timeslots set course_id=?, faculty_id=?, fromtime=?, totime=?, dateof=?, subject_id=? WHERE id=?";
         PreparedStatement upq=con.prepareStatement(query);
         upq.setString(1,this.course_id);
@@ -89,7 +90,8 @@ public class timeslot {
         upq.setString(5,this.date);
         upq.setString(6,this.subject_id);
         upq.setString(7,this.timeslot_id);
-        upq.execute();
+        int result=upq.executeUpdate();
+        return result>0;
     }
 
     public void delete() throws SQLException{

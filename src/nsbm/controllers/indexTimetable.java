@@ -12,12 +12,18 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import nsbm.models.subject;
 import nsbm.models.timeslot;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -127,13 +133,29 @@ public class indexTimetable {
     }
 
     @FXML
-    void addnew(ActionEvent event) {
-
+    void addnew(ActionEvent event) throws IOException {
+        close();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/timetable/create.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Add new Timeslot");
+        stage.setScene(new Scene(root1));
+        stage.show();
     }
 
     @FXML
-    void edit(ActionEvent event) {
-
+    void edit(ActionEvent event) throws IOException {
+        close();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/timetable/update.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Edit Timeslot");
+        stage.setScene(new Scene(root1));
+        stage.show();
     }
 
+    void close(){
+        Stage thiswindow= (Stage) addnew.getScene().getWindow();
+        thiswindow.close();
+    }
 }

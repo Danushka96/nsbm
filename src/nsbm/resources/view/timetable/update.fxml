@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #41e2f4;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.editTimeslot">
+   <children>
+      <Text layoutX="182.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Time Slot">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="subject" layoutX="73.0" layoutY="156.0" prefHeight="25.0" prefWidth="172.0" promptText="Subject ID" />
+      <JFXComboBox fx:id="day" layoutX="345.0" layoutY="156.0" prefHeight="25.0" prefWidth="172.0" promptText="Day" />
+      <JFXComboBox fx:id="from" layoutX="73.0" layoutY="223.0" prefHeight="25.0" prefWidth="172.0" promptText="From" />
+      <JFXComboBox fx:id="to" layoutX="345.0" layoutY="223.0" prefHeight="25.0" prefWidth="172.0" promptText="To" />
+      <JFXTextField fx:id="timeid" layoutX="73.0" layoutY="94.0" prefHeight="25.0" prefWidth="172.0" promptText="TIme Slot ID" />
+      <JFXButton layoutX="491.0" layoutY="318.0" onAction="#update" prefHeight="32.0" prefWidth="74.0" style="-fx-background-color: #41f452;" text="Update" />
+      <JFXButton layoutX="406.0" layoutY="318.0" onAction="#close" prefHeight="32.0" prefWidth="74.0" style="-fx-background-color: #f47c41;" text="Cancel" />
+   </children>
+</AnchorPane>

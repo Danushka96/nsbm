@@ -1764,7 +1764,7 @@ student_id</ColNames>
     </column>
     <column id="412" parent="273" name="dateof">
       <Position>6</Position>
-      <DataType>date|0s</DataType>
+      <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="413" parent="273" name="subject_id">
