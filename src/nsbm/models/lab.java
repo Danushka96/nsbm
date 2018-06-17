@@ -6,13 +6,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.PropertyPermission;
 
 public class lab {
     Connection con=ConnectionManager.getConnection();
     String id, name, faculty;
     int numberofSeats;
-    lab(String id, String name, String faculty, int numberofSeats){
+    public lab(String id, String name, String faculty, int numberofSeats){
         this.id=id;
         this.name=name;
         this.faculty=faculty;
@@ -45,24 +46,26 @@ public class lab {
         this.numberofSeats = numberofSeats;
     }
 
-    public void save() throws SQLException{
+    public boolean save() throws SQLException{
         String query="INSERT INTO labs (id, name, numberofSeats, faculty) VALUES (?,?,?,?)";
         PreparedStatement insq=con.prepareStatement(query);
         insq.setString(1,this.id);
         insq.setString(2,this.name);
         insq.setInt(3,this.numberofSeats);
         insq.setString(4,this.faculty);
-        insq.execute();
+        int result=insq.executeUpdate();
+        return result>0;
     }
 
-    public void update() throws SQLException{
+    public boolean update() throws SQLException{
         String query="UPDATE labs set name=?, numberofSeats=?, faculty=? WHERE id=?";
         PreparedStatement upq=con.prepareStatement(query);
         upq.setString(1,this.name);
         upq.setInt(2,this.numberofSeats);
         upq.setString(3,this.faculty);
         upq.setString(4,this.id);
-        upq.execute();
+        int result=upq.executeUpdate();
+        return result>0;
     }
 
     public void delete() throws SQLException{
@@ -86,5 +89,18 @@ public class lab {
             faculty=result.getString("faculty");
         }
         return new lab(id,name,faculty,numberofSeats);
+    }
+
+    public static ArrayList<lab> getall() throws SQLException{
+        Connection con=ConnectionManager.getConnection();
+        String query="SELECT * FROM labs";
+        PreparedStatement selectq=con.prepareStatement(query);
+        ResultSet result=selectq.executeQuery();
+        ArrayList<lab> all=new ArrayList<>();
+        while (result.next()){
+            String lab_id = result.getString("id");
+            all.add(findlab(lab_id));
+        }
+        return all;
     }
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="600.0" style="-fx-background-color: #84dded;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.editLab">
+   <children>
+      <Text layoutX="253.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Lab">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="id" layoutX="62.0" layoutY="99.0" prefHeight="25.0" prefWidth="175.0" promptText="ID" />
+      <JFXComboBox fx:id="faculty" layoutX="341.0" layoutY="169.0" prefHeight="25.0" prefWidth="175.0" promptText="Faculty" />
+      <JFXTextField fx:id="name" layoutX="341.0" layoutY="99.0" prefHeight="25.0" prefWidth="175.0" promptText="Name" />
+      <JFXTextField fx:id="seats" layoutX="62.0" layoutY="169.0" prefHeight="25.0" prefWidth="175.0" promptText="Number of Seats" />
+      <JFXButton layoutX="489.0" layoutY="248.0" onAction="#close" prefHeight="36.0" prefWidth="90.0" style="-fx-background-color: #ea6831;" text="Cancel" />
+      <JFXButton layoutX="384.0" layoutY="248.0" onAction="#edit" prefHeight="36.0" prefWidth="90.0" style="-fx-background-color: #28ed63;" text="Edit" />
+   </children>
+</AnchorPane>
