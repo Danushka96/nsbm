@@ -2,15 +2,13 @@ package nsbm.models;
 
 import nsbm.controllers.ConnectionManager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class semester {
     private Connection con = ConnectionManager.getConnection();
     private String semester_id, year, semester_number, start_date, end_date, faculty;
-    semester(String semester_id, String year, String semester_number, String start_date, String end_date, String faculty){
+    public semester(String semester_id, String year, String semester_number, String start_date, String end_date, String faculty){
         this.semester_number=semester_number;
         this.semester_id=semester_id;
         this.year=year;
@@ -57,7 +55,7 @@ public class semester {
         this.year = year;
     }
 
-    public void save() throws SQLException{
+    public boolean save() throws SQLException{
         String query="INSERT INTO semester (id, faculty, semesternumber, yearof, start_date, end_date) VALUES (?,?,?,?,?,?)";
         PreparedStatement insq=con.prepareStatement(query);
         insq.setString(1,this.semester_id);
@@ -66,9 +64,10 @@ public class semester {
         insq.setString(4,this.year);
         insq.setString(5,this.start_date);
         insq.setString(6,this.end_date);
-        insq.execute();
+        int result=insq.executeUpdate();
+        return result>0;
     }
-    public void update() throws SQLException{
+    public boolean update() throws SQLException{
         String query="UPDATE semester SET faculty=?, semesternumber=?, yearof=?, start_date=?, end_date=? WHERE id=?";
         PreparedStatement upq=con.prepareStatement(query);
         upq.setString(1,this.faculty);
@@ -77,7 +76,8 @@ public class semester {
         upq.setString(4,this.start_date);
         upq.setString(5,this.end_date);
         upq.setString(6,this.semester_id);
-        upq.execute();
+        int result=upq.executeUpdate();
+        return result>0;
     }
     public void delete() throws SQLException{
         String query="DELETE FROM semester WHERE id=?";
@@ -93,12 +93,25 @@ public class semester {
         ResultSet result=selectq.executeQuery();
         String year=null, semester_number=null, start_date=null, end_date=null, faculty=null;
         while (result.next()){
-            year=result.getString("year");
+            year=result.getString("yearof");
             semester_number=result.getString("semesternumber");
-            start_date=result.getString("yearof");
+            start_date=result.getString("start_date");
             end_date=result.getString("end_date");
             faculty=result.getString("faculty");
         }
         return new semester(semester_id,year,semester_number,start_date,end_date,faculty);
+    }
+
+    public static ArrayList<semester> getall() throws SQLException{
+        ArrayList<semester> all=new ArrayList<>();
+        Connection con=ConnectionManager.getConnection();
+        String query="SELECT * FROM semester";
+        Statement allq=con.prepareStatement(query);
+        ResultSet result=((PreparedStatement) allq).executeQuery();
+        while (result.next()){
+            String sem_id=result.getString("id");
+            all.add(findsemester(sem_id));
+        }
+        return all;
     }
 }

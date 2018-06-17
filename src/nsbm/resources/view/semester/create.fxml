@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="349.0" prefWidth="600.0" style="-fx-background-color: #42ebf4;" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="nsbm.controllers.createSemester" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="195.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Semester">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="id" layoutX="70.0" layoutY="98.0" prefHeight="25.0" prefWidth="178.0" promptText="ID" />
+      <JFXComboBox fx:id="faculty" layoutX="359.0" layoutY="98.0" prefHeight="25.0" prefWidth="161.0" promptText="faculty" />
+      <JFXComboBox fx:id="semester" layoutX="70.0" layoutY="155.0" prefHeight="25.0" prefWidth="178.0" promptText="Semester Number" />
+      <JFXComboBox fx:id="year" layoutX="359.0" layoutY="155.0" prefHeight="25.0" prefWidth="161.0" promptText="Year" />
+      <JFXDatePicker fx:id="start" layoutX="70.0" layoutY="219.0" prefHeight="28.0" prefWidth="187.0" promptText="Start Date" />
+      <JFXDatePicker fx:id="end" layoutX="359.0" layoutY="219.0" prefHeight="28.0" prefWidth="161.0" promptText="End Date" />
+      <JFXButton layoutX="513.0" layoutY="299.0" onAction="#cancel" prefHeight="33.0" prefWidth="73.0" style="-fx-background-color: #f46541;" text="Cancel" />
+      <JFXButton layoutX="418.0" layoutY="299.0" onAction="#save" prefHeight="33.0" prefWidth="73.0" style="-fx-background-color: #4ef442;" text="Save" />
+   </children>
+</AnchorPane>
