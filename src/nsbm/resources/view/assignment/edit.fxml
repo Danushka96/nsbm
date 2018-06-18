@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="291.0" prefWidth="600.0" style="-fx-background-color: #71b6f2;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.editAssignment">
+   <children>
+      <JFXTextField fx:id="marks" layoutX="57.0" layoutY="175.0" prefHeight="25.0" prefWidth="176.0" promptText="Max Marks" />
+      <Text layoutX="201.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Assignment">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="id" layoutX="57.0" layoutY="110.0" prefHeight="25.0" prefWidth="176.0" promptText="Assignment ID" />
+      <JFXTextField fx:id="name" layoutX="349.0" layoutY="110.0" prefHeight="25.0" prefWidth="176.0" promptText="Assignment Name" />
+      <JFXComboBox fx:id="subject" layoutX="349.0" layoutY="175.0" prefHeight="25.0" prefWidth="176.0" promptText="Subject ID" />
+      <JFXButton layoutX="486.0" layoutY="236.0" onAction="#close" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #f46835;" text="Cancel" />
+      <JFXButton layoutX="385.0" layoutY="236.0" onAction="#Update" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #39ef4e;" text="Update" />
+   </children>
+</AnchorPane>
