@@ -1,9 +1,9 @@
 CREATE TABLE payments(
-  id varchar(8) PRIMARY KEY ,
+  id int(8) PRIMARY KEY AUTO_INCREMENT,
   student_id varchar(9),
-  subject_id varchar(8),
-  reciept_id varchar(8),
+  semster_id varchar(8),
+  reciept_id int(5),
   FOREIGN KEY (student_id) REFERENCES students(reg_Number),
-  FOREIGN KEY (subject_id) REFERENCES subjects(code),
+  FOREIGN KEY (semster_id) REFERENCES semester(id),
   FOREIGN KEY (reciept_id) REFERENCES reciept(id)
 )

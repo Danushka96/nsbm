@@ -84,4 +84,16 @@ public class faculty {
         }
         return arr;
     }
+    public static ArrayList<faculty> getallfaculty() throws SQLException{
+        Connection con= ConnectionManager.getConnection();
+        String query="SELECT * FROM faculties";
+        PreparedStatement findq=con.prepareStatement(query);
+        ResultSet result=findq.executeQuery();
+        ArrayList<faculty> arr = new ArrayList<faculty>();
+        while (result.next()){
+            String faculty_id=result.getString("code");
+            arr.add(find(faculty_id));
+        }
+        return arr;
+    }
 }

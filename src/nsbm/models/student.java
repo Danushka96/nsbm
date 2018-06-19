@@ -2,6 +2,7 @@ package nsbm.models;
 import nsbm.controllers.ConnectionManager;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class student extends UniversityMemeber{
     private Connection con = ConnectionManager.getConnection();
@@ -78,4 +79,5 @@ public class student extends UniversityMemeber{
         faculty=memeber.getFaculty();
         return new student(reg_Number,firstname,lastname,gender,faculty,nic,email,dob,address,mobile,registration_date,intake_number);
     }
+
 }

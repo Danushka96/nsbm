@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="311.0" prefWidth="600.0" style="-fx-background-color: #58bdef;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.createPayment">
+   <children>
+      <Text layoutX="200.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add new Payment">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="semesters" layoutX="345.0" layoutY="102.0" prefHeight="25.0" prefWidth="161.0" promptText="Semester ID" />
+      <JFXTextField fx:id="amount" layoutX="72.0" layoutY="175.0" prefHeight="25.0" prefWidth="161.0" promptText="Paid Amount" />
+      <JFXDatePicker fx:id="issue" layoutX="345.0" layoutY="174.0" prefHeight="28.0" prefWidth="161.0" promptText="Issue Date" />
+      <JFXButton layoutX="496.0" layoutY="246.0" onAction="#close" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #f46835;" text="Cancel" />
+      <JFXButton layoutX="395.0" layoutY="246.0" onAction="#save" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #39ef4e;" text="Add" />
+      <JFXTextField fx:id="student" layoutX="72.0" layoutY="102.0" prefHeight="25.0" prefWidth="161.0" promptText="Student ID" />
+   </children>
+</AnchorPane>

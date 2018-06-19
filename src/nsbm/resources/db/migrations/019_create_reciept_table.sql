@@ -1,4 +1,5 @@
 CREATE TABLE reciept(
-  id varchar(8) PRIMARY KEY,
-  issued_date date
+  id int(5) PRIMARY KEY AUTO_INCREMENT,
+  issued_date date,
+  amount double(7,2) default 0
 )

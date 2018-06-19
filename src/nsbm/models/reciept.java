@@ -9,39 +9,44 @@ import java.sql.SQLException;
 
 public class reciept {
     private Connection con=ConnectionManager.getConnection();
-    private String reciept_id, issueDate;
-    public reciept(String reciept_id, String issueDate){
-        this.reciept_id=reciept_id;
+    private String issueDate;
+    private double amount;
+    public reciept(Double amount, String issueDate){
+        this.amount=amount;
         this.issueDate=issueDate;
     }
 
     public String getIssueDate() {
         return issueDate;
     }
-    public String getReciept_id() {
-        return reciept_id;
+    public Double getAmount() {
+        return amount;
     }
 
     public void setIssueDate(String issueDate) {
         this.issueDate = issueDate;
     }
-    public void setReciept_id(String reciept_id) {
-        this.reciept_id = reciept_id;
+    public void setReciept_id(Double amount) {
+        this.amount = amount;
     }
 
-    public void save() throws SQLException{
-        String query="INSERT INTO reciept (id, issued_date) VALUES (?,?)";
+    public int save() throws SQLException{
+        String query="INSERT INTO reciept (amount, issued_date) VALUES (?,?)";
         PreparedStatement insq=con.prepareStatement(query);
-        insq.setString(1,this.reciept_id);
+        insq.setDouble(1,this.amount);
         insq.setString(2,this.issueDate);
-        insq.execute();
+        System.out.println(insq);
+        insq.executeUpdate();
+        ResultSet resultset=insq.getGeneratedKeys();
+        return resultset.next()?resultset.getInt(1):0;
     }
 
-    public void update() throws SQLException{
-        String query="UPDATE reciept SET issued_date=? WHERE id=?";
+    public void update(int id) throws SQLException{
+        String query="UPDATE reciept SET issued_date=?, amount=? WHERE id=?";
         PreparedStatement upq=con.prepareStatement(query);
         upq.setString(1,this.issueDate);
-        upq.setString(2,this.reciept_id);
+        upq.setDouble(2,this.amount);
+        upq.setInt(3,id);
         upq.execute();
     }
 
@@ -52,9 +57,11 @@ public class reciept {
         findq.setString(1,reciept_id);
         ResultSet result=findq.executeQuery();
         String issuedate=null;
+        Double amount=null;
         while (result.next()){
             issuedate=result.getString("issued_date");
+            amount=result.getDouble("amount");
         }
-        return new reciept(reciept_id,issuedate);
+        return new reciept(amount,issuedate);
     }
 }
