@@ -125,7 +125,7 @@ public class indexExams {
     void addexam(ActionEvent event) throws IOException {
         Stage thistage = (Stage) addexam.getScene().getWindow();
         thistage.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/assignment/create.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/exam/create.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Add New Exam");
@@ -138,7 +138,7 @@ public class indexExams {
         if(getSelecter()!=null) {
             Stage thistage = (Stage) addexam.getScene().getWindow();
             thistage.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/assignment/edit.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/exam/edit.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Edit Exam");

@@ -23,5 +23,6 @@
       <JFXButton layoutX="461.0" layoutY="307.0" onAction="#save" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #3aea5d;" text="Save" />
       <JFXTextField fx:id="hours" layoutX="62.0" layoutY="198.0" prefHeight="25.0" prefWidth="135.0" promptText="Number of Hours" />
       <JFXComboBox fx:id="lecturer" layoutX="62.0" layoutY="250.0" prefHeight="25.0" prefWidth="170.0" promptText="Lecturer ID" />
+      <JFXComboBox fx:id="subtype" layoutX="365.0" layoutY="250.0" prefHeight="25.0" prefWidth="170.0" promptText="Subject Type" />
    </children>
 </AnchorPane>

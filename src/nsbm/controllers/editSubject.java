@@ -19,6 +19,7 @@ import java.util.ArrayList;
 
 public class editSubject {
 
+    public JFXComboBox subtype;
     @FXML
     private JFXTextField code;
 
@@ -53,7 +54,7 @@ public class editSubject {
 
     @FXML
     void edit(ActionEvent event) throws SQLException, IOException {
-        subject subj=new subject(code.getText(),name.getText(),Double.parseDouble(fee.getText()),Integer.parseInt(credits.getText()),lecturer.getSelectionModel().getSelectedItem().toString(),Integer.parseInt(hours.getText()),course.getSelectionModel().getSelectedItem().toString());
+        subject subj=new subject(code.getText(),name.getText(),Double.parseDouble(fee.getText()),Integer.parseInt(credits.getText()),lecturer.getSelectionModel().getSelectedItem().toString(),Integer.parseInt(hours.getText()),course.getSelectionModel().getSelectedItem().toString(),getType());
         boolean result=subj.update();
         if(result){
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/alertbox/updateSuccess.fxml"));
@@ -87,6 +88,8 @@ public class editSubject {
         for(lecturer lect:alllec){
             lecturer.getItems().add(lect.getLecture_id());
         }
+        subtype.getItems().add("compulsary");
+        subtype.getItems().add("optional");
     }
 
     private void setData() throws SQLException{
@@ -99,6 +102,15 @@ public class editSubject {
         hours.setText(Integer.toString(sub.getNumberofHours()));
         lecturer.getSelectionModel().select(sub.getLecturer_id());
         course.getSelectionModel().select(sub.getCourse_id());
+        subtype.getSelectionModel().select(sub.getType());
+    }
+
+    private int getType(){
+        if(subtype.getSelectionModel().getSelectedIndex()==1){
+            return 0;
+        }else{
+            return 1;
+        }
     }
 
 }

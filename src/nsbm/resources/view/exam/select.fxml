@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="312.0" prefWidth="469.0" style="-fx-background-color: #58bdef;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.selectExam">
+   <children>
+      <Text layoutX="133.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Filter Option">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="faculty" layoutX="135.0" layoutY="116.0" onAction="#changesemester" prefHeight="25.0" prefWidth="198.0" promptText="Faculty" />
+      <JFXComboBox fx:id="semester" layoutX="135.0" layoutY="177.0" prefHeight="25.0" prefWidth="198.0" promptText="Semester" />
+      <JFXButton layoutX="143.0" layoutY="254.0" onAction="#go" prefHeight="25.0" prefWidth="183.0" style="-fx-background-color: #5734f4;" text="GO" textFill="#f2eeee" />
+   </children>
+</AnchorPane>

@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 public class subject {
     Connection con = ConnectionManager.getConnection();
-    String code, name, lecturer_id, course_id;
-    Double fee;
-    int numberofCredits, numberofHours;
+    private String code, name, lecturer_id, course_id;
+    private Double fee;
+    private int numberofCredits, numberofHours, type;
     public subject(String code, String name, Double fee, int numberofCredits, String lecturer_id, int numberofHours, String course_id){
         this.code=code;
         this.name=name;
@@ -21,6 +21,17 @@ public class subject {
         this.lecturer_id=lecturer_id;
         this.numberofHours=numberofHours;
         this.course_id=course_id;
+        this.type=0;
+    }
+    public subject(String code, String name, Double fee, int numberofCredits, String lecturer_id, int numberofHours, String course_id, int type){
+        this.code=code;
+        this.name=name;
+        this.fee=fee;
+        this.numberofCredits=numberofCredits;
+        this.lecturer_id=lecturer_id;
+        this.numberofHours=numberofHours;
+        this.course_id=course_id;
+        this.type=type;
     }
 
     public String getCode() {
@@ -44,6 +55,7 @@ public class subject {
     public String getCourse_id() {
         return course_id;
     }
+    public int getType(){return type;}
 
     public void setCode(String code) {
         this.code = code;
@@ -66,9 +78,10 @@ public class subject {
     public void setCourse_id(String course_id) {
         this.course_id = course_id;
     }
+    public void setType(int type){this.type=type;}
 
     public boolean save() throws SQLException{
-        String query="INSERT INTO subjects (code, name, fee, numberofCredits, numberofHours, lecturer_id, course_id) VALUES (?,?,?,?,?,?,?)";
+        String query="INSERT INTO subjects (code, name, fee, numberofCredits, numberofHours, lecturer_id, course_id,type) VALUES (?,?,?,?,?,?,?,?)";
         PreparedStatement insq=con.prepareStatement(query);
         insq.setString(1,this.code);
         insq.setString(2,this.name);
@@ -77,12 +90,13 @@ public class subject {
         insq.setInt(5,this.numberofHours);
         insq.setString(6,this.lecturer_id);
         insq.setString(7,this.course_id);
+        insq.setInt(8,this.type);
         int resut=insq.executeUpdate();
         return resut>0;
     }
 
     public boolean update() throws SQLException{
-        String query="UPDATE subjects SET name=?, fee=?, numberofCredits=?, numberofHours=?, lecturer_id=?, course_id=? WHERE code=?";
+        String query="UPDATE subjects SET name=?, fee=?, numberofCredits=?, numberofHours=?, lecturer_id=?, course_id=?, type=? WHERE code=?";
         PreparedStatement upq=con.prepareStatement(query);
         upq.setString(1,this.name);
         upq.setDouble(2,this.fee);
@@ -90,7 +104,8 @@ public class subject {
         upq.setInt(4,this.numberofHours);
         upq.setString(5,this.lecturer_id);
         upq.setString(6,this.course_id);
-        upq.setString(7,this.code);
+        upq.setInt(7,this.type);
+        upq.setString(8,this.code);
         int resut=upq.executeUpdate();
         return resut>0;
     }
@@ -110,7 +125,7 @@ public class subject {
         ResultSet result=findq.executeQuery();
         String name=null, lecturer_id=null, course_id=null;
         Double fee=0.0;
-        int numberofCredits=0, numberofHours=0;
+        int numberofCredits=0, numberofHours=0,type=0;
         while (result.next()){
             name=result.getString("name");
             lecturer_id=result.getString("lecturer_id");
@@ -118,8 +133,9 @@ public class subject {
             fee=result.getDouble("fee");
             numberofCredits=result.getInt("numberofCredits");
             numberofHours=result.getInt("numberofHours");
+            type=result.getInt("type");
         }
-        return new subject(code,name,fee,numberofCredits,lecturer_id,numberofHours,course_id);
+        return new subject(code,name,fee,numberofCredits,lecturer_id,numberofHours,course_id,type);
     }
 
     public static ArrayList<subject> getall() throws SQLException{

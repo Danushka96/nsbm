@@ -315,10 +315,28 @@ public class mainInterface {
     }
 
     public void openexam(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/exam/index.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/exam/select.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Index Exam");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+
+    public void addmarks(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/exam/select.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Add Marks");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
+
+    public void genreport(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/exam/select.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Generate Reports");
         stage.setScene(new Scene(root1));
         stage.show();
     }

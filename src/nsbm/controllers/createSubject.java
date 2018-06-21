@@ -22,6 +22,7 @@ public class createSubject {
 
 
     public JFXComboBox lecturer;
+    public JFXComboBox subtype;
     @FXML
     private JFXTextField code;
 
@@ -52,7 +53,7 @@ public class createSubject {
 
     @FXML
     void save(ActionEvent event) throws SQLException, IOException {
-        subject subj=new subject(code.getText(),name.getText(),Double.parseDouble(fee.getText()),Integer.parseInt(credits.getText()),lecturer.getSelectionModel().getSelectedItem().toString(),Integer.parseInt(hours.getText()),course.getSelectionModel().getSelectedItem().toString());
+        subject subj=new subject(code.getText(),name.getText(),Double.parseDouble(fee.getText()),Integer.parseInt(credits.getText()),lecturer.getSelectionModel().getSelectedItem().toString(),Integer.parseInt(hours.getText()),course.getSelectionModel().getSelectedItem().toString(),getType());
         boolean result=subj.save();
         if(result){
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/alertbox/saveSuccess.fxml"));
@@ -85,6 +86,16 @@ public class createSubject {
         ArrayList<lecturer> alllec=nsbm.models.lecturer.getall();
         for(lecturer lect:alllec){
             lecturer.getItems().add(lect.getLecture_id());
+        }
+        subtype.getItems().add("compulsary");
+        subtype.getItems().add("optional");
+    }
+
+    private int getType(){
+        if(subtype.getSelectionModel().getSelectedIndex()==1){
+            return 0;
+        }else{
+            return 1;
         }
     }
 

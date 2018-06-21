@@ -6,6 +6,7 @@ CREATE TABLE subjects(
   numberofHours int(3),
   lecturer_id varchar(8),
   course_id varchar(8),
+  type int(1) DEFAULT 0,
   FOREIGN KEY (lecturer_id) REFERENCES lecturers(id),
   FOREIGN KEY (course_id) REFERENCES courses(code)
 );

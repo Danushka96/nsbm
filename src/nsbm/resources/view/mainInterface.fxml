@@ -345,6 +345,30 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
+            <JFXButton layoutX="74.0" layoutY="494.0" onAction="#addmarks" prefHeight="51.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Add Student Marks">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/evaluation1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="350.0" layoutY="494.0" onAction="#genreport" prefHeight="51.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Generate Report">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/evaluation.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
          </children>
       </AnchorPane>
       <AnchorPane id="home" fx:id="menuhome" layoutX="255.0" layoutY="7.0" prefHeight="600.0" prefWidth="647.0" style="-fx-background-color: #a2dff9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
