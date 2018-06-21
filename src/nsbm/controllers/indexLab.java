@@ -132,15 +132,25 @@ public class indexLab {
 
     @FXML
     void editlab(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/lab/edit.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("Lab Registration");
-        stage.setScene(new Scene(root1));
-        stage.showAndWait();
-        Stage thiswin = (Stage) addsubject.getScene().getWindow();
-        thiswin.close();
+        if (getSelecter()!=null) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/lab/edit.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Lab Registration");
+            stage.setScene(new Scene(root1));
+            stage.showAndWait();
+            Stage thiswin = (Stage) addsubject.getScene().getWindow();
+            thiswin.close();
+        }else{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/alertbox/select.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Error on edit Lab");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }
     }
 
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="495.0" style="-fx-background-color: #f48942;" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="nsbm.controllers.alert.select" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="191.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <Text layoutX="71.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Select one raw from the table to Edit or Delete">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="close" layoutX="402.0" layoutY="161.0" onAction="#close" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #95f441;" text="Close" />
+   </children>
+</AnchorPane>

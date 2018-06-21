@@ -37,7 +37,8 @@ public class editAssignment {
 
     @FXML
     void Update(ActionEvent event) throws SQLException, IOException {
-        assignment upassign=new assignment(id.getText(), name.getText(),subject.getSelectionModel().getSelectedItem().toString() ,Integer.parseInt(marks.getText()));
+        String sem=selectAssignment.getSem();
+        assignment upassign=new assignment(id.getText(), name.getText(),subject.getSelectionModel().getSelectedItem().toString() ,Integer.parseInt(marks.getText()),sem);
         boolean result = upassign.update();
         if(result){
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/alertbox/updateSuccess.fxml"));
@@ -77,7 +78,9 @@ public class editAssignment {
 
     private void getData() throws SQLException{
         String assingid = indexAssignments.getSelecter();
+        //System.out.println(assingid);
         assignment assing=assignment.findassignment(assingid);
+        //System.out.println(assing.getName());
         id.setText(assing.getAssignment_id());
         name.setText(assing.getName());
         marks.setText(Integer.toString(assing.getMarks()));

@@ -43,7 +43,8 @@ public class createAssignment {
 
     @FXML
     void save(ActionEvent event) throws SQLException, IOException {
-        assignment newassignment = new assignment(id.getText(), name.getText(),subject.getSelectionModel().getSelectedItem().toString() ,Integer.parseInt(marks.getText()));
+        String sem=selectAssignment.getSem();
+        assignment newassignment = new assignment(id.getText(), name.getText(),subject.getSelectionModel().getSelectedItem().toString() ,Integer.parseInt(marks.getText()),sem);
         boolean result=newassignment.save();
         if(result){
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/alertbox/saveSuccess.fxml"));

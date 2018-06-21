@@ -145,13 +145,23 @@ public class indexTimetable {
 
     @FXML
     void edit(ActionEvent event) throws IOException {
-        close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/timetable/update.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        stage.setTitle("Edit Timeslot");
-        stage.setScene(new Scene(root1));
-        stage.show();
+        if(getSelecter()!=null) {
+            close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/timetable/update.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Edit Timeslot");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }else{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/alertbox/select.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Error on Edit Timetable");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }
     }
 
     void close(){

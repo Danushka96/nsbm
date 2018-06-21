@@ -21,67 +21,68 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import nsbm.models.assignment;
-import nsbm.models.semester;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class indexAssignments {
+/**
+ * @author Danushka
+ */
+public class indexExams {
+    @FXML
+    private JFXTreeTableView<indexExams.assign> treeview;
+    private static JFXTreeTableView<indexExams.assign> treeview1;
 
     @FXML
-    private JFXTreeTableView<assign> treeview;
-    private static JFXTreeTableView<assign> treeview1;
-
-    @FXML
-    private JFXButton addassignment;
+    private JFXButton addexam;
 
     public void initialize() throws SQLException {
 
         //ID
-        JFXTreeTableColumn<indexAssignments.assign, String> id = new JFXTreeTableColumn<>("ID");
+        JFXTreeTableColumn<indexExams.assign, String> id = new JFXTreeTableColumn<>("ID");
         id.setPrefWidth(150);
-        id.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<indexAssignments.assign, String>, ObservableValue<String>>() {
+        id.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<indexExams.assign, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<indexAssignments.assign, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<indexExams.assign, String> param) {
                 return param.getValue().getValue().id;
             }
         });
 
         //Name
-        JFXTreeTableColumn<indexAssignments.assign, String> name = new JFXTreeTableColumn<>("Name");
+        JFXTreeTableColumn<indexExams.assign, String> name = new JFXTreeTableColumn<>("Name");
         name.setPrefWidth(150);
-        name.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<indexAssignments.assign, String>, ObservableValue<String>>() {
+        name.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<indexExams.assign, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<indexAssignments.assign, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<indexExams.assign, String> param) {
                 return param.getValue().getValue().name;
             }
         });
 
         //Marks
-        JFXTreeTableColumn<indexAssignments.assign, String> marks = new JFXTreeTableColumn<>("Marks");
+        JFXTreeTableColumn<indexExams.assign, String> marks = new JFXTreeTableColumn<>("Marks");
         marks.setPrefWidth(150);
-        marks.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<indexAssignments.assign, String>, ObservableValue<String>>() {
+        marks.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<indexExams.assign, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<indexAssignments.assign, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<indexExams.assign, String> param) {
                 return param.getValue().getValue().marks;
             }
         });
 
         //Start_date
-        JFXTreeTableColumn<indexAssignments.assign, String> subject = new JFXTreeTableColumn<>("Subject");
+        JFXTreeTableColumn<indexExams.assign, String> subject = new JFXTreeTableColumn<>("Subject");
         subject.setPrefWidth(150);
-        subject.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<indexAssignments.assign, String>, ObservableValue<String>>() {
+        subject.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<indexExams.assign, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<indexAssignments.assign, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<indexExams.assign, String> param) {
                 return param.getValue().getValue().subject_id;
             }
         });
 
 
-        ObservableList<indexAssignments.assign> semesters= getall();
+        ObservableList<indexExams.assign> semesters= getall();
 
-        final TreeItem<indexAssignments.assign> root = new RecursiveTreeItem<indexAssignments.assign>(semesters,RecursiveTreeObject::getChildren);
+        final TreeItem<indexExams.assign> root = new RecursiveTreeItem<indexExams.assign>(semesters,RecursiveTreeObject::getChildren);
         treeview.getColumns().setAll(id,name,marks,subject);
         treeview.setRoot(root);
         treeview.setShowRoot(false);
@@ -89,7 +90,7 @@ public class indexAssignments {
 
     }
 
-    class assign extends RecursiveTreeObject<indexAssignments.assign>{
+    class assign extends RecursiveTreeObject<indexExams.assign>{
         StringProperty id,name,marks,subject_id;
         String assignment_id;
         assign(String id, String name, String marks, String subject_id){
@@ -103,45 +104,44 @@ public class indexAssignments {
             //System.out.println(this.id.toString());
             return this.assignment_id;
         }
-
     }
 
-    private ObservableList<indexAssignments.assign> getall() throws SQLException {
-        ObservableList<indexAssignments.assign> assignments= FXCollections.observableArrayList();
-        ArrayList<assignment> all=assignment.getall();
+    private ObservableList<indexExams.assign> getall() throws SQLException {
+        ObservableList<indexExams.assign> assignments= FXCollections.observableArrayList();
+        ArrayList<assignment> all=assignment.getallexams();
         for(assignment assginemt:all){
-            assignments.add(new indexAssignments.assign(assginemt.getAssignment_id(),assginemt.getName(),Integer.toString(assginemt.getMarks()),assginemt.getSubject_id()));
+            assignments.add(new indexExams.assign(assginemt.getAssignment_id(),assginemt.getName(),Integer.toString(assginemt.getMarks()),assginemt.getSubject_id()));
         }
         return assignments;
     }
 
     static String getSelecter(){
 
-        TreeItem<indexAssignments.assign> slected= treeview1.getSelectionModel().getSelectedItem();
+        TreeItem<indexExams.assign> slected= treeview1.getSelectionModel().getSelectedItem();
         return slected==null?null:slected.getValue().getid();
     }
 
     @FXML
-    void addassignment(ActionEvent event) throws IOException {
-        Stage thistage = (Stage) addassignment.getScene().getWindow();
+    void addexam(ActionEvent event) throws IOException {
+        Stage thistage = (Stage) addexam.getScene().getWindow();
         thistage.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/assignment/create.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
-        stage.setTitle("Add New Assignment");
+        stage.setTitle("Add New Exam");
         stage.setScene(new Scene(root1));
         stage.show();
     }
 
     @FXML
-    void editassignment(ActionEvent event) throws IOException {
+    void editexam(ActionEvent event) throws IOException {
         if(getSelecter()!=null) {
-            Stage thistage = (Stage) addassignment.getScene().getWindow();
+            Stage thistage = (Stage) addexam.getScene().getWindow();
             thistage.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/assignment/edit.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
-            stage.setTitle("Edit Assignment");
+            stage.setTitle("Edit Exam");
             stage.setScene(new Scene(root1));
             stage.show();
         }else{
@@ -149,7 +149,7 @@ public class indexAssignments {
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setTitle("Error");
+            stage.setTitle("Error on Exam");
             stage.setScene(new Scene(root1));
             stage.show();
         }

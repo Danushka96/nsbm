@@ -3,5 +3,8 @@ CREATE TABLE assignments(
   name varchar(20),
   marks int(2),
   subject_id varchar(8),
-  FOREIGN KEY (subject_id) REFERENCES subjects(code)
+  type int(1),
+  semester_id varchar(8),
+  FOREIGN KEY (subject_id) REFERENCES subjects(code),
+  FOREIGN KEY (semester_id) REFERENCES semester(id)
 )
