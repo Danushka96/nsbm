@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="224.0" prefWidth="600.0" style="-fx-background-color: #c4efdc;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.enrollSelect">
+   <children>
+      <JFXTextField fx:id="studentId" layoutX="78.0" layoutY="93.0" prefHeight="25.0" prefWidth="200.0" promptText="Student ID" />
+      <JFXComboBox fx:id="semesterid" layoutX="341.0" layoutY="93.0" prefHeight="25.0" prefWidth="200.0" promptText="Semester ID" />
+      <Text fx:id="alert" fill="#dd0a0a" layoutX="78.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Student Not Found" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="470.0" layoutY="168.0" onAction="#addsubjects" prefHeight="35.0" prefWidth="96.0" style="-fx-background-color: #41f4ee;" text="Add Subjects" />
+      <Text fill="#030303" layoutX="179.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject Enrollment" textAlignment="CENTER" wrappingWidth="242.984375">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="277.0" layoutY="90.0" onAction="#selectsub" prefHeight="25.0" prefWidth="27.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/search-engine.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="600.0" style="-fx-background-color: #abdff2;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.enrollCreate">
+   <children>
+      <Text layoutX="199.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject Selection">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="sub1" layoutX="151.0" layoutY="168.0" onAction="#checkCredits" prefHeight="25.0" prefWidth="176.0" promptText="subject 1" />
+      <JFXComboBox fx:id="sub2" layoutX="151.0" layoutY="214.0" onAction="#checkCredits" prefHeight="25.0" prefWidth="176.0" promptText="subject 2" />
+      <JFXComboBox fx:id="sub3" layoutX="151.0" layoutY="262.0" onAction="#checkCredits" prefHeight="25.0" prefWidth="176.0" promptText="subject 3" />
+      <JFXComboBox fx:id="sub4" layoutX="151.0" layoutY="308.0" onAction="#checkCredits" prefHeight="25.0" prefWidth="176.0" promptText="subject 4" />
+      <Text fx:id="credits" fill="#0a0a0a" layoutX="183.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15">
+         <font>
+            <Font name="System Bold" size="62.0" />
+         </font>
+      </Text>
+      <TextField fx:id="credit1" disable="true" editable="false" layoutX="400.0" layoutY="168.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="credit2" disable="true" editable="false" layoutX="400.0" layoutY="214.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="credit3" disable="true" editable="false" layoutX="400.0" layoutY="262.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="credit4" disable="true" editable="false" layoutX="400.0" layoutY="308.0" prefHeight="25.0" prefWidth="70.0" />
+      <JFXButton layoutX="491.0" layoutY="359.0" onAction="#save" prefHeight="33.0" prefWidth="82.0" style="-fx-background-color: #40ef43;" text="Save" />
+      <Text layoutX="279.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits Remaining">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="479.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="label2" layoutX="479.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="label3" layoutX="479.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="label4" layoutX="479.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
