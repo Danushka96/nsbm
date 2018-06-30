@@ -98,4 +98,18 @@ public final class undergraduate extends student {
         }
         return all;
     }
+
+    public static undergraduate getStudentID(String reg_num) throws SQLException{
+        Connection con=ConnectionManager.getConnection();
+        String query="SELECT student_id FROM undergraduates WHERE reg_number=?";
+        PreparedStatement precon=con.prepareStatement(query);
+        precon.setString(1,reg_num);
+        ResultSet result=precon.executeQuery();
+        String student_id="";
+        while (result.next()) {
+            student_id = result.getString("student_id");
+        }
+        //System.out.println(student_id);
+        return findUndergraduate(student_id);
+    }
 }

@@ -15,40 +15,52 @@
          </font>
       </Text>
       <JFXComboBox fx:id="sub1" layoutX="151.0" layoutY="168.0" onAction="#checkCredits" prefHeight="25.0" prefWidth="176.0" promptText="subject 1" />
-      <JFXComboBox fx:id="sub2" layoutX="151.0" layoutY="214.0" onAction="#checkCredits" prefHeight="25.0" prefWidth="176.0" promptText="subject 2" />
-      <JFXComboBox fx:id="sub3" layoutX="151.0" layoutY="262.0" onAction="#checkCredits" prefHeight="25.0" prefWidth="176.0" promptText="subject 3" />
-      <JFXComboBox fx:id="sub4" layoutX="151.0" layoutY="308.0" onAction="#checkCredits" prefHeight="25.0" prefWidth="176.0" promptText="subject 4" />
+      <JFXComboBox fx:id="sub2" layoutX="151.0" layoutY="214.0" onAction="#checkCredits" prefHeight="25.0" prefWidth="176.0" promptText="subject 2" visible="false" />
+      <JFXComboBox fx:id="sub3" layoutX="151.0" layoutY="262.0" onAction="#checkCredits" prefHeight="25.0" prefWidth="176.0" promptText="subject 3" visible="false" />
+      <JFXComboBox fx:id="sub4" layoutX="151.0" layoutY="308.0" onAction="#checkCredits" prefHeight="25.0" prefWidth="176.0" promptText="subject 4" visible="false" />
       <Text fx:id="credits" fill="#0a0a0a" layoutX="183.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15">
          <font>
             <Font name="System Bold" size="62.0" />
          </font>
       </Text>
-      <TextField fx:id="credit1" disable="true" editable="false" layoutX="400.0" layoutY="168.0" prefHeight="25.0" prefWidth="70.0" />
-      <TextField fx:id="credit2" disable="true" editable="false" layoutX="400.0" layoutY="214.0" prefHeight="25.0" prefWidth="70.0" />
-      <TextField fx:id="credit3" disable="true" editable="false" layoutX="400.0" layoutY="262.0" prefHeight="25.0" prefWidth="70.0" />
-      <TextField fx:id="credit4" disable="true" editable="false" layoutX="400.0" layoutY="308.0" prefHeight="25.0" prefWidth="70.0" />
-      <JFXButton layoutX="491.0" layoutY="359.0" onAction="#save" prefHeight="33.0" prefWidth="82.0" style="-fx-background-color: #40ef43;" text="Save" />
+      <TextField fx:id="credit1" disable="true" editable="false" layoutX="400.0" layoutY="168.0" prefHeight="25.0" prefWidth="70.0" style="-fx-text-fill: green;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="credit2" disable="true" editable="false" layoutX="400.0" layoutY="214.0" prefHeight="25.0" prefWidth="70.0" visible="false">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font></TextField>
+      <TextField fx:id="credit3" disable="true" editable="false" layoutX="400.0" layoutY="262.0" prefHeight="25.0" prefWidth="70.0" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <TextField fx:id="credit4" disable="true" editable="false" layoutX="400.0" layoutY="308.0" prefHeight="25.0" prefWidth="70.0" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <JFXButton fx:id="saveb" disable="true" layoutX="491.0" layoutY="359.0" onAction="#save" prefHeight="33.0" prefWidth="82.0" style="-fx-background-color: #40ef43;" text="Save" />
       <Text layoutX="279.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits Remaining">
          <font>
             <Font size="17.0" />
          </font>
       </Text>
-      <Text layoutX="479.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits ">
+      <Text fx:id="label1" layoutX="479.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits ">
          <font>
             <Font size="13.0" />
          </font>
       </Text>
-      <Text fx:id="label2" layoutX="479.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits ">
+      <Text fx:id="label2" layoutX="479.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits " visible="false">
          <font>
             <Font size="13.0" />
          </font>
       </Text>
-      <Text fx:id="label3" layoutX="479.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits ">
+      <Text fx:id="label3" layoutX="479.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits " visible="false">
          <font>
             <Font size="13.0" />
          </font>
       </Text>
-      <Text fx:id="label4" layoutX="479.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits ">
+      <Text fx:id="label4" layoutX="479.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits " visible="false">
          <font>
             <Font size="13.0" />
          </font>
