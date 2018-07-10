@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="128.0" prefWidth="321.0" style="-fx-background-color: #32efef;" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="nsbm.controllers.alert.confirmDelete" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="99.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Delete">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="btnok" layoutX="67.0" layoutY="80.0" onAction="#delete" prefHeight="34.0" prefWidth="78.0" style="-fx-background-color: #58ef47;" text="OK" />
+      <JFXButton layoutX="186.0" layoutY="80.0" onAction="#close" prefHeight="34.0" prefWidth="78.0" style="-fx-background-color: #ef7647;" text="Cancel" />
+   </children>
+</AnchorPane>

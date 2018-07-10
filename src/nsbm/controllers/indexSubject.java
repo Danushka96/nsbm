@@ -20,6 +20,7 @@ import javafx.scene.control.TreeTableColumn;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import nsbm.controllers.alert.deleteAlertShow;
 import nsbm.models.subject;
 
 import java.io.IOException;
@@ -161,6 +162,19 @@ public class indexSubject {
         stage.setTitle("Add New Subject");
         stage.setScene(new Scene(root1));
         stage.show();
+    }
+
+    public void deleteSubject(ActionEvent actionEvent) throws SQLException, IOException {
+        deleteAlertShow alert = new deleteAlertShow();
+
+        if(getSelecter()!=null) {
+            String currentId = getSelecter();
+            subject current = subject.findsubject(currentId);
+            current.delete();
+            initialize();
+        }else{
+            alert.showError();
+        }
     }
 
     @FXML

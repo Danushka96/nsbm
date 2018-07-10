@@ -8,9 +8,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00c7f4;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.indexCourse">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="712.0" style="-fx-background-color: #00c7f4;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.indexCourse">
     <children>
-        <JFXTreeTableView fx:id="treeview" layoutX="5.0" layoutY="100.0" prefHeight="292.0" prefWidth="587.0" />
+        <JFXTreeTableView fx:id="treeview" layoutX="5.0" layoutY="100.0" prefHeight="292.0" prefWidth="701.0" />
         <Text layoutX="196.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Courses">
             <font>
                 <Font size="27.0" />
@@ -21,7 +21,8 @@
                 <Image url="@../../icons/presentation.png" />
             </image>
         </ImageView>
-      <JFXButton layoutX="464.0" layoutY="32.0" onAction="#editcourse" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #9087e5;" text="Edit Course" />
-      <JFXButton fx:id="addcourse" layoutX="331.0" layoutY="32.0" onAction="#addcourse" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #1fef22;" text="Add Course" />
+      <JFXButton layoutX="452.0" layoutY="32.0" onAction="#editcourse" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #9087e5;" text="Edit Course" />
+      <JFXButton fx:id="addcourse" layoutX="319.0" layoutY="32.0" onAction="#addcourse" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #1fef22;" text="Add Course" />
+      <JFXButton layoutX="584.0" layoutY="32.0" onAction="#deletecourse" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #f92a2a;" text="Delete Course" />
     </children>
 </AnchorPane>

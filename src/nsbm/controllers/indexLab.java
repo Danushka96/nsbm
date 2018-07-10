@@ -20,6 +20,7 @@ import javafx.scene.control.TreeTableColumn;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import nsbm.controllers.alert.deleteAlertShow;
 import nsbm.models.lab;
 import nsbm.models.timeslot;
 
@@ -128,6 +129,19 @@ public class indexLab {
         stage.showAndWait();
         Stage thiswin = (Stage) addsubject.getScene().getWindow();
         thiswin.close();
+    }
+
+    public void deleteLab(ActionEvent actionEvent) throws SQLException, IOException {
+        deleteAlertShow alert = new deleteAlertShow();
+
+        if(getSelecter()!=null) {
+            String currentId = getSelecter();
+            lab current = lab.findlab(currentId);
+            current.delete();
+            initialize();
+        }else{
+            alert.showError();
+        }
     }
 
     @FXML

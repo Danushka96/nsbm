@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class studentsubject {
     private Connection con=ConnectionManager.getConnection();
     String semester_id, student_id, subject_id;
-    studentsubject(String semester_id, String student_id, String subject_id){
+    public studentsubject(String semester_id, String student_id, String subject_id){
         this.semester_id=semester_id;
         this.student_id=student_id;
         this.subject_id=subject_id;

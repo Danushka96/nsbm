@@ -20,6 +20,7 @@ import javafx.scene.control.TreeTableColumn;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import nsbm.controllers.alert.deleteAlertShow;
 import nsbm.models.instructor;
 import nsbm.models.lecturer;
 
@@ -113,6 +114,19 @@ public class indexInstructor {
             lecturers.add(new ins(lectr.getInstructor_id(),name, lectr.getNic(), lectr.getMobile(), lectr.getFaculty()));
         }
         return lecturers;
+    }
+
+    public void deleteInstructor(ActionEvent actionEvent) throws SQLException, IOException {
+        deleteAlertShow alert = new deleteAlertShow();
+
+        if(getSelecter()!=null) {
+            String currentId = getSelecter();
+            instructor current = instructor.findInstructor(currentId);
+            current.delete();
+            initialize();
+        }else{
+            alert.showError();
+        }
     }
 
     @FXML

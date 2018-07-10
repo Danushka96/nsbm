@@ -21,6 +21,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import jdk.nashorn.api.tree.Tree;
+import nsbm.controllers.alert.deleteAlertShow;
 import nsbm.models.lecturer;
 
 import java.io.IOException;
@@ -96,7 +97,6 @@ public class indexLecturer {
         treeview1 = treeview;
     }
 
-
     class lect extends RecursiveTreeObject<indexLecturer.lect> {
         StringProperty name, nic, office, faculty, researchSpeciality;
         String id;
@@ -120,6 +120,19 @@ public class indexLecturer {
             lecturers.add(new lect(lectr.getLecture_id(),name, lectr.getNic(), lectr.getOffice_number(), lectr.getFaculty(), lectr.getResearchSpeciality()));
         }
         return lecturers;
+    }
+
+    public void deleteLecturer(ActionEvent actionEvent) throws SQLException, IOException {
+        deleteAlertShow alert = new deleteAlertShow();
+
+        if(getSelecter()!=null) {
+            String currentId = getSelecter();
+            lecturer current = lecturer.findLecturer(currentId);
+            current.delete();
+            initialize();
+        }else{
+            alert.showError();
+        }
     }
 
     @FXML

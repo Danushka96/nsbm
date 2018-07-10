@@ -8,9 +8,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00c7f4;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.indexLab">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="712.0" style="-fx-background-color: #00c7f4;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.indexLab">
     <children>
-        <JFXTreeTableView fx:id="treeview" layoutX="5.0" layoutY="100.0" prefHeight="292.0" prefWidth="587.0" />
+        <JFXTreeTableView fx:id="treeview" layoutX="5.0" layoutY="100.0" prefHeight="292.0" prefWidth="701.0" />
         <Text layoutX="152.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laboratories">
             <font>
                 <Font size="27.0" />
@@ -21,7 +21,8 @@
                 <Image url="@../../icons/robot.png" />
             </image>
         </ImageView>
-      <JFXButton layoutX="464.0" layoutY="32.0" onAction="#editlab" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #9087e5;" text="Edit Lab" />
-      <JFXButton fx:id="addsubject" layoutX="331.0" layoutY="32.0" onAction="#addlab" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #1fef22;" text="Add Lab" />
+      <JFXButton layoutX="444.0" layoutY="32.0" onAction="#editlab" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #9087e5;" text="Edit Lab" />
+      <JFXButton fx:id="addsubject" layoutX="311.0" layoutY="32.0" onAction="#addlab" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #1fef22;" text="Add Lab" />
+      <JFXButton layoutX="576.0" layoutY="32.0" onAction="#deleteLab" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #f92a2a;" text="Delete Lab" />
     </children>
 </AnchorPane>

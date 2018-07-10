@@ -21,6 +21,7 @@ import javafx.scene.control.TreeTableColumn;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import nsbm.controllers.alert.deleteAlertShow;
 import nsbm.models.semester;
 
 import java.io.IOException;
@@ -143,6 +144,19 @@ public class indexSemester {
         stage.showAndWait();
         Stage thiswin=(Stage) addsubject.getScene().getWindow();
         thiswin.close();
+    }
+
+    public void deleteSemester(ActionEvent actionEvent) throws SQLException, IOException {
+        deleteAlertShow alert = new deleteAlertShow();
+
+        if(getSelecter()!=null) {
+            String currentId = getSelecter();
+            semester current = semester.findsemester(currentId);
+            current.delete();
+            initialize();
+        }else{
+            alert.showError();
+        }
     }
 
     @FXML

@@ -20,6 +20,7 @@ import javafx.scene.control.TreeTableColumn;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import nsbm.controllers.alert.deleteAlertShow;
 import nsbm.models.subject;
 import nsbm.models.timeslot;
 
@@ -141,6 +142,18 @@ public class indexTimetable {
         stage.setTitle("Add new Timeslot");
         stage.setScene(new Scene(root1));
         stage.show();
+    }
+
+    public void deleteTime(ActionEvent actionEvent) throws SQLException, IOException {
+        deleteAlertShow alert = new deleteAlertShow();
+        if(getSelecter()!=null) {
+            String currentId = getSelecter();
+            timeslot current = timeslot.findtimeslot(currentId);
+            current.delete();
+            initialize();
+        }else{
+            alert.showError();
+        }
     }
 
     @FXML

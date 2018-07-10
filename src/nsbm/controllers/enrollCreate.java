@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import nsbm.models.studentsubject;
 import nsbm.models.subject;
 import nsbm.models.undergraduate;
 
@@ -60,15 +61,29 @@ public class enrollCreate {
     public void initialize() throws SQLException{
         student1=enrollSelect.getStudent();
         semester1=enrollSelect.getSemester();
-
         undergrad=undergraduate.getStudentID(student1);
         ArrayList<subject> allsub=subject.getall();
         setSubjects(allsub);
-
     }
 
     @FXML
-    void save(ActionEvent event) {
+    void save(ActionEvent event) throws SQLException {
+        if(sub1.getSelectionModel().getSelectedItem()!=null) {
+            studentsubject sub1s = new studentsubject(semester1, student1, sub1.getSelectionModel().getSelectedItem().toString());
+            sub1s.save();
+        }
+        if(sub1.getSelectionModel().getSelectedItem()!=null) {
+            studentsubject sub2s = new studentsubject(semester1, student1, sub2.getSelectionModel().getSelectedItem().toString());
+            sub2s.save();
+        }
+        if(sub1.getSelectionModel().getSelectedItem()!=null) {
+            studentsubject sub3s = new studentsubject(semester1, student1, sub3.getSelectionModel().getSelectedItem().toString());
+            sub3s.save();
+        }
+        if(sub1.getSelectionModel().getSelectedItem()!=null) {
+            studentsubject sub4s = new studentsubject(semester1, student1, sub4.getSelectionModel().getSelectedItem().toString());
+            sub4s.save();
+        }
 
     }
 

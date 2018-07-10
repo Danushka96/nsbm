@@ -8,9 +8,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00c7f4;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.indexLecturer">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="712.0" style="-fx-background-color: #00c7f4;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.indexLecturer">
     <children>
-        <JFXTreeTableView fx:id="treeview" layoutX="5.0" layoutY="100.0" prefHeight="292.0" prefWidth="587.0" />
+        <JFXTreeTableView fx:id="treeview" layoutX="5.0" layoutY="100.0" prefHeight="292.0" prefWidth="701.0" />
         <Text layoutX="150.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecturers">
             <font>
                 <Font size="27.0" />
@@ -22,5 +22,6 @@
             </image>
         </ImageView>
       <JFXButton fx:id="editlecturer" layoutX="435.0" layoutY="32.0" onAction="#editlecturer" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #1fef22;" text="Edit Lecturer" />
+      <JFXButton layoutX="576.0" layoutY="32.0" onAction="#deleteLecturer" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #f92a2a;" text="Delete Lecturer" />
     </children>
 </AnchorPane>
