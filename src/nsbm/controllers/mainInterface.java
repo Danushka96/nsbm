@@ -340,4 +340,13 @@ public class mainInterface {
         stage.setScene(new Scene(root1));
         stage.show();
     }
+
+    public void paymentstd(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/payment/select.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Select Student Payments");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
 }
