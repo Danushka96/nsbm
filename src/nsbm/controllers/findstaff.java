@@ -8,14 +8,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import nsbm.models.instructor;
+import nsbm.models.lecturer;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class findstaff {
 
     private static String staffmember;
     @FXML
-    private JFXTextField lecturer;
+    private JFXTextField lecturer1;
 
     @FXML
     private JFXTextField Instructor;
@@ -27,31 +30,51 @@ public class findstaff {
     private JFXButton instructorsearch;
 
     @FXML
-    void searchins(ActionEvent event) throws IOException {
+    void searchins(ActionEvent event) throws IOException, SQLException {
         String typed=Instructor.getText();
         if(!typed.equals("")){
             staffmember=typed;
         }
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/instructor/view.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        stage.setTitle("Lecturer Update");
-        stage.setScene(new Scene(root1));
-        stage.show();
+        instructor ins = instructor.findInstructor(staffmember);
+        if(ins.getNic()!=null) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/instructor/view.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Lecturer Update");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }else{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/alertbox/searchnotfound.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Error on delete");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }
     }
 
     @FXML
-    void searchlect(ActionEvent event) throws IOException {
-        String typed=lecturer.getText();
+    void searchlect(ActionEvent event) throws IOException, SQLException {
+        String typed= lecturer1.getText();
         if(!typed.equals("")){
             staffmember=typed;
         }
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/lecturer/view.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        stage.setTitle("Instructor Update");
-        stage.setScene(new Scene(root1));
-        stage.show();
+        lecturer lect = lecturer.findLecturer(staffmember);
+        if(lect.getOffice_number()!=null) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/lecturer/view.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Instructor Update");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }else {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/alertbox/searchnotfound.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Error  on delete");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }
     }
 
     static String getStaffmember(){

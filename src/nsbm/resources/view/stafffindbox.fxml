@@ -13,7 +13,7 @@
             <Font size="34.0" />
          </font>
       </Text>
-      <JFXTextField fx:id="lecturer" layoutX="79.0" layoutY="109.0" prefHeight="29.0" prefWidth="241.0" promptText="Lecturer ID" />
+      <JFXTextField fx:id="lecturer1" layoutX="79.0" layoutY="109.0" prefHeight="29.0" prefWidth="241.0" promptText="Lecturer ID" />
       <JFXTextField fx:id="Instructor" layoutX="79.0" layoutY="168.0" prefHeight="29.0" prefWidth="241.0" promptText="Instructor ID" />
       <JFXButton fx:id="lecturesearch" layoutX="392.0" layoutY="118.0" onAction="#searchlect" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #04afed;" text="Search" />
       <JFXButton fx:id="instructorsearch" layoutX="392.0" layoutY="178.0" onAction="#searchins" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #04afed;" text="Search" />

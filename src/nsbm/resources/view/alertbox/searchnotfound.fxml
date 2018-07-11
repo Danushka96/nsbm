@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.alert.searchnotfound">
+   <children>
+      <ImageView fitHeight="79.0" fitWidth="82.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/warning_1.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="120.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Result was not found!!">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="close" layoutX="326.0" layoutY="68.0" onAction="#close" prefHeight="33.0" prefWidth="60.0" style="-fx-background-color: #f74c4c;" text="Close" />
+   </children>
+</AnchorPane>

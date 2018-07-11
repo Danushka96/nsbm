@@ -216,7 +216,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton layoutX="74.0" layoutY="342.0" onAction="#findstaff" prefHeight="51.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Find Staff Member">
+            <JFXButton layoutX="179.0" layoutY="341.0" onAction="#findstaff" prefHeight="65.0" prefWidth="332.0" style="-fx-border-color: #57a8f9;" text="Find Staff Member">
                <graphic>
                   <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -227,18 +227,6 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
-            </JFXButton>
-            <JFXButton layoutX="350.0" layoutY="342.0" prefHeight="65.0" prefWidth="255.0" style="-fx-border-color: #57a8f9;" text="Delete Staff Member">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="59.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/garbage.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
             </JFXButton>
          </children>
       </AnchorPane>

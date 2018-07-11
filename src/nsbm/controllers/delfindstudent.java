@@ -42,13 +42,22 @@ public class delfindstudent {
             post=postgraduate.findPostgraduate(typed);
             type=1;
         }
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/student/delete/deletebox.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("Postgraduate Update");
-        stage.setScene(new Scene(root1));
-        stage.show();
+        if(post.getCourse_id()!=null) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/student/delete/deletebox.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Postgraduate Update");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }else{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/alertbox/searchnotfound.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Error delete");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }
     }
 
     @FXML
@@ -58,13 +67,22 @@ public class delfindstudent {
             under=undergraduate.findUndergraduate(typed);
             type=0;
         }
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/student/delete/deletebox.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("Undergraduate Update");
-        stage.setScene(new Scene(root1));
-        stage.show();
+        if (under.getCourse_id()!=null) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/student/delete/deletebox.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Undergraduate Update");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }else {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/alertbox/searchnotfound.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Error  delete");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }
     }
 
     public static String getStudent_id(){
