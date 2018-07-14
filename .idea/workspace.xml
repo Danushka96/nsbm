@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/nsbm/controllers/selectstudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nsbm/resources/view/mainInterface.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/nsbm/resources/view/mainInterface.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,31 +39,6 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="nsbm@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="nsbm@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="nsbm@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="nsbm: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="nsbm@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="nsbm: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="instructors: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="nsbm@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="nsbm: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="subjects: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -110,60 +86,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="findstudent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/findstudent.java">
+      <file leaf-file-name="selectstudent.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/selectstudent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="47" selection-start-line="47" selection-end-line="52" selection-end-column="25" />
-              <folding>
-                <element signature="e#2410#2411#0" expanded="true" />
-                <element signature="e#2443#2444#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="194">
+              <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="delfindstudent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/delfindstudent.java">
+      <file leaf-file-name="selectExam.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/selectExam.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="78" selection-start-line="78" selection-end-line="83" selection-end-column="25" />
-              <folding>
-                <element signature="e#2611#2612#0" expanded="true" />
-                <element signature="e#2644#2645#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="findstaff.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/findstaff.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
-              <folding>
-                <element signature="e#2341#2342#0" expanded="true" />
-                <element signature="e#2375#2376#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainInterface.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="347" column="38" selection-start-line="347" selection-start-column="38" selection-end-line="347" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainInterface.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/mainInterface.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="311" column="71" selection-start-line="311" selection-start-column="71" selection-end-line="311" selection-end-column="71" />
+            <state relative-caret-position="64">
+              <caret line="39" column="9" selection-start-line="39" selection-end-line="46" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -223,8 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/nsbm/controllers/selectAssignment.java" />
-        <option value="$PROJECT_DIR$/src/nsbm/controllers/editAssignment.java" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/view/alertbox/select.fxml" />
         <option value="$PROJECT_DIR$/src/nsbm/controllers/alert/select.java" />
         <option value="$PROJECT_DIR$/src/nsbm/resources/view/exam/select.fxml" />
@@ -273,7 +207,9 @@
         <option value="$PROJECT_DIR$/src/nsbm/controllers/findstudent.java" />
         <option value="$PROJECT_DIR$/src/nsbm/controllers/delfindstudent.java" />
         <option value="$PROJECT_DIR$/src/nsbm/controllers/findstaff.java" />
+        <option value="$PROJECT_DIR$/src/nsbm/resources/view/marks/select.fxml" />
         <option value="$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java" />
+        <option value="$PROJECT_DIR$/src/nsbm/controllers/selectstudent.java" />
       </list>
     </option>
   </component>
@@ -296,6 +232,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -421,6 +358,15 @@
               <item name="nsbm" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="marks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NSBM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NSBM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nsbm" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="payment" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -440,6 +386,16 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="student" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NSBM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NSBM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nsbm" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+              <item name="create" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NSBM" type="b2602c69:ProjectViewProjectNode" />
@@ -497,7 +453,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -710,12 +665,14 @@
       <workItem from="1530459541447" duration="2621000" />
       <workItem from="1530680290635" duration="218000" />
       <workItem from="1530775881185" duration="88000" />
-      <workItem from="1531222837091" duration="17820000" />
+      <workItem from="1531222837091" duration="18590000" />
+      <workItem from="1531315933409" duration="7905000" />
+      <workItem from="1531578766781" duration="2101000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="417294000" />
+    <option name="totallyTimeSpent" value="428070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -729,10 +686,10 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32838285" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25412542" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924356" visible="true" weight="0.2590759" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26072606" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924356" weight="0.2590759" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2647504" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.27231467" />
       <window_info anchor="right" id="Database" order="3" sideWeight="0.49774775" visible="true" weight="0.15658094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -804,6 +761,41 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/selectstudent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/findstudent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="47" selection-start-line="47" selection-end-line="52" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/delfindstudent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="78" selection-start-line="78" selection-end-line="83" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/findstaff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1168">
+          <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5504">
+          <caret line="344" column="54" lean-forward="true" selection-start-line="344" selection-start-column="54" selection-end-line="344" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/createExam.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
@@ -881,13 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://99a213d3-dced-40d3-9239-d2ce4c9ed4d8/schema/nsbm/table/students">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/enrollSelect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="768">
@@ -934,17 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/alertbox/deleteConfirm.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -952,19 +926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/assignment/index.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="10" column="134" selection-start-line="10" selection-start-column="98" selection-end-line="10" selection-end-column="134" />
         </state>
       </provider>
     </entry>
@@ -975,26 +936,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/course/index.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="109" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/indexAssignments.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="140" column="14" lean-forward="true" selection-start-line="138" selection-start-column="8" selection-end-line="147" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/exam/index.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="109" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="109" />
         </state>
       </provider>
     </entry>
@@ -1005,34 +950,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/instructor/index.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="12" column="109" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/indexInstructor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="119" column="16" selection-start-line="119" selection-end-line="128" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/lab/index.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="12" column="109" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/payment/index.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -1043,14 +964,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/lecturer/index.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="10" column="134" selection-start-line="10" selection-start-column="98" selection-end-line="10" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/indexLab.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -1058,50 +971,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/student/index/indexpostgrad.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="134" selection-start-line="10" selection-start-column="98" selection-end-line="10" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/student/index/indexundergrad.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="107" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/indexSubject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="170" column="30" lean-forward="true" selection-start-line="170" selection-start-column="30" selection-end-line="170" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/subject/index.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="25" column="65" lean-forward="true" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/semester/index.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="109" lean-forward="true" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/timetable/index.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="25" column="63" lean-forward="true" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -1130,69 +1003,73 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/alertbox/searchnotfound.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/findstudent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="47" selection-start-line="47" selection-end-line="52" selection-end-column="25" />
-          <folding>
-            <element signature="e#2410#2411#0" expanded="true" />
-            <element signature="e#2443#2444#0" expanded="true" />
-          </folding>
+    <entry file="das://99a213d3-dced-40d3-9239-d2ce4c9ed4d8/schema/nsbm/table/universitymembers">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/delfindstudent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="78" selection-start-line="78" selection-end-line="83" selection-end-column="25" />
-          <folding>
-            <element signature="e#2611#2612#0" expanded="true" />
-            <element signature="e#2644#2645#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="80">
+          <caret line="82" column="28" lean-forward="true" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/payment/select.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/findstudent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="47" selection-start-line="47" selection-end-line="52" selection-end-column="25" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/findstaff.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
-          <folding>
-            <element signature="e#2341#2342#0" expanded="true" />
-            <element signature="e#2375#2376#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="151">
+          <caret line="75" column="25" lean-forward="true" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/mainInterface.fxml">
+    <entry file="das://99a213d3-dced-40d3-9239-d2ce4c9ed4d8/schema/nsbm/table/students">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/resources/view/marks/select.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/models/reciept.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="311" column="71" selection-start-line="311" selection-start-column="71" selection-end-line="311" selection-end-column="71" />
+        <state relative-caret-position="-496">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/selectExam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="39" column="9" selection-start-line="39" selection-end-line="46" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/mainInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="347" column="38" selection-start-line="347" selection-start-column="38" selection-end-line="347" selection-end-column="38" />
+        <state relative-caret-position="640">
+          <caret line="310" column="7" lean-forward="true" selection-start-line="310" selection-start-column="7" selection-end-line="310" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nsbm/controllers/selectstudent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
         </state>
       </provider>
     </entry>

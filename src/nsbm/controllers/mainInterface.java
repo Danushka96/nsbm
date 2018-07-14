@@ -324,7 +324,7 @@ public class mainInterface {
     }
 
     public void addmarks(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/exam/select.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/marks/select.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Add Marks");
