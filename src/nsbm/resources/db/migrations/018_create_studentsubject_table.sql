@@ -1,6 +1,6 @@
 CREATE TABLE studentsubject(
   sem_id varchar(8),
-  student_id varchar(9),
+  student_id varchar(15),
   subject_id varchar(8),
   PRIMARY KEY (sem_id,subject_id,student_id),
   FOREIGN KEY (sem_id) REFERENCES semester(id),

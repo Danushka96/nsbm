@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class studentsubject {
     private Connection con=ConnectionManager.getConnection();
@@ -54,7 +55,7 @@ public class studentsubject {
         upq.execute();
     }
 
-    public static studentsubject[] findstudentSubject(String semester_id, String student_id) throws SQLException{
+    public static ArrayList<studentsubject> findstudentSubject(String semester_id, String student_id) throws SQLException{
         Connection con = ConnectionManager.getConnection();
         String query="SELECT * FROM studentsubject where student_id=? AND sem_id=?";
         PreparedStatement selectq=con.prepareStatement(query);
@@ -62,15 +63,10 @@ public class studentsubject {
         selectq.setString(2,semester_id);
         ResultSet result= selectq.executeQuery();
         String subjectid=null;
-        int count=0;
+        ArrayList<studentsubject> all=new ArrayList<>();
         while (result.next()){
-            count++;
-        }
-        studentsubject[] all=new studentsubject[count];
-        while (result.next()){
-            subjectid=result.getString("subjectid");
-            all[count-1]=new studentsubject(semester_id,student_id,subjectid);
-            count--;
+            subjectid=result.getString("subject_id");
+            all.add(new studentsubject(semester_id,student_id,subjectid));
         }
         return all;
     }

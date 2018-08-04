@@ -98,6 +98,21 @@ public final class postgraduate extends student{
         student stu = findstudent(reg_number);
         return new postgraduate(reg_number,stu.getFirstName(),stu.getLastName(),stu.getGender(),stu.getFaculty(),stu.getNic(),stu.getEmail(),stu.getDob(),stu.getAddress(),stu.getMobile(),stu.getRegistration_date(),stu.getIntake_number(),student_id,qualification_type,institute,yearof_Completion,course_id);
     }
+
+    public static postgraduate getStudentID(String reg_num) throws SQLException{
+        Connection con=ConnectionManager.getConnection();
+        String query="SELECT student_id FROM postgraduates WHERE reg_number=?";
+        PreparedStatement precon=con.prepareStatement(query);
+        precon.setString(1,reg_num);
+        ResultSet result=precon.executeQuery();
+        String student_id="";
+        while (result.next()) {
+            student_id = result.getString("student_id");
+        }
+        //System.out.println(student_id);
+        return findPostgraduate(student_id);
+    }
+
     public static ArrayList<postgraduate> getall() throws SQLException{
         ArrayList<postgraduate> all=new ArrayList<>();
         Connection con=ConnectionManager.getConnection();

@@ -15,7 +15,7 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <JFXTextField fx:id="studentid" layoutX="99.0" layoutY="72.0" prefHeight="25.0" prefWidth="187.0" promptText="NIC Number" />
+      <JFXTextField fx:id="studentid" layoutX="99.0" layoutY="72.0" prefHeight="25.0" prefWidth="187.0" promptText="Student ID" />
       <JFXButton layoutX="305.0" layoutY="223.0" onAction="#submitstudent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #4286f4;" text="OK" />
       <JFXComboBox fx:id="semesterselect" layoutX="100.0" layoutY="172.0" prefHeight="32.0" prefWidth="187.0" promptText="Semester" />
    </children>

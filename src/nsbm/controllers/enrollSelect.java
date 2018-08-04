@@ -9,8 +9,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import nsbm.models.postgraduate;
 import nsbm.models.semester;
 import nsbm.models.student;
+import nsbm.models.undergraduate;
 
 import java.io.IOException;
 import java.sql.SQLException;

@@ -20,6 +20,14 @@ public class assignment {
         this.type=0;
         this.semester=semester;
     }
+    public assignment(String assignment_id, String name, String subject_id, int marks,int type,String semester){
+        this.assignment_id=assignment_id;
+        this.name=name;
+        this.subject_id=subject_id;
+        this.marks=marks;
+        this.type=type;
+        this.semester=semester;
+    }
 
     public void setSubject_id(String subject_id) {
         this.subject_id = subject_id;
@@ -102,6 +110,27 @@ public class assignment {
         return new assignment(assignment_id,name,subject_id,marks,semester);
     }
 
+    public static ArrayList<assignment> findassignmentSubject(String subject_id,int type, String semester) throws SQLException{
+        ArrayList<assignment> all = new ArrayList<>();
+        Connection con=ConnectionManager.getConnection();
+        String query="SELECT * FROM assignments WHERE subject_id=? AND type=? AND semester_id=?";
+        PreparedStatement selectq=con.prepareStatement(query);
+        selectq.setString(1,subject_id);
+        selectq.setInt(2,type);
+        selectq.setString(3,semester);
+        ResultSet result=selectq.executeQuery();
+        String name=null, assignment_id=null;
+        int marks=0;
+        while (result.next()){
+            name=result.getString("name");
+            assignment_id=result.getString("id");
+            marks=result.getInt("marks");
+            type=result.getInt("type");
+            all.add(new assignment(assignment_id,name,subject_id,marks,type,semester));
+        }
+        return all;
+    }
+
     public static ArrayList<assignment> getall() throws SQLException{
         Connection con=ConnectionManager.getConnection();
         String query="SELECT * FROM assignments";
@@ -118,6 +147,18 @@ public class assignment {
     public static ArrayList<assignment> getallexams() throws SQLException{
         Connection con=ConnectionManager.getConnection();
         String query="SELECT * FROM assignments WHERE type=1";
+        PreparedStatement selectq=con.prepareStatement(query);
+        ResultSet result=selectq.executeQuery();
+        ArrayList<assignment> all=new ArrayList<>();
+        while (result.next()){
+            String insid = result.getString("id");
+            all.add(findassignment(insid));
+        }
+        return all;
+    }
+    public static ArrayList<assignment> getallassignments() throws SQLException{
+        Connection con=ConnectionManager.getConnection();
+        String query="SELECT * FROM assignments WHERE type=2";
         PreparedStatement selectq=con.prepareStatement(query);
         ResultSet result=selectq.executeQuery();
         ArrayList<assignment> all=new ArrayList<>();
