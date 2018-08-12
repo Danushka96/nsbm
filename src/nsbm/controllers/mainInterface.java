@@ -78,7 +78,7 @@ public class mainInterface {
     }
 
     @FXML
-    public void handleButtonAction(javafx.event.ActionEvent actionEvent) {
+    public void handleButtonAction(javafx.event.ActionEvent actionEvent) throws IOException {
         if(actionEvent.getSource()==btnhome){
             menuhome.toFront();
         }
@@ -95,10 +95,22 @@ public class mainInterface {
             menuuni.toFront();
         }
         else if(actionEvent.getSource()==btnusers){
-            System.out.println("Users Menu");
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/user/create.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Add New User");
+            stage.setScene(new Scene(root1));
+            stage.show();
         }
         else if(actionEvent.getSource()==btnlogout){
-            System.out.println("Logout Command");
+            Stage thiswin = (Stage) btnlogout.getScene().getWindow();
+            thiswin.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/newlogin.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Login to the System");
+            stage.setScene(new Scene(root1));
+            stage.show();
         }
     }
 

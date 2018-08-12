@@ -411,7 +411,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="341.0" layoutY="286.0" prefHeight="76.0" prefWidth="242.0" style="-fx-border-color: #57a8f9;" text="Manage Timetable">
+            <JFXButton layoutX="341.0" layoutY="286.0" onAction="#opentimetable" prefHeight="76.0" prefWidth="242.0" style="-fx-border-color: #57a8f9;" text="Manage Timetable">
                <graphic>
                   <ImageView fitHeight="79.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -423,7 +423,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="38.0" layoutY="401.0" prefHeight="76.0" prefWidth="242.0" style="-fx-border-color: #57a8f9;" text="Assignments">
+            <JFXButton layoutX="38.0" layoutY="401.0" onAction="#openassignment" prefHeight="76.0" prefWidth="242.0" style="-fx-border-color: #57a8f9;" text="Assignments">
                <graphic>
                   <ImageView fitHeight="79.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -435,7 +435,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="341.0" layoutY="401.0" prefHeight="76.0" prefWidth="242.0" style="-fx-border-color: #57a8f9;" text="Student Payments">
+            <JFXButton layoutX="341.0" layoutY="401.0" onAction="#openpayment" prefHeight="76.0" prefWidth="242.0" style="-fx-border-color: #57a8f9;" text="Student Payments">
                <graphic>
                   <ImageView fitHeight="79.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -480,17 +480,12 @@
                   <Image url="@../icons/high-school.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="7.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../icons/history.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="39.0" layoutX="3.0" layoutY="459.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="39.0" layoutX="7.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../icons/hands.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="10.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="7.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../icons/paper-plane.png" />
                </image>
@@ -515,17 +510,12 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btnuniversity" graphicTextGap="0.0" layoutY="386.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="255.0" text="Manage University">
+            <JFXButton fx:id="btnusers" graphicTextGap="0.0" layoutY="387.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="255.0" text="Manage Users">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btnusers" graphicTextGap="0.0" layoutY="455.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="255.0" text="Manage Users">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </JFXButton>
-            <JFXButton fx:id="btnlogout" graphicTextGap="0.0" layoutY="518.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="255.0" text="Logout">
+            <JFXButton fx:id="btnlogout" graphicTextGap="0.0" layoutY="451.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="255.0" text="Logout">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>

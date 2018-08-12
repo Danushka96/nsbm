@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="203.0" prefWidth="600.0" style="-fx-background-color: #a8c6f7;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.createUser">
+   <children>
+      <Text layoutX="227.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New User">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="username" layoutX="27.0" layoutY="94.0" promptText="username" />
+      <JFXPasswordField fx:id="password" layoutX="232.0" layoutY="94.0" promptText="password" />
+      <JFXComboBox fx:id="faculty1" layoutX="412.0" layoutY="94.0" prefHeight="25.0" prefWidth="154.0" promptText="Faculty" />
+      <JFXButton layoutX="503.0" layoutY="149.0" onAction="#createuser" prefHeight="31.0" prefWidth="63.0" style="-fx-background-color: #4ff751;" text="Add" />
+   </children>
+</AnchorPane>

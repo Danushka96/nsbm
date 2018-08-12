@@ -11,7 +11,7 @@ import java.util.PropertyPermission;
 public final class user {
     private Connection con=ConnectionManager.getConnection();
     private String username, password, faculty_id;
-    private user(String username, String password, String faculty_id){
+    public user(String username, String password, String faculty_id){
         this.username=username;
         this.password=password;
         this.faculty_id=faculty_id;
