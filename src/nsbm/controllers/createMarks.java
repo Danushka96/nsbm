@@ -1,11 +1,12 @@
 package nsbm.controllers;
 
 import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
-import nsbm.models.studentsubject;
-import nsbm.models.undergraduate;
+import javafx.stage.Stage;
+import nsbm.models.*;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
  * @author Danushka
  */
 public class createMarks {
+    public JFXTextField markss;
     @FXML
     private AnchorPane marks;
 
@@ -36,13 +38,33 @@ public class createMarks {
     }
 
     @FXML
-    void addmarks(ActionEvent event) {
+    void addmarks(ActionEvent event) throws SQLException {
+        String assign = assignment.getSelectionModel().getSelectedItem().toString();
+        String student1 = selectstudent.getStudent_id();
+        String reg;
+        if(selectstudent.getStudentType()==1){
+            System.out.println("under");
+            reg = undergraduate.findUndergraduate(student1).getReg_Number();
+        }else{
+            System.out.println("post");
+            reg = postgraduate.findPostgraduate(student1).getReg_Number();
+        }
+        studentassignment stuass = new studentassignment(assign,reg,Integer.parseInt(markss.getText()));
+        stuass.save();
 
+        Stage thiswin = (Stage) marks.getScene().getWindow();
+        thiswin.close();
     }
 
     @FXML
-    void loadassignments(ActionEvent event) {
-
+    void loadassignments(ActionEvent event) throws SQLException {
+        int type = selectstudent.getType();
+        String sem = selectstudent.getSemester_id();
+        String sub = subject.getSelectionModel().getSelectedItem().toString();
+        ArrayList<assignment> all = nsbm.models.assignment.findassignmentSubject(sub,type,sem);
+        for(assignment a:all){
+            assignment.getItems().add(a.getAssignment_id());
+        }
     }
 
     private void fillsubjects() throws SQLException {
@@ -57,5 +79,10 @@ public class createMarks {
         {
             subject.getItems().add(a.getSubject_id());
         }
+    }
+
+    public void close(ActionEvent actionEvent) {
+        Stage thiswin = (Stage) marks.getScene().getWindow();
+        thiswin.close();
     }
 }

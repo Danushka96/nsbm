@@ -31,6 +31,7 @@ public class selectstudent {
     private static String student_id;
     private static String semester_id;
     private static int type;
+    private static int studentType;
 
     public void initialize(){
         assignmenttype.getItems().add("Exam");
@@ -58,14 +59,18 @@ public class selectstudent {
 
     public static String getSemester_id(){ return semester_id; }
 
+    static int getStudentType(){ return studentType; }
+
     public void getstudent(ActionEvent actionEvent) throws SQLException, IOException {
         student_id = studentid.getText();
         type=assignmenttype.getSelectionModel().getSelectedItem().equals("Exam")?1:0;
         String searched_student;
         if(undergraduate.findUndergraduate(student_id).getCourse_id()==null){
             searched_student = postgraduate.findPostgraduate(student_id).getNic();
+            studentType=0;
         }else{
             searched_student = undergraduate.findUndergraduate(student_id).getNic();
+            studentType=1;
         }
         UniversityMemeber student = UniversityMemeber.findmember(searched_student);
         System.out.println(student.getFaculty());

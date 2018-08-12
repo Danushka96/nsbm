@@ -11,7 +11,7 @@ public class studentassignment {
     private Connection con=ConnectionManager.getConnection();
     private String assignment_id, student_id;
     private int marks;
-    studentassignment(String assignment_id, String student_id, int marks){
+    public studentassignment(String assignment_id, String student_id, int marks){
         this.assignment_id=assignment_id;
         this.student_id=student_id;
         this.marks=marks;

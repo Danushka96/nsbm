@@ -39,6 +39,8 @@ public class selectAssignment {
 
     @FXML
     void go(ActionEvent event) throws IOException {
+        sem = semester.getSelectionModel().getSelectedItem().toString();
+        facul = faculty.getSelectionModel().getSelectedItem().toString();
         Stage thiswin=(Stage)faculty.getScene().getWindow();
         thiswin.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../resources/view/assignment/index.fxml"));

@@ -24,4 +24,9 @@ Image goes here
 
 Image goes here
 
+###How to Install the System
+
+- First Run the Migration (For Create the Database Tables and Table Data)
+- Then Run the Main Script for run the System
+
 ### END
