@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="593.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nsbm.controllers.generateReport">
+   <children>
+      <Text layoutX="154.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Report card">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="157.0" fitWidth="153.0" layoutX="31.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/postgraduate.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="227.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="227.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Number :">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="227.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intake :">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="227.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Faculty : ">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="493.0" layoutY="495.0" onAction="#sendmail" prefHeight="40.0" prefWidth="84.0" style="-fx-background-color: #77f442;" text="Send Email" />
+      <JFXTreeTableView fx:id="datatable" layoutX="14.0" layoutY="268.0" prefHeight="222.0" prefWidth="572.0" />
+      <Text layoutX="410.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semester :">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="name" layoutX="300.0" layoutY="103.0" prefHeight="25.0" prefWidth="285.0" />
+      <JFXTextField fx:id="regnum" layoutX="419.0" layoutY="143.0" prefHeight="25.0" prefWidth="166.0" />
+      <JFXTextField fx:id="intake" layoutX="297.0" layoutY="183.0" prefHeight="25.0" prefWidth="103.0" />
+      <JFXTextField fx:id="fac" layoutX="297.0" layoutY="227.0" prefHeight="25.0" prefWidth="103.0" />
+      <JFXTextField fx:id="sem" layoutX="500.0" layoutY="227.0" prefHeight="25.0" prefWidth="84.0" />
+   </children>
+</AnchorPane>
