@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="410.0" style="-fx-background-color: #aaf2f7;" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="nsbm.controllers.selectReport" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="135.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Student">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="studentid" layoutX="122.0" layoutY="86.0" prefHeight="25.0" prefWidth="175.0" promptText="Student ID" />
+      <JFXComboBox fx:id="semester1" layoutX="122.0" layoutY="139.0" prefHeight="25.0" prefWidth="175.0" promptText="Semester" />
+      <JFXButton layoutX="314.0" layoutY="196.0" onAction="#generate" prefHeight="29.0" prefWidth="69.0" style="-fx-background-color: #29f24a;" text="Generate" />
+      <JFXButton layoutX="314.0" layoutY="86.0" onAction="#search" style="-fx-background-color: #29b2f2;" text="Search" />
+   </children>
+</AnchorPane>
