@@ -12,21 +12,28 @@
 
 ![](https://image.ibb.co/iHR5Lo/nsbm_team_logo.png)
 <center>
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+![](https://img.shields.io/github/stars/pandao/editor.md.svg) 
+![](https://img.shields.io/github/forks/pandao/editor.md.svg) 
+![](https://img.shields.io/github/tag/pandao/editor.md.svg) 
+![](https://img.shields.io/github/release/pandao/editor.md.svg) 
+![](https://img.shields.io/github/issues/pandao/editor.md.svg) 
+![](https://img.shields.io/bower/v/editor.md.svg)
 </center>
 
-
-### Class Diagram
-
-Image goes here
 
 ### ER Diagram
 
 Image goes here
 
-###How to Install the System
+### How to Install the System
 
+- Need Java 9 for Running this Software.
 - First Run the Migration (For Create the Database Tables and Table Data)
 - Then Run the Main Script for run the System
+
+### External Libraries
+
+- JDBC Mysql Driver
+- Jphonex Library for Java 9
 
 ### END
