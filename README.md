@@ -23,7 +23,7 @@
 
 ### ER Diagram
 
-Image goes here
+![](https://image.ibb.co/cpGkne/er_java_1.png)
 
 ### How to Install the System
 
