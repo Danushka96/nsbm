@@ -27,18 +27,19 @@
 ├──src
     ├── nsbm
     │   ├── Controller
-    │   ├── Model
-    │   ├── Resources
-    │       ├── css
-    │       ├── db
-    │           ├── migrations
-    │               ├── **.*.sql
-    │           ├── migrate.java
-    │           ├── Scriptrunner.java
-    │       ├── icons
-    │       ├── img
-    │       ├── view  
-    │   └── Main.java
+            ├── ConnectionManager.java          # Database Configuration File
+    │   ├── Model                               # All Model Classes Stored Here
+    │   ├── Resources                           # Resources need for get System Running
+    │       ├── css                             # Css Files
+    │       ├── db                              # Database files
+    │           ├── migrations                  # All Migration Files
+    │               ├── **.*.sql                # Sql Files to creating the Database and Tables
+    │           ├── migrate.java                # Running this will create tables and it's Data alone
+    │           ├── Scriptrunner.java           # External Library
+    │       ├── icons                           # Icons used for Interfaces
+    │       ├── img                             # Images Used for Interfaces
+    │       ├── view                            # All Interface xml Files
+    │   └── Main.java                           # Main Driver Programme Script
     └── .gitignore
 ```
 
