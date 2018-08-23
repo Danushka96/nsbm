@@ -22,6 +22,26 @@
 - First Run the Migration (For Create the Database Tables and Table Data)
 - Then Run the Main Script for run the System
 
+### Folder Structure of the System
+```bash
+├──src
+    ├── nsbm
+    │   ├── Controller
+    │   ├── Model
+    │   ├── Resources
+    │       ├── css
+    │       ├── db
+    │           ├── migrations
+    │               ├── **.*.sql
+    │           ├── migrate.java
+    │           ├── Scriptrunner.java
+    │       ├── icons
+    │       ├── img
+    │       ├── view  
+    │   └── Main.java
+    └── .gitignore
+```
+
 ### External Libraries
 
 - JDBC Mysql Driver
