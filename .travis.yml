@@ -3,3 +3,5 @@ jdk:
  - oraclejdk9
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+
+script: ant build
