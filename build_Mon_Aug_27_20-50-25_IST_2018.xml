@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="nsbm" default="all">
-  
-  
+
+
   <property file="build.properties"/>
   <!-- Uncomment the following property if no tests compilation is needed -->
-  <!-- 
+  <!--
   <property name="skip.tests" value="true"/>
    -->
-  
+
   <!-- Compiler options -->
-  
+
   <property name="compiler.debug" value="on"/>
   <property name="compiler.generate.no.warnings" value="off"/>
   <property name="compiler.args" value=""/>
@@ -51,9 +51,9 @@
     <exclude name="**/?*.kt"/>
     <exclude name="**/?*.clj"/>
   </patternset>
-  
+
   <!-- JDK definitions -->
-  
+
   <property name="jdk.bin.9" value="${jdk.home.9}/bin"/>
   <path id="jdk.classpath.9">
     <fileset dir="${jdk.home.9}">
@@ -157,18 +157,18 @@
       <include name="../jdk-9.0.1!/oracle.net"/>
     </fileset>
   </path>
-  
+
   <property name="project.jdk.home" value="${jdk.home.9}"/>
   <property name="project.jdk.bin" value="${jdk.bin.9}"/>
   <property name="project.jdk.classpath" value="jdk.classpath.9"/>
-  
-  
+
+
   <!-- Project Libraries -->
-  
+
   <path id="library.jfoenix-9.0.4.classpath">
     <pathelement location="${basedir}/../../../Downloads/jfoenix-9.0.4.jar"/>
   </path>
-  
+
   <path id="library.mysql-connector.classpath">
     <pathelement location="${basedir}/../../../Downloads/mysql-connector.jar"/>
   </path>
@@ -186,18 +186,18 @@
     <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
     <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
   </target>
-  
+
   <!-- Modules -->
-  
+
   <import file="${basedir}/module_nsbm.xml"/>
-  
+
   <target name="init" description="Build initialization">
     <!-- Perform any build initialization in this target -->
   </target>
-  
+
   <target name="clean" depends="clean.module.nsbm" description="cleanup all"/>
-  
+
   <target name="build.modules" depends="init, clean, compile.module.nsbm" description="build all modules"/>
-  
+
   <target name="all" depends="build.modules" description="build all"/>
 </project>

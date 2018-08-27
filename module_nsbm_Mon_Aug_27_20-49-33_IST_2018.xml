@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_nsbm" default="compile.module.nsbm">
+  <dirname property="module.nsbm.basedir" file="${ant.file.module_nsbm}"/>
+  
+  <property name="module.jdk.home.nsbm" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.nsbm" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.nsbm" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.nsbm" value="-encoding UTF-8 -source 9 -target 9 ${compiler.args}"/>
+  
+  <property name="nsbm.output.dir" value="${module.nsbm.basedir}/out/production/NSBM"/>
+  <property name="nsbm.testoutput.dir" value="${module.nsbm.basedir}/out/test/NSBM"/>
+  
+  <path id="nsbm.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="nsbm.module.production.classpath">
+    <path refid="${module.jdk.classpath.nsbm}"/>
+    <path refid="library.mysql-connector.classpath"/>
+    <path refid="library.jfoenix-9.0.4.classpath"/>
+  </path>
+  
+  <path id="nsbm.runtime.production.module.classpath">
+    <pathelement location="${nsbm.output.dir}"/>
+    <path refid="library.mysql-connector.classpath"/>
+    <path refid="library.jfoenix-9.0.4.classpath"/>
+  </path>
+  
+  <path id="nsbm.module.classpath">
+    <path refid="${module.jdk.classpath.nsbm}"/>
+    <pathelement location="${nsbm.output.dir}"/>
+    <path refid="library.mysql-connector.classpath"/>
+    <path refid="library.jfoenix-9.0.4.classpath"/>
+  </path>
+  
+  <path id="nsbm.runtime.module.classpath">
+    <pathelement location="${nsbm.testoutput.dir}"/>
+    <pathelement location="${nsbm.output.dir}"/>
+    <path refid="library.mysql-connector.classpath"/>
+    <path refid="library.jfoenix-9.0.4.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.nsbm">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.nsbm">
+    <patternset refid="excluded.from.module.nsbm"/>
+  </patternset>
+  
+  <path id="nsbm.module.sourcepath">
+    <dirset dir="${module.nsbm.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.nsbm" depends="compile.module.nsbm.production,compile.module.nsbm.tests" description="Compile module NSBM"/>
+  
+  <target name="compile.module.nsbm.production" depends="register.custom.compilers" description="Compile module NSBM; production classes">
+    <mkdir dir="${nsbm.output.dir}"/>
+    <javac2 destdir="${nsbm.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.nsbm}/javac">
+      <compilerarg line="${compiler.args.nsbm}"/>
+      <bootclasspath refid="nsbm.module.bootclasspath"/>
+      <classpath refid="nsbm.module.production.classpath"/>
+      <src refid="nsbm.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.nsbm"/>
+    </javac2>
+    
+    <copy todir="${nsbm.output.dir}">
+      <fileset dir="${module.nsbm.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.nsbm.tests" depends="register.custom.compilers,compile.module.nsbm.production" description="compile module NSBM; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.nsbm" description="cleanup module">
+    <delete dir="${nsbm.output.dir}"/>
+    <delete dir="${nsbm.testoutput.dir}"/>
+  </target>
+</project>
